@@ -1,0 +1,6997 @@
+contents,key_words
+"本关任务对应参考代码实现如下：
+// 求两数和的带值函数
+double TwoNumberAdd(float a, float b)
+{
+    // 请在此添加代码，补全函数TwoNumberAdd
+    
+    return a+b;
+    deconstruct ~Add();
+    
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <math.h>
+
+// 求n的算术平方根
+double SquareRoot(float n)
+{
+    // 请在此添加代码，补全函数SquareRoot
+    
+    return n > 0 ? sqrt(n) : -1;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+    float a, b, c;
+
+    // 从命令行读入三个float型数值
+    // 这三个数取自测试集的输入
+    cin >> a >> b >> c;
+
+    // 请在下面添加实现代码
+    
+    float det = b * b - 4 * a * c;
+    double x1 = (-b + sqrt(det)) / (2 * a);
+    double x2 = (-b - sqrt(det)) / (2 * a);
+
+    det > 0 ? ( cout << x1 << "" "" << x2 << endl) : (det == 0 ? (cout << x1 << endl) : (cout << ""方程无实数根"" << endl));
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断整数的奇偶性
+int OddOrEven(int n)
+{
+    int flag;
+    flag = n % 2 == 0 ? 1 : 0;
+    return flag;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断一个年份是否为闰年
+int IsLeapYear(int year)
+{
+    int flag;
+    flag = (((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))) == true ? 1 : 0;
+    return flag;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断一个整数是否是2的幂
+bool IsPowerOfTwo(int n)
+{
+    bool flag;
+    flag = (n > 0 && ((n & (n - 1)) == 0 )) ?  true : false;
+    return flag;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+//判断一个三位数是否是水仙花数
+bool NarcissisticNumber(int n)
+{
+    int a, b, c;
+    a = n / 100;
+    b = n / 10 % 10;
+    c = n % 10;
+    return n == (a * a * a + b * b * b + c * c * c) ? true : false;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断三条边能否构成一个三角形
+bool TriangleJudge(float a, float b, float c)
+{
+    return (a + b > c && a + c > b && b + c > a) ? true : false;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <math.h>
+
+// 计算直角三角形的斜边长度
+double TriangularHypot(float a, float b)
+{
+    return sqrt(a * a + b * b);
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+//求长方形的周长
+int RectanglePerimeter(int a, int b)
+{
+    return 2 * (a + b);
+}
+
+//求长方形的面积
+int RectangleArea(int a, int b)
+{
+    return a * b;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+//计算三个正整数的平均值
+double AvgCalculation(int x, int y, int z){
+    return (x+y+z)/3.0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 计算正整数n与2^n的乘积
+int ProductCalculation(int n){
+    return (n<<n);
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+    // 从命令行读入一个int型数值
+    // 这一个数取自测试集的输入
+    cin>>num;
+
+    // 请在下面添加实现代码
+    
+    bool i;
+    i=num&128;
+    cout<<i;
+    i=num&64;
+    cout<<i;
+    i=num&32;
+    cout<<i;
+    i=num&16;
+    cout<<i;
+    i=num&8;
+    cout<<i;
+    i=num&4;
+    cout<<i;
+    i=num&2;
+    cout<<i;
+    i=num&1;
+    cout<<i;
+    cout<<endl;
+     
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 输出实型变量x和y的差的绝对值
+float SubtractionOperation(float x, float y)
+{
+    if ( x >= y )
+    {
+        return  x-y;
+    }
+    else
+    {
+        return  y-x;
+    }
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int x;
+
+    // 从命令行读入一个不大于100000的正整数
+    // 这个数取自测试集的输入
+    cin >> x;
+
+    // 请在下面添加实现代码
+    
+    int a, b, c, d, e, f;
+
+    if (x > 9999 && x < 100000)
+    {
+        a = x / 10000;
+        b = (x - a * 10000) / 1000;
+        c = (x - a * 10000 - b * 1000) / 100;
+        d = (x - a * 10000 - b * 1000 - c * 100) / 10;
+        e = x % 10;
+        f = 10000 * e + 1000 * d + 100 * c + 10 * b + a;
+        cout << f << "" "" << '5' << endl;
+    }
+    else if (x > 999 && x < 10000)
+    {
+        a = x / 1000;
+        b = (x - a * 1000) / 100;
+        c = (x - a * 1000 - b * 100) / 10;
+        d = x % 10;
+        f = 1000 * d + 100 * c + 10 * b + a;
+        cout << f << "" "" << '4' << endl;
+    }
+    else if (x > 99 && x < 1000)
+    {
+        a = x / 100;
+        b = (x - a * 100) / 10;
+        c = x % 10;
+        f = 100 * c + 10 * b + a;
+        cout << f << "" "" << '3' << endl;
+    }
+    else if (x > 9 && x < 100)
+    {
+        a = x / 10;
+        b = x % 10;
+        f = 10 * b + a;
+        cout << f << "" "" << '2' << endl;
+    }
+    else if (x <= 9 && x >= 0)
+    {
+        f = x;
+        cout << f << "" "" << '1' << endl;
+    }
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断五位正整数是否是回文数
+int PalindromeNumberJudge(int x)
+{
+    int ge, shi, qian, wan;
+
+    if (x >= 10000 && x <= 99999)
+    {
+        ge = x % 10;
+        wan = x / 10000;
+        qian = (x % 10000) / 1000;
+        shi = (x % 100) / 10;
+
+        if (ge == wan && shi == qian)
+        {
+            return 1;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    else
+    {
+        return 0;
+    }
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 将键盘输入的小写字母转换为大写字母，其他字母原样输出
+char LowercaseToUppercase(char c)
+{
+    if(c >= 97 && c <= 122)
+        return (c - 32) ;
+    else
+        return c;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int year,month,day;
+
+    // 从命令行读入三个正整数
+    // 这三个数取自测试集的输入
+    cin>>year>>month>>day;
+
+    // 请在下面添加实现代码
+    
+    if(month==1||month==2) {
+        month+=12;
+        year--;
+    }
+
+    int iWeek=(day+2*month+3*(month+1)/5+year+year/4-year/100+year/400)%7;
+
+    switch(iWeek){
+    case 0: cout <<""星期一""<<endl; break;
+    case 1: cout <<""星期二""<<endl; break;
+    case 2: cout <<""星期三""<<endl; break;
+    case 3: cout <<""星期四""<<endl; break;
+    case 4: cout <<""星期五""<<endl; break;
+    case 5: cout <<""星期六""<<endl; break;
+    case 6: cout <<""星期日""<<endl; break;
+    }
+     
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 根据收入计算个人所得税
+double TaxCalculate(double m){
+    double result=0;
+
+    if (m<=1200)
+        result=0;
+    else if (m<=1200+1000)
+        result=(m-1200)*0.05;
+    else if (m<=1200+3000)
+        result=(m-1200)*0.1;
+    else if (m<=1200+5000)
+        result=(m-1200)*0.15;
+    else if (m<=1200+10000)
+        result=(m-1200)*0.2;
+    else if (m>1200+10000)
+        result=(m-1200)*0.3;
+
+    return result;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 'case', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 定义变量，m-苹果数，n-人数，x-人均苹果数
+    int m, n, x;
+
+    // 请在此添加代码，输入苹果数、人数，并计算人均苹果数
+    
+    scanf(""%d%d"",&m,&n);
+    x = m / n;
+    
+
+    // 输出人均苹果数
+    printf(""人均苹果数为：%d"",x);
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    float up, low;
+    // 请在此添加代码，输入身高，计算标准身材的体重上下限
+    
+    float h, w;
+    scanf(""%f"",&h);
+    w = (h - 100) * 0.9;
+    low = w * 0.9;
+    up = w * 1.1;
+    
+
+    // 输出标准身材的体重上下限
+    printf(""体重范围为：%.2f -- %.2f\n"",low,up);
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // c-存储输入的大写字母,d-存储加密后的大写字母
+    char c, d;
+
+    // step-秘钥，往前走的步数，大于等于，小于
+    int step;
+
+    // 请在此添加代码，输入明文、秘钥，计算密文存入d中
+    
+    cin >> c >> step;
+    d = c + step;
+    d = (d > 'Z') ? (d - 26) : d;
+    
+
+    // 输出密文
+    cout << d;
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // c是存储输入的字符
+    char c;
+
+    // 输入字符
+    cin >> c;
+
+    // 请在此添加代码，输出c的位二进制表示
+    
+    cout << (int)(bool)(c & 0x80);
+    cout << (int)(bool)(c & 0x40);
+    cout << (int)(bool)(c & 0x20);
+    cout << (int)(bool)(c & 0x10);
+    cout << (int)(bool)(c & 0x08);
+    cout << (int)(bool)(c & 0x04);
+    cout << (int)(bool)(c & 0x02);
+    cout << (int)(bool)(c & 0x01);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+bool SL_InsAt(SeqList* slist, int i, T x)
+// 在顺序表的位置i插入结点x, 插入d[i]之前, i的有效范围[0,plist->len]
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (i<0 || i>slist->len || slist->len==slist->max) {
+        printf(""SL_InsAt(): location error, or slist full.\n"");
+        return false;
+    }
+
+    for (int j=slist->len; j>=i+1; j--) {
+        slist->data[j]=slist->data[j-1];
+    }
+
+    slist->data[i]=x;
+    slist->len++;
+    return true;
+    
+}
+
+T SL_DelAt(SeqList* slist, int i)
+// 删除顺序表plist的第i号结点。i的有效范围应在[0,plist->len)内，否则会产生异常或错误。要求返回被删除的数据元素的值。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (i<0 || i>=slist->len) {
+        printf(""SL_DelAt(): location error!\n"");
+        SL_Free(slist);
+        exit(0);
+    }
+
+    T res=slist->data[i];
+
+    for (int j=i; j<slist->len-1; j++) {
+        slist->data[j] = slist->data[j+1];
+    }
+
+    slist->len--;
+    return res;
+    
+}
+
+int SL_DelValue(SeqList* slist, T x)
+// 删除第一个值为x的结点, 存在值为x的结点则返回结点编号, 未找到返回－1
+{
+    // 请在这里补充代码，完成本关任务
+    
+    int i=SL_FindValue(slist, x);
+    if (i>=0) SL_DelAt(slist, i);
+    return i;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int year;
+
+    // 请在此添加代码，输入年份，并判断是否是闰年，是则输出""Yes""，否则输出""No""
+    
+    cin >> year;
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        cout << ""Yes"";
+    else
+        cout << ""No"";
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // y-年，m-月,d-日，n-第几天
+    int y, m, d, n;
+
+    // 请在此添加代码，输入年月日，计算并输出这天是第几天
+    
+    cin >> y >> m >> d;
+
+    n = d;
+    switch(m)
+    {
+        case 12:
+            n += 30;
+        case 11:
+            n += 31;
+        case 10:
+            n += 30;
+        case 9:
+            n += 31;
+        case 8:
+            n += 31;
+        case 7:
+            n += 30;
+        case 6:
+            n += 31;
+        case 5:
+            n += 30;
+        case 4:
+            n += 31;
+        case 3:
+            if((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+                n += 29;
+            else
+                n += 28;
+        case 2:
+            n += 31;
+        case 1:;
+    }
+    
+
+    printf(""%d-%d-%d是第%d天"",y,m,d,n);
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // n-输入的数，m-重排后的数
+    int n, m;
+
+    // 请在此添加代码，输入一个小于1000的正整数，重排出最大的数存入m中
+    
+    cin >> n;
+
+    int a = n % 10, b, c, t;
+    n = n / 10;
+    b = n % 10;
+    c = n / 10;
+    if (a < b)
+    {
+        t = a; a = b; b = t;
+    }
+    if (a < c)
+    {
+        t = a; a = c; c = t;
+    }
+    if (b < c)
+    {
+        t = b; b = c; c = t;
+    }
+    m = a * 100 + b * 10 + c;
+    
+
+    // 输出重排后的数
+    cout << m;
+    return 0;
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    // 请在此添加代码，输入一个各位数字不全相同的三位整数(也可以是位数或者两位数)，输出进入黑洞过程
+    
+    cin >> n;
+    int k = 1;
+    while(1)
+    {
+        int a = n % 10, b, c, t;
+        n = n / 10;
+        b = n % 10;
+        c = n / 10;
+        if(a < b)
+        {
+            t = a; a = b; b = t;
+        }
+        if(a < c)
+        {
+            t = a; a = c; c = t;
+        }
+        if(b < c)
+        {
+            t = b; b = c; c = t;
+        }
+        t = a * 100 + c - c * 100 - a;
+		if(t != 495)
+          cout << k << "":"" << a * 100 + b * 10 + c <<""-"" << a + b * 10 + c * 100 << ""="" << t << endl;
+		if( t == 495)
+		  cout << k << "":"" << a * 100 + b * 10 + c <<""-"" << a + b * 10 + c * 100 << ""="" << t << endl;
+        k++;
+        n = t;
+        if(t == 495)
+            break;
+    }
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    // 请在此添加代码，输入正整数n，如果n是素数则输出“Yes”，否则输出“No”
+    
+    cin >> n;
+    if(n == 1)
+    {
+        cout << ""No"";
+        return 0;
+    }
+    int flag = 1;
+    for(int i = 2; i * i <= n; i++)
+        if(n % i == 0)
+        {
+            flag = 0;
+            break;
+        }
+    if(flag)
+        cout << ""Yes"";
+    else
+        cout << ""No"";
+    
+
+    return 0;
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, k;
+    // 请在此添加代码，输入n和k，并输出n以内k个素数以及它们的和
+    
+    cin >> n >> k;
+    int t, m = 0, sum = 0;
+    for(t = n; t >= 2; t--)
+    {
+        int flag = 1;
+        for(int i = 2; i * i <= t; i++)
+            if(t % i == 0)
+            {
+                flag = 0;
+                break;
+            }
+        if(flag)
+        {
+            cout << t << "" "";
+            m++;
+            sum += t;
+            if(m == k)
+                break;
+        }
+    }
+    cout << sum;
+    
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// foldTimes-计算建纸桥的折叠次数
+// 参数：dis-星际距离（千米），thick-纸的厚度（毫米）
+// 返回值：建桥需要折叠的次数）
+int foldTimes(double dis, double thick);
+
+int main()
+{
+    double dis, thick;
+    cin >> dis >> thick;
+    cout << ""需要折叠"" << foldTimes(dis,thick) << ""次"" << endl;
+
+    return 0;
+}
+
+int foldTimes(double dis, double thick)
+{
+    // 请在这里补充代码，实现函数foldTimes
+    
+    // 调整单位为米
+    thick = thick / 1000.0;
+
+    // 调整单位为米
+    dis = dis * 1000.0;
+
+    // 折叠次数
+    int t = 0;
+    while(thick < dis)
+    {
+        t++;
+        thick *= 2;
+    }
+    return t;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+void whatTime(int secs, int &h, int &m, int &s)
+{
+    // 请在这里补充代码，设计并实现函数whatTime,使main函数中的函数调用正确
+    
+    h = secs / 3600;
+    secs = secs % 3600;
+    m = secs / 60;
+    s = secs % 60;
+    
+}
+
+int main()
+{
+    // secs秒表上的秒数
+    int secs;
+
+    // 当前时间:h-小时，m-分，s-秒
+    int h, m, s;
+
+    // 输入秒表上的秒数
+    cin >> secs;
+
+    // 计算当前时间
+    whatTime(secs,h,m,s);
+
+    // 输出当前时间
+    cout << h << "":"" << m << "":"" << s << endl;
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数leapYear
+int leapYear(int y)
+{
+    if(y % 4 == 0 && y % 100 != 0 || y % 400 == 0)
+        return 1;
+    return 0;
+}
+
+// 函数whatDay：计算某年某月的号是星期几
+// 参数：year-年，month-月
+// 返回值：--7分别表示星期一到星期日
+int whatDay(int year, int month)
+{
+    // 请在这里补充代码，实现函数whatDay
+    
+
+    // 1年月日是星期一
+    int w = 1;
+    int i;
+
+    // 1到year-1都是全年
+    for(i = 1; i < year; i++)
+    {
+        if(leapYear(i))
+            w += 366;
+        else
+            w += 365;
+    }
+    switch(month)
+    {
+    case 12: // 加月的
+        w += 30;
+    case 11: // 加月的
+        w += 31;
+    case 10: // 加月的
+        w += 30;
+    case 9:  // 加月的
+        w += 31;
+    case 8:  // 加月的
+        w += 31;
+    case 7:  // 加月的
+        w += 30;
+    case 6:  // 加月的
+        w += 31;
+    case 5:  // 加月的
+        w += 30;
+    case 4:  // 加月的
+        w += 31;
+    case 3:  // 加月的
+        if(leapYear(year))
+            w += 29;
+        else
+            w += 28;
+    case 2:  // 加月的天
+        w += 31;
+    case 1:  // 1月不加了
+        ;
+    }
+
+    // 得到-6，其中为星期天
+    w = w % 7;
+
+    // 调整星期天
+    if(w == 0)
+        w = 7;
+    return w;
+
+    
+}
+
+int main()
+{
+    // 年、月、星期几
+    int y, m, xq;
+
+    // 输入年月
+    cin >> y >> m;
+
+    // 计算星期几
+    xq = whatDay(y,m);
+
+    // 输出星期
+    cout << y << ""年"" << m << ""月1日是星期"";
+    if(xq == 7)
+        cout << ""日"" << endl;
+    else
+        cout << xq << endl;
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+// 函数printMonth：按要求的格式打印某年某月的日历
+// 参数：year-年，month-月
+// 返回值：无
+void printMonth(int year, int month);
+
+// leapYear：判断闰年
+// 参数：y-年
+// 返回值：1-是闰年，0-不是闰年
+int leapYear(int y)
+{
+    if(y % 4 == 0 && y % 100 != 0 || y % 400 == 0)
+        return 1;
+    return 0;
+}
+
+// 函数whatDay:计算某年某月的1号是星期几
+// 参数：year-年，month-月
+// 返回值：1到7--星期1到星期日
+int whatDay(int year, int month)
+{
+    // 1年月日是星期一
+    int w = 1;
+    int i;
+
+    // 1到year-1都是全年
+    for(i = 1; i < year; i++)
+    {
+        if(leapYear(i))
+            w += 366;
+        else
+            w += 365;
+    }
+    switch(month)
+    {
+    case 12: // 加月的
+        w += 30;
+    case 11: // 加月的
+        w += 31;
+    case 10: // 加月的
+        w += 30;
+    case 9:  // 加月的
+        w += 31;
+    case 8:  // 加月的
+        w += 31;
+    case 7:  // 加月的
+        w += 30;
+    case 6:  // 加月的
+        w += 31;
+    case 5:  // 加月的
+        w += 30;
+    case 4:  // 加月的
+        w += 31;
+    case 3:  // 加月的
+        if(leapYear(year))
+            w += 29;
+        else
+            w += 28;
+    case 2:  // 加月的天
+        w += 31;
+    case 1:  // 1月不加了
+        ;
+    }
+
+    // 得到-6，其中为星期天
+    w = w % 7;
+
+    // 调整星期天
+    if(w == 0)
+        w = 7;
+    return w;
+}
+
+// 请在下面补充代码，实现函数printMonth
+/*************** Begin **************/
+
+// 函数days：计算某年某月有多少天
+// 参数：year-年，month-月
+// 返回值：该年该月的天数
+int days(int year, int month)
+{
+    switch(month)
+    {
+    case 1:case 3:case 5:case 7: case 8:case 10: case 12:
+        return 31;
+    case 2: // 考虑闰年
+        if(leapYear(year))
+            return 29;
+        return 28;
+    default:
+        return 30;
+	}
+}
+
+// 函数printMonth
+void printMonth(int year, int month)
+{
+    // 输出头部信息
+    printf(""  一  二  三  四  五  六  日\n"");
+
+    // 这个月的1号是星期几
+    int w = whatDay(year, month);
+    int i;
+
+    // 1号前输出w-1个空位
+    for(i = 0; i < w - 1; i++)
+        printf(""%4c"",' ');
+
+    // 输出每一个日期
+    for(i = 1; i <= days(year,month); i++)
+    {
+        printf(""%4d"",i);
+        // 空位数加日期数是7的倍数则输出换行符
+        if((i + w - 1) % 7 == 0)
+            printf(""\n"");
+    }
+    // 如果最后没有输出换行符，则输出一个
+    if((i + w - 1) % 7 != 0)
+        printf(""\n"");
+}
+
+/*************** End **************/
+
+int main()
+{
+    // 年、月
+    int y, m;
+
+    // 输入年月
+    cin >> y >> m;
+
+    // 输出该年月的日历
+    printMonth(y,m);
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 递归函数splitNum：顺序输出n的各位数字，每个数字占一行
+// 返回值：无
+void splitNum(unsigned int n)
+{
+    // 请在这里补充代码，实现递归函数splitNum
+    
+    if(n>9)
+        splitNum(n/10);
+    cout<<n%10<<endl;
+
+    
+}
+
+int main()
+{
+    unsigned n;
+    // 输入正整数n
+    cin >> n;
+
+    // 调用splitNum函数，顺序输出n的各位数字
+    splitNum(n);
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 'default', 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数funP：实现数学函数P函数
+// 返回值：返回P(n,x)的值
+double funP(int n, double x)
+{
+    // 请在这里补充代码，实现递归函数funP
+    
+    if(n == 0)
+        return 1;
+    if(n == 1)
+        return x;
+    return ((2 * n - 1) * funP(n - 1, x) - (n - 1) * funP(n - 2, x)) / n;
+
+    
+}
+
+int main()
+{
+    int n;
+    double x;
+    // 输入n、x
+    cin >> n >> x;
+
+    // 输出P(n,x)
+    cout << ""P(""<<n<<"", ""<<x<<"")="" << funP(n,x) << endl;
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 'unsigned', 0, 0, 'signed', 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+bool LL_InsAfter(LinkList* llist, T x)
+// 在线性表的当前位置之后插入数据元素x。空表允许插入。当前位置指针将指向新结点。若插入失败，返回false，否则返回true。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LinkNode *newNode=(LinkNode*)malloc(sizeof(LinkNode));
+    if (newNode==NULL) return false;
+    newNode->data=x;
+
+    if (llist->len==0)    {
+        /* 在空表中插入*/
+        newNode->next=NULL;
+        llist->front = llist->rear = newNode;
+    }
+    else if (llist->curr == llist->rear || llist->curr == NULL)	{
+        /* 在尾结点后插入*/
+        newNode->next = NULL;
+        llist->rear->next=newNode;
+        llist->pre=llist->rear;
+        llist->rear=newNode;
+        llist->position=llist->len;
+    }
+    else{
+        /* 在中间位置插入*/
+        newNode->next = llist->curr->next;
+        llist->curr->next=newNode;
+        llist->pre=llist->curr;
+        llist->position ++;
+    }
+
+    /* 增加链表的大小*/
+    llist->len ++;
+
+    /* 新插入的结点为当前结点*/
+    llist->curr = newNode;
+    return true;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int num;
+
+    // 从命令行读入一个int型数值
+    // 这个数取自测试集的输入
+    cin>>num; 
+
+    // 请在下面添加实现代码
+    
+    switch (num)
+    {
+    case 0: cout << ""Sunday"" << endl;
+        break;
+    case 1: cout << ""Monday"" << endl;
+        break;
+    case 2: cout << ""Tuesday"" << endl;
+        break;
+    case 3: cout << ""Wednesday"" << endl;
+        break;
+    case 4: cout << ""Thursday"" << endl;
+        break;
+    case 5: cout << ""Friday"" << endl;
+        break;
+    case 6: cout << ""Saturday"" << endl;
+        break;
+    default: cout << ""Error"" << endl;
+    }
+    
+}
+","[0, 'else', 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int x,y;
+    char ch;
+
+    // 从命令行读入两个int型数值和一个char型运算符
+    // 这两个数和一个运算符均取自测试集的输入
+    cin >> x >> y >> ch; 
+
+    // 请在下面添加实现代码
+    
+    switch(ch)
+    {
+    case '+': cout << x << ""+"" << y << ""="" << x + y << endl;
+        break;
+    case '-': cout << x << ""-"" << y << ""="" << x - y << endl;
+        break;
+    case '*': cout << x << ""*"" << y << ""="" << x * y << endl;
+        break;
+    case '/': cout << x << ""/"" << y << ""="" << x / y << endl;
+        break;
+    case '%': cout << x << ""%"" << y << ""="" << x % y << endl;
+        break;
+    default : cout << ""Error Opertor!"" << endl;
+    }
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 'case', 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 'default', 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 根据输入年月输出该月份的天数
+int DayOfMonth(int year, int month)
+{
+    switch(month)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        return 31;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        return 30;
+    case 2:
+        if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        {
+            return 29;
+        }
+        else
+        {
+            return 28;
+        }
+    default:
+        return 0;
+    }
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 'case', 0, 0, 0, 'def', 0, 0, 0, 0, 'char', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 'default', 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 求1到n间所有整数的和
+int SumOfNumber(int n)
+{
+    int sum = 0;
+    for(int i = 1;i <= n;i ++)
+    {
+        sum = sum + i;
+    }
+    return sum;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 'default', 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 求s=a+aa+aaa+aaaa+aa...a的值
+int FunCal(int a, int n)
+{
+    int c,s,sum;
+    for (s = 0,c = 1,sum = 0;c <= n;c ++)
+    {
+        s = 10 * s + a;
+        sum = sum + s;
+    }
+    return sum;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 计算1!+2!+3!+...+n!的值
+double FactorialSum(int n)
+{
+    int sum = 1;
+    double result = 1;
+
+    for(int i = 2; i <= n; i++)
+    {
+        sum *= i;
+        result += sum;
+    }
+
+    return result;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 定义变量及数组，n-销售额个数，a-销售额
+    int n, a[30], i;
+
+    // 输入销售额数量，n <= 30
+    cin >> n;
+
+    // 输入n个销售额，分别存入a[0]到a[n-1]
+    for(i = 0; i < n; i++)
+        cin >> a[i];
+
+    // 请在此添加代码，计算并输出销售额的波动情况
+    
+    for(i = 0; i < n - 1; i++)
+    {
+        if(i == 0)
+            cout << a[i + 1] - a[i];
+        else
+            cout << "" "" << a[i + 1] - a[i];
+    }
+    cout << endl;
+
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数maxIncrease：计算销售额增幅
+// 参数：s-销售额数组，n-销售额数组长度，n>1
+// 返回值：销售额最大增幅
+int maxIncrease(int s[], int n);
+
+int main()
+{
+    // 定义变量及数组，n-销售额个数，a-销售额数组
+    int n, a[30], i;
+
+    // 输入销售额数量，n>1
+    cin >> n;
+
+    // 输入n个销售额，分别存入a[0]到a[n-1]
+    for(i = 0; i < n; i++)
+        cin >> a[i];
+
+    i = maxIncrease(a,n);
+    cout << ""最大销售增幅为："" << i << endl;
+
+    return 0;
+}
+
+int maxIncrease(int s[], int n)
+{
+    //请在此添加代码，实现函数maxIncrease
+    
+    int i, j, cha = 0;
+    for(i = 0; i < n; i++)
+    {
+        for(j = i; j < n; j++)
+        {
+            if(s[j] - s[i] > cha)
+                cha = s[j] - s[i];
+        }
+    }
+    return cha;
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数king：猴子选大王
+// 参数：a-猴子数组n-1个猴子分别占据下标为~n-1的位置，n-数组长度
+// 返回值：新猴王的下标序号
+int king(int a[], int n);
+
+int main()
+{
+    // 定义变量及数组，n-猴子数量，a-猴子数组
+    int n, a[1000], i;
+
+    // 输入猴子数量，n>0
+    cin >> n;
+
+    // 初始化猴子数组,n个猴子分别占据~n的位置
+    a[0] = 0; // 0号位置没有猴子
+    for(i = 1;i <= n; i++)
+        a[i] = i;
+
+    // 选大王啦
+    i = king(a, n );
+    cout << i << ""号猴子是大王。"" << endl;
+
+    return 0;
+}
+
+int king(int a[], int n)
+{
+    // 请在此添加代码，实现函数king
+    
+    int out = 0; // 出去了几个
+    int k = 0; // 报数号
+    int next = 1; // 下一个
+
+    // 循环n-1次,每次出去一个
+    while(out < n - 1)
+    {
+        while(a[next] == 0)
+        {// 这个位置的猴子已经出去了
+            next++;  // 看下一个位置的猴子
+            if(next == n + 1) // 到尾部了，再回到头部
+                next = 1;
+        }
+        k++; // 报数号加
+        if(k == 3) // 要出去了
+        {
+            a[next] = 0;
+            next = next + 1;
+            if(next == n + 1)
+                next = 1;
+            k = 0;
+            out++;
+        }
+        else
+        {
+            next = next + 1;
+            if(next == n + 1)
+                next = 1;
+        }
+    }
+    // 找唯一的猴子
+    int i;
+    for(i = 1; i < n + 1; i++)
+        if(a[i] != 0)
+            return i;
+    return 0;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数silly：计算数值有多二
+// 参数：a-存储数值的字符数组，以'\0'结束，所以不需要另一个参数告诉函数数组有多长
+// 返回值：数值犯二的程度
+double silly(char a[]);
+
+int main()
+{
+    // 定义存储数值的数组
+    char s[102];
+
+    // 输入不超过位的整数
+    cin >> s;
+
+    // 计算犯二的程度
+    double sy = silly(s);
+
+    // 输出犯二的程度
+    cout << sy << endl;
+
+    return 0;
+}
+
+double silly(char a[])
+{
+    // 请在此添加代码，实现函数silly
+    
+    double bs=1; // 倍数
+    int s=0; // 第一个数字开始的位置
+    int n2=0,na=0; // 2的数量，全部位数
+
+    // 第一位为'-'的情况
+    if(a[0] == '-')
+    {
+        bs = bs * 1.5;
+        s++;
+    }
+
+    // 判断整数的每一位
+    while(a[s] != '\0')
+    {
+        // 判断是否为
+        if(a[s] == '2')
+            n2++;
+        na++;
+        s++;
+    }
+
+    // 判断最后一位是否为偶数
+    if((a[s-1] - '0') % 2 == 0)
+        bs = bs * 2;
+
+    // 计算并返回犯二的程度
+    return (double)n2 / na * bs;
+
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数rotateLeft：矩阵循环左移
+// 参数：a-100*100的二维数组，用来存储n行n列的数组（<n<100)，存储在其~n-1行和~n-1列，
+// m-循环左移的位数(0<m<n)
+// 返回值：无，循环左移的结果写入原二维数组中
+// 说明：传递多维数组时，形式参数中，除了第一维外，其它维的大小必须给出
+// 方便编译器计算每个数组元素的地址
+void rotateLeft(int a[][100],int n,int m);
+
+int main()
+{
+    // 定义存储二维数组的空间
+    int a[100][100];
+    int n, m;
+
+    // 输入n和m
+    cin >> n >> m;
+
+    // 输入n*n的矩阵，存储在数组a的~n-1行和~n-1列
+    int i, j;
+    for(i = 0; i < n; i++)
+        for(j = 0; j < n; j++)
+            cin >> a[i][j];
+
+    // 循环左移
+    // 说明：传递多维数组时，实在参数只需要给出数组名就可以了
+    rotateLeft(a,n,m);
+
+    // 输出循环右移的结果
+    for(i = 0; i < n; i++)
+    {
+        for(j = 0; j < n; j++)
+            cout << "" "" << a[i][j];
+        cout << endl;
+    }
+
+    return 0;
+}
+
+void rotateLeft(int a[][100],int n,int m)
+{
+    // 请在此添加代码，实现函数rotateLeft
+    
+    int t[100];
+    int i, j, k;
+    for(i = 0; i < m; i++)
+    {
+        // 缓存第一列
+        for(k = 0; k < n; k++)
+            t[k] = a[k][0];
+
+        // 左移
+        for(j = 0; j < n - 1; j++)   // 列
+            for(k = 0; k < n; k++) // 行
+                a[k][j] = a[k][j+1];
+
+        // t放回最后一列
+        for(k = 0; k < n; k++)
+            a[k][n-1] = t[k];
+    }
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 请在此添加代码，写完成upvote.cpp文件
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, j, t;
+    // 定义标签表，bq[i]存放标签i出现的次数,开始都是次
+    int bq[1001] = {0};
+    int N, K;
+
+    // 输入点赞文章数
+    cin >> N;
+
+    // 逐个处理每篇文章
+    for(i = 0; i < N; i++)
+    {
+        // 输入文章标签数
+        cin >> K;
+        for(j = 0; j < K; j++)
+        {
+            // 读入一个标签
+            cin >> t;
+            // 加到标签表中
+            bq[t]++;
+        }
+    }
+
+    // 查找出现最多的最大标签
+    int maxx = 0, index = -1;
+    for(i = 0; i < 1001; i++)
+    {
+        if(bq[i] >= maxx)
+        {
+            maxx = bq[i];
+            index = i;
+        }
+    }
+
+    // 输出标签及次数
+    cout << index << "" "" << maxx << endl;
+
+    return 0;
+}
+
+// 参数：a-100*100的二维数组，用来存储n行n列的数组（<n<100)，存储在其~n-1行和~n-1列，
+// m-循环右移的位数(0<m<n)
+// 返回值：无，循环右移的结果写入原二维数组中
+void rotateLeft(int a[][100],int n,int m)
+{
+    int t[100];
+    int i, j, k;
+    for(i = 0; i < m; i++)
+    {
+        // 缓存第一列
+        for(k = 0; k < n;k++)
+            t[k] = a[k][0];
+        // 左移
+        for(j = 0; j < n - 1; j++)//列
+            for(k = 0; k < n; k++)//行
+                a[k][j] = a[k][j+1];
+        // t放回最后一列
+        for(k = 0; k < n; k++)
+            a[k][n-1] = t[k];
+    }
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+//判断一个数是否为完全平方数
+bool IsSqrt(int n)
+{
+    for(int i = 1; n > 0; i += 2)
+    {
+        n -= i;
+    }
+    return 0 == n;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 统计m和n之间有多少个数其各位数字之和是5
+int Count (int m, int n)
+{
+    int i, num = 0;;
+    for(i = m; i <= n; i++)
+    {
+        if((i % 10 + i / 10 % 10 + i / 100) == 5)
+        {
+            num++;
+        }
+    }
+    return num;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 计算n以内（不包含n）的所有素数之和
+int SumOfPrime(int n)
+{
+    int i, k, sum = 0;
+    for (i = 2; i < n; i++)
+    {
+        bool prime = true;
+        for (k = 2; k <= i / 2; k++)
+        {
+            if (i % k == 0)
+            {
+                prime = false;
+                break;
+            }
+        }
+        if (prime)
+            sum += i;
+    }
+    return sum;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 求两个正整数的最大公约数
+int Gcd(int a,int b)
+{
+    int i,j,k;
+
+    if(a >= b)
+        j = a;
+    else
+        j = b;
+
+    for(i = j; i >= 1; i--)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            k = i;
+            break;
+        }
+    }
+    return k;
+}
+
+// 求两个正整数的最小公倍数
+int Lcm(int a,int b)
+{
+    int o,p,q;
+
+    if(a >= b)
+        p = b;
+    else
+        p = a;
+
+    for(o = p; o >= 1; o--)
+    {
+        if(a % o == 0 && b % o == 0)
+        {
+            q = o;
+            break;
+        }
+    }
+    return (a * b) / q;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 计算舍罕王共需要多少立方的麦子赏赐他的宰相
+double WheatNum ()
+{
+    
+    double sum = 0, m3;
+
+    for (int i = 0; i < 64; i++)
+    {
+        sum = sum + pow(2,i);
+    }
+
+    m3 = sum / (1.42 * pow(10,8));
+    return m3;
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断一个不小于2的正整数是否为素数
+int IsPrime(int n)
+{
+    int i;
+    for(i = 2; i < n; i++)
+    {
+        if(n % i == 0)
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int n, bn, ln;
+
+    // 从命令行读入一个int型数值
+    // 这一个数取自测试集的输入
+    cin >> n;
+
+    // 请在下面添加实现代码
+    
+    for (ln = 1; ln < n; ln++)
+    {
+        for (bn = 1; bn <= ln - 1; bn++)
+        {
+            cout<<"" "";
+        }
+        cout << ""**"";
+
+        for (bn = 1; bn <= 2 * (n - ln - 1); bn++)
+        {
+            cout<<"" "";
+        }
+        cout << ""**"" << endl;
+    }
+
+    for (bn = 1; bn <= n-1; bn++)
+    {
+        cout << "" "";
+    }
+    cout << ""**"" << endl;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 请在下面添加实现代码
+    
+    for(int c = 1; c <= 13; ++c)
+    {
+        for(int h = 1; h <= 18; ++h)
+        {
+            for(int s = 1; s <= 96; ++s)
+            {
+                if(7 * c + 5 * h + s / 3 - 100) 
+                {
+                    continue;
+                }
+                if(c + h + s - 100) 
+                {
+                    continue;
+                }
+                if(s % 3) 
+                {
+                    continue;
+                }
+                cout << ""雄鸡:"" << c << "", 母鸡:"" << h << "", 小鸡:"" << 100 - c - h << endl; 
+            }
+        }
+    }
+     
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 请在下面添加实现代码
+    
+    char i,j,k;
+    for (i='X';i<='Z';i++)
+    {
+        for (j='X';j<='Z';j++)
+        {
+            if (i!=j)
+            {
+                for (k='X';k<='Z';k++)
+                {
+                    if (i!=k && j!=k)
+                    {
+                        if (i!='X' && k!='X' && k!='Z')
+                        {
+                            cout<<""A--""<<i<<""  B--""<<j<<""  C--""<<k<<endl;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    // 从命令行读入一个int型数值
+    // 这一个数取自测试集的输入
+    cin >> n;
+
+    // 请在下面添加实现代码
+    
+    float a, c, d;
+    d = -100;
+    c = 100;
+
+    for (a = 1; a <= n; a++)
+    {
+        d += c * 2;
+        c = 0.5 * c;
+    }
+    cout << d << "" "" << c;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 使用while循环求1到n间所有整数的和
+int Sum(int n)
+{
+    int i = 0, sum = 0;
+    while(i <= n)
+    {
+        sum += i;
+        i++;
+    }
+    return sum;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 计算x的n次方
+long Power(int x,int n)
+{
+    int x1 = 1;
+    while(n > 0)
+    {
+        x1 = x1 * x;
+        n--;
+    }
+    return x1;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 求给定正整数的“亲密对数”
+int Fun(int x)
+{
+    int i = 1,s = 0;
+
+    while(i < x)
+    {
+        if(x % i == 0)
+        {
+            s = s + i;
+        }
+        i++;
+    }
+    return s;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 'long', 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 判断整数n的各位数字中是否包含数字3或4
+bool Valid(int n)
+{
+    if (n < 0)
+    {
+        n = -n;
+    }
+
+    while (n > 0)
+    {
+        if (n % 10 == 3 || n % 10 == 4)
+        {
+            return true;
+        }
+        n = n / 10;
+    }
+    return false;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+// 使用do-while循环求1到n间所有整数的和
+int Sum(int n)
+{
+    int i = 0, sum = 0;
+    do
+    {
+        sum += i;
+        i++;
+    } while (i <= n);
+    return sum;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+#define A (4 * x * x * x + 3 * x * x + 2 * x + 1)
+#define B (12 * x * x + 6 * x + 2)
+
+int main()
+{
+
+    double x = 1, a;
+
+    // 请在下面添加do-while部分实现代码
+    
+    do
+    {
+        a = x;
+        x = a - A / B;
+    } while (fabs(x - a) > (1e-5));
+    
+
+    cout << x << endl;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 请在下面添加实现代码
+    
+    int a, n = 0;
+    float avg, sum = 0;
+
+    do
+    {
+        cin >> a;
+        if (a > 0)
+        {
+            n++;
+            sum += a;
+        }
+    } while (a != 0);
+
+    avg = sum / n;
+    cout << ""n="" << n << endl;
+    cout << ""avg="" << avg << endl;
+    cout << ""sum="" << sum << endl;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 'while', 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i, n;
+
+    // 从命令行读入一个int型数值
+    // 这个数取自测试集的输入
+    cin >> n;
+
+    // 请在下面添加实现代码
+    
+    for (i = 1; i <= n; i++)
+    {
+        if (i % 3 == 0)
+        {
+            continue;
+        }
+        cout << i << "" "";
+    }
+    cout << endl;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 请在下面添加实现代码
+     
+    const int N = 10;
+    int num, sum = 0;
+    
+    for (int i = 0; i < N; i++)
+    {
+        cin >> num;
+
+        if (num < 0)
+        {
+            continue;
+        }
+        sum = sum + num;
+    }
+    cout << ""sum="" << sum << endl;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // 请在下面添加实现代码
+    
+    const int M = 10;
+    int num, sum = 0;
+
+    for (int i = 0; i < M; i++)
+    {
+        cin >> num;
+        if (num < 0)
+        {
+            break;
+        }
+        sum += num;
+    }
+    cout << ""sum="" << sum << endl;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'const', 0, 0, 0, 0, 0, 0, 'using', 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+// 请在下面添加Inc函数的实现代码
+
+void Inc(int &a)
+{
+    a++;
+}
+
+
+int main()
+{
+    int a;
+    int m = a;
+
+    // 从命令行读入一个int型数值
+    // 这个数取自测试集的输入
+    cin >> m;
+
+    Inc(m);
+    cout << m << endl;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'const', 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+// 请在下面添加内联函数的实现代码
+
+inline double CalArea(double radius)
+{
+    return 3.14 * radius * radius;
+}
+
+
+int main()
+{
+    double radius, area;
+
+    // 从命令行读入一个double型数值
+    // 这个数取自测试集的输入
+    cin >> radius;
+
+    double r(radius);
+    area = CalArea(r);
+    cout << area << endl;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+// 请在下面添加内联函数的实现代码
+
+inline float Min(float x, float y)
+{
+    return x < y ? x : y;
+}
+
+
+int main()
+{
+    float a, b, c;
+
+    // 从命令行读入两个float型数值
+    // 这两个数取自测试集的输入
+    cin >> a >> b;
+
+    c = Min(a,b);
+    cout << ""Min("" << a << "","" << b << "")="" << c << endl;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 'inline', 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 'namespace', 0]"
+"请将以下代码直接拷贝到右侧相应位置：
+
+#include <iostream>
+using namespace std;
+
+// 请在下面添加外部函数的实现代码
+
+extern long Fact(int x)
+{
+    int i;
+    long t = 1;
+    if (x==0)
+    {
+        return(1);
+    }
+
+    for (i = 1; i <= x; i++)
+    {
+        t *= i;
+    }
+    return t;
+}
+
+
+int main()
+{
+    int n;
+
+    // 从命令行读入一个正整数
+    // 这个数取自测试集的输入
+    cin >> n;
+
+    cout << n << ""!="" << Fact(n) << endl;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 'inline', 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 请在下面添加递归函数的实现代码
+int Fun(int n)
+{
+    // 请在此添加代码，补全函数Fun
+    
+    do
+    {
+        if (n <= 3)
+        {
+            return n;
+        }
+        return Fun(n - 1) + Fun(n - 3);
+
+    } while (n > 0);
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'extern', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 'long', 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 用递归编写计算阶乘的函数
+int Fac(int n)
+{
+    // 请在此添加代码，补全函数Fac
+    
+    if (n == 0 || n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return n * Fac(n - 1);
+    }
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 请在下面添加递归函数实现求最大公因子的实现代码
+int Fun(int n, int m)
+{
+    // 请在此添加代码，补全函数Fun
+    
+    int a;
+
+    if (m > n)
+    {
+        a = m % n;
+        if (a == 0)
+        {
+            return n;
+        }
+        else
+        {
+            return Fun(a,n);
+        }
+    }
+    else
+    {
+        a = n % m;
+        if (a == 0)
+        {
+            return m;
+        }
+        else
+        {
+            return Fun(a,m);
+        }
+     }
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+bool SQ_IsEmpty(SeqQueue* sq)
+// 判断队列是否为空，为空返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return sq->front==sq->rear;
+    
+
+}
+
+bool SQ_IsFull(SeqQueue* sq)
+// 判断队列是否为满。为满返回true,否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return sq->front==(sq->rear+1)%sq->max;
+    
+}
+
+int SQ_Length(SeqQueue* sq)
+// 队列长度
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return (sq->rear-sq->front+sq->max) % sq->max;
+    
+}
+
+bool SQ_In(SeqQueue* sq, T x)
+// 将x入队。若入队失败(队列满)，则返回false，否则返回true。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if ( SQ_IsFull(sq) ) {
+        return false;
+    }
+    else {
+        sq->data[sq->rear]=x;
+        sq->rear=(sq->rear+1)%sq->max;
+        return true;
+    }
+    
+}
+
+bool SQ_Out(SeqQueue* sq, T& item)
+// 从队列sq出队一个元素，返回时item为出队的元素的值。若出队成功(队列不为空)，则返回true，否则(队列空)，返回false，此时item不会返回有效值。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if ( SQ_IsEmpty(sq) ) {
+        return false;
+    }
+    else {
+        item=sq->data[sq->front];
+        sq->front=(sq->front+1)%sq->max;
+        return true;
+    }
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+bool CLQ_IsEmpty(LNode* rear)
+// 判断队列是否为空
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return rear->next->data==0;
+    
+}
+
+int CLQ_Length(LNode* rear)
+// 返回队列长度，rear指向尾结点
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return rear->next->data;
+    
+}
+
+void CLQ_In(LNode* & rear, T x)
+// 入队列, 新结点加入链表尾部。rear指向尾结点
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* n=(LNode*)malloc(sizeof(LNode));
+    n->data=x;
+    n->next=rear->next;
+    rear->next=n;
+    rear=n;
+    rear->next->data++;
+    
+}
+
+bool CLQ_Out(LNode* & rear, T& item)
+// 出队列。空队列时，返回值为false。rear指向尾结点
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (CLQ_IsEmpty(rear)) return false;
+
+    LNode* head=rear->next->next;
+    item = head->data;
+    rear->next->next = head->next;
+    if (head==rear) rear=rear->next;
+    free(head);
+    rear->next->data --;
+    return true;
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数trim：去掉字符串首尾空格
+// 参数：str-字符指针，指向输入的字符串
+// 返回值：字符指针，指向去掉首尾空格后的字符串（首地址）
+// 提示：可以字节在字符串str中操作
+char * trim(char * str);
+
+int main()
+{
+    // 定义存储字符串的一维字符数组
+    char s[1024];
+
+    // 输入一行字符，可以包含空格
+    // 输入的字符串存入s中，最多读取个字符，后面自动加上'\0'
+    cin.getline(s,1024);
+
+    // 输出去掉首尾空格后的字符串
+    cout << trim(s) << endl;
+
+    return 0;
+}
+
+// 函数trim：去掉字符串首尾空格
+// 参数：str-字符指针，指向输入的字符串
+// 返回值：字符指针，指向去掉首尾空格后的字符串（首地址）
+// 提示：可以字节在字符串str中操作
+char * trim(char * str)
+{
+    // 请在此添加代码，实现函数trim
+    
+    char *p = str;
+    while(*p != '\0')
+        p++;
+    p--;
+    while(p >= str && *p == ' ')
+    {
+        *p = '\0';
+        p--;
+    }
+    p = str;
+    while(*p == ' ')
+        p++;
+    return p;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数pswap：交换指针p和q指向的单元中的整数值
+// 参数：p,q-int类型指针，指向要交换的整数
+void pswap(int * p, int *q);
+
+int main()
+{
+    int a, b;
+    // 输入两个整数
+    cin >> a >> b;
+
+    // 调用pswap函数，交换a、b的值
+    pswap(&a,&b);
+
+    // 输出a、b的值
+    cout << a << "" "" << b << endl;
+
+    return 0;
+}
+
+//函数pswap：交换指针p和q指向的单元中的整数值
+//参数：p,q-int类型指针，指向要交换的整数
+void pswap(int * p, int *q)
+{
+    // 请在此添加代码，实现函数pswap
+    
+    int a = *p;
+    *p = *q;
+    *q = a;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数extractNum：选出str指向的字符串中的数字，并写回str
+// 参数：str-指向字符串
+void extractNum(char * str);
+
+int main()
+{
+    char s[1024];
+    // 输入一行字符
+    cin.getline(s,1024);
+    // 调用extractNum函数，选出数字
+    extractNum(s);
+    // 输出选出的数字
+    cout<<s<<endl;
+
+    return 0;
+}
+
+// 函数extractNum：选出str指向的字符串中的数字，并写回str
+// 参数：str-指向字符串
+void extractNum(char * str)
+{
+    // 请在此添加代码，实现函数extractNum
+    
+    char *p=str,*q=str;
+    int fuhao=1;
+    while(*q!='\0')
+    {
+        if(*q=='-' && fuhao)
+        {
+            *p++=*q++;
+            fuhao=0;
+        }
+        else if(*q>='0' && *q<='9')
+        {
+            fuhao=0;
+            *p++=*q++;
+        }
+        else
+            q++;
+    }
+    *p='\0';
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数toUp：将str指向的字符串中的小写字母变成对应的大写字母
+// 参数：str-指向字符串
+void toUp(char * str);
+
+int main()
+{
+    char s[1024];
+    // 输入一行字符
+    cin.getline(s,1024);
+
+    // 调用toUp函数，转换成大写字母
+    toUp(s);
+
+    // 输出变更后的字符串
+    cout<<s<<endl;
+
+    return 0;
+}
+
+// 函数toUp：将str指向的字符串中的小写字母变成对应的大写字母
+// 参数：str-指向字符串
+void toUp(char * str)
+{
+    // 请在此添加代码，实现函数toUp
+    
+    char *p=str;
+    while(*p)
+    {
+        if(*p>='a' && *p<='z')
+            *p=*p+'A'-'a';
+        p++;
+    }
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含字符串函数库
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+// 函数frequency：计算子串在长串中出现的次数
+// 参数：substr-指向子串，str-指向长串
+// 返回值：出现的次数
+int frequency(char * substr, char * str);
+
+int main()
+{
+    char sub[128],str[1024];
+
+    // 输入子串
+    cin.getline(sub,128);
+
+    // 输入长串
+    cin.getline(str,1024);
+
+    // 调用frequency函数，计算子串在长串中出现的次数
+    int n = frequency(sub,str);
+
+    // 输出次数
+    cout<<n<<endl;
+
+    return 0;
+}
+
+// 函数frequency：计算子串在长串中出现的次数
+// 参数：substr-指向子串，str-指向长串
+// 返回值：出现的次数
+int frequency(char * substr, char * str)
+{
+    // 请在此添加代码，实现函数frequency
+    
+    int n=strlen(substr);
+    int t=0;
+    char *p=str;
+    while(p=strstr(p,substr))
+    {
+        t++;
+        p=p+n;
+    }
+    return t;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数strmncpy：字符串的部分复制，将s指向字符串从第m个字符开始的n个字符复制的t中
+// 参数：s-指向源字符串，t-指向目标字符串，m-起始位置，n-字符个数
+// 返回值：无
+void strmncpy(char *s, int m, int n, char *t);
+
+int main()
+{
+    char s[128],t[128];
+    int m,n;
+
+    // 输入源串
+    cin>>s;
+
+    // 输入m和n
+    cin>>m>>n;
+
+    // 字符串复制
+    strmncpy(s, m, n, t);
+
+    // 输出复制结果
+    cout<<""t:""<<t<<endl;
+
+    return 0;
+}
+
+// 函数strmncpy：字符串的部分复制，将s指向字符串从第m个字符开始的n个字符复制的t中
+// 参数：s-指向源字符串，t-指向目标字符串，m-起始位置，n-字符个数
+// 返回值：无
+void strmncpy(char *s, int m, int n, char *t)
+{
+    // 请在此添加代码，实现函数strmncpy
+    
+    int k=0;
+    while(s[k]!=0)k++;
+    if(k<=m)
+    {
+        *t='\0';
+        return;
+    }
+    char *p=s+m;
+    for(int i=0;i<n;i++)
+    {
+        *t=*p;
+        if(*t=='\0')
+            return;
+        t++;
+        p++;
+    }
+    *t='\0';
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+struct rationalNumber{
+    int fenzi; // 分子
+    int fenmu; // 分母
+};
+
+// 函数reduction：有理数化简，对传入的有理数n进行化简
+// 参数：n-有理数
+// 返回值：化简后的有理数
+rationalNumber reduction(rationalNumber n);
+
+int main()
+{
+    char c;
+    rationalNumber x, y;
+    // 输入有理数，首先读入分子，然后是/，最后是分母
+    cin >> x.fenzi >> c >> x.fenmu;
+
+    // 有理数化简
+    y = reduction(x);
+
+    // 输出化简的结果
+    if(y.fenmu == 1)
+        cout << y.fenzi << endl;
+    else
+        cout << y.fenzi << ""/"" << y.fenmu << endl;
+
+    return 0;
+}
+
+// 函数reduction：有理数化简，对传入的有理数n进行化简
+// 参数：n-有理数
+// 返回值：无化简后的有理数
+rationalNumber reduction(rationalNumber n)
+{
+    // 请在这里补充代码，实现函数reduction
+    
+    int flag = 1,k;
+    if(n.fenzi == 0)
+    {
+        n.fenmu = 1;
+        return n;
+    }
+    if(n.fenzi < 0)
+    {
+        n.fenzi = -n.fenzi;
+        flag = -1;
+    }
+    k = (n.fenmu > n.fenzi) ? n.fenzi : n.fenmu;
+    while(k > 1)
+    {
+        if(n.fenmu % k == 0 && n.fenzi % k == 0)
+        {
+            n.fenmu = n.fenmu / k;
+            n.fenzi = n.fenzi / k;
+        }
+        k--;
+    }
+    n.fenzi = n.fenzi * flag;
+    return n;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+struct rationalNumber{
+    int fenzi; // 分子
+    int fenmu; // 分母
+};
+
+// 函数rnAdd：两个有理数相加
+// 参数：x,y-两个有理数
+// 返回值：x+y的最简分数形式
+rationalNumber rnAdd(rationalNumber x, rationalNumber y);
+
+int main()
+{
+    char c;
+    rationalNumber x, y, z;
+    // 输入两个有理数
+    cin >> x.fenzi >> c >> x.fenmu;
+    cin >> y.fenzi >> c >> y.fenmu;
+
+    // 有理数相加
+    z = rnAdd(x,y);
+
+    // 输出相加的结果
+    if(z.fenmu == 1)
+        cout << z.fenzi << endl;
+    else
+        cout << z.fenzi << ""/"" << z.fenmu << endl;
+
+    return 0;
+}
+
+// 请在此添加代码，实现函数rnAdd
+
+rationalNumber reduction(rationalNumber n)
+{
+    int flag = 1,k;
+    if(n.fenzi == 0)
+    {
+        n.fenmu = 1;
+        return n;
+    }
+    if(n.fenzi < 0)
+    {
+        n.fenzi = -n.fenzi;
+        flag = -1;
+    }
+    k = (n.fenmu > n.fenzi) ? n.fenzi : n.fenmu;
+    while(k > 1)
+    {
+        if(n.fenmu % k == 0 && n.fenzi % k == 0)
+        {
+            n.fenmu = n.fenmu / k;
+            n.fenzi = n.fenzi / k;
+        }
+        k--;
+    }
+    n.fenzi = n.fenzi * flag;
+    return n;
+}
+
+// 函数rnAdd：两个有理数相加
+// 参数：x,y-两个有理数
+// 返回值：x+y的最简分数形式
+rationalNumber rnAdd(rationalNumber x, rationalNumber y)
+{
+    rationalNumber z;
+    z.fenmu = x.fenmu * y.fenmu;
+    z.fenzi = x.fenzi * y.fenmu + y.fenzi * x.fenmu;
+    return reduction(z);
+}
+
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 'struct', 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+struct rationalNumber{
+    int fenzi; // 分子
+    int fenmu; // 分母
+};
+
+// 函数rnMean：计算n个有理数的平均数
+// 参数：a-存放有理数的数组,n-有理数的个数
+// 返回值：n个有理数的平均数
+rationalNumber rnMean(rationalNumber a[], int n);
+
+int main()
+{
+    char c;
+    rationalNumber a[100],z;
+    int n, i;
+
+    // 输入有理数个数
+    cin >> n;
+
+    // 输入n个有理数
+    for(i = 0; i < n; i++)
+        cin >> a[i].fenzi >> c >> a[i].fenmu;
+
+    // 计算有理数平均数
+    z = rnMean(a,n);
+
+    // 输出平均数
+    if(z.fenmu == 1)
+        cout << z.fenzi << endl;
+    else
+        cout << z.fenzi << ""/"" << z.fenmu << endl;
+
+    return 0;
+}
+
+// 请在此添加代码，实现函数rnMean
+
+rationalNumber reduction(rationalNumber n)
+{
+    int flag = 1,k;
+    if(n.fenzi < 0)
+    {
+        n.fenzi = -n.fenzi;
+        flag = -1;
+    }
+    k = (n.fenmu > n.fenzi) ? n.fenzi : n.fenmu;
+    while(k > 1)
+    {
+        if(n.fenmu%k == 0 && n.fenzi%k == 0)
+        {
+            n.fenmu = n.fenmu / k;
+            n.fenzi = n.fenzi / k;
+        }
+        k--;
+    }
+    n.fenzi = n.fenzi * flag;
+    return n;
+}
+rationalNumber rnAdd(rationalNumber x, rationalNumber y)
+{
+    rationalNumber z;
+    z.fenmu = x.fenmu * y.fenmu;
+    z.fenzi = x.fenzi * y.fenmu + y.fenzi * x.fenmu;
+    return reduction(z);
+}
+
+// 函数rnMean：计算n个有理数的平均数
+// 参数：a-存放有理数的数组,n-有理数的个数
+// 返回值：n个有理数的平均数，最简分数
+rationalNumber rnMean(rationalNumber a[], int n)
+{
+    rationalNumber x = {0,1};
+    int i;
+    for(i = 0; i < n; i++)
+    {
+        x = rnAdd(x,a[i]);
+    }
+    x.fenmu = x.fenmu * n;
+    x = reduction(x);
+    return x;
+}
+
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 'struct', 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 请在此添加代码，实现书籍数据的输入、排序和输出
+
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+struct book{
+    char name[52];  //书名
+    float price;  //价格
+};
+
+int main()
+{
+    int n;  // 书的数量
+    book bk[100];  // 书的数组
+    int i,j,k;
+
+    // 输入书的信息
+    cin>>n;
+    for(i=0;i<n;i++)
+    {
+        char s[10];
+        cin.getline(s,10);  // 读取上一行的那个换行符
+        cin.getline(bk[i].name,52);
+        cin>>bk[i].price;
+    }
+
+    // 排序
+    for(i=0;i<n-1;i++)
+    {
+        k=i;
+        for(j=i+1;j<n;j++)
+        {
+            if(bk[k].price>bk[j].price)
+                k=j;
+            else if(bk[k].price==bk[j].price && strcmp(bk[j].name,bk[k].name)<0)
+                k=j;
+        }
+        if(k!=i)
+        {
+            book t = bk[i];
+            bk[i]=bk[k];
+            bk[k]=t;
+        }
+    }
+
+    // 输出
+    for(i=0;i<n;i++)
+    {
+        cout<<bk[i].price<<"", ""<<bk[i].name<<endl;
+    }
+
+    return 0;
+}
+
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 'struct', 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+bool SS_IsFull(SeqStack* stack)
+// 判断栈是否为满。为满返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top+1>=stack->max;
+
+    
+}
+
+bool SS_IsEmpty(SeqStack* stack)
+// 判断栈是否为空。为空返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top<0;
+
+    
+}
+
+int SS_Length(SeqStack* stack)
+// 获取栈元素个数
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top+1;
+
+    
+}
+
+bool SS_Push(SeqStack* stack, T x)
+// 将元素x进栈，若满栈则无法进栈，返回false，否则返回true
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (SS_IsFull(stack)) {
+        return false;
+    }
+    stack->top++;
+    stack->data[stack->top]=x;
+    return true;
+
+    
+}
+
+bool SS_Pop(SeqStack* stack, T &item)
+// 出栈的元素放入item。若出栈成功(栈不为空)，则返回true；否则(空栈)，返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (SS_IsEmpty(stack)) {
+        return false;
+    }
+    item = stack->data[stack->top];
+    stack->top--;
+    return true;
+
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 'struct', 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+/*判断栈是否为空*/
+bool LS_IsEmpty(LinkStack* ls)
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return ls->len == 0;
+
+    
+}
+
+/*获取栈的长度*/
+int LS_Length(LinkStack* ls)
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return ls->len;
+
+    
+}
+
+/*将x进栈*/
+void LS_Push(LinkStack* ls, T x)
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=(LNode*)malloc(sizeof(LNode));
+    node->data=x;
+    node->next=ls->top;
+    ls->top = node;
+    ls->len ++;
+
+    
+}
+
+/*出栈。出栈元素放入item；如果空栈，将返回false*/
+bool LS_Pop(LinkStack* ls, T& item)
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=ls->top;
+    if (node==NULL) {
+        return false;
+    }
+    item = node->data;
+    ls->top = node->next;
+    ls->len --;
+    free(node);
+    return true;
+
+    
+}
+
+/*读栈顶元素放入item。如果空栈，将返回false*/
+bool LS_Top(LinkStack* ls, T& item)
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=ls->top;
+    if (node==NULL) {
+        return false;
+    }
+    item = node->data;
+    return true;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node *insertTail(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertTail
+    
+    if(h == NULL) // 空链表单独处理
+    {
+        t->next = NULL; // 链表尾指针置为NULL
+        return t; // 返回第一个结点的地址（即链表头指针）
+    }
+    // 非空链表的情况
+    node *p = h;
+    // 让p指向最后一个结点
+    while(p->next)
+        p = p->next;
+    p->next = t; // 让最后一个结点的指针域指向结点t
+    t->next = NULL; // 链表尾指针置为NULL
+    return h;  // 返回第一个结点的地址（即链表头指针）
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * insertHead(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertHead
+    
+    t->next = h;
+    return t;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * insertSort(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertSort
+    
+    node *p = NULL, *q = h;  // 定位第一个插入点：链首
+
+    // 查找插入点
+    while(q && q->data < t->data)
+    {// 两个指针并行后移
+        p = q;
+        q = q->next;
+    }
+
+    // 插入链首
+    if(p == NULL)
+    {
+        t->next = h;
+        return t;
+    }
+
+    // 插入链尾
+    if(q == NULL)
+    {
+        p->next = t;
+        t->next = NULL;
+    }
+
+    // 插入p、q之间
+    t->next = q;
+    p->next = t;
+    return h;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * search(node * h, int num)
+{
+    // 请在此添加代码，补全函数search
+    
+    while(h)
+    {// h为真，即h指向的结点存在
+        if(h->data == num)
+            return h;
+        h = h->next;  // 将该结点的指针域赋值给h，h就指向了下一个结点
+    }
+    return NULL; // 没找到包含num的结点
+
+    
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * delAt(node * h, int i)
+{
+    // 请在此添加代码，补全函数delAt
+    
+    // 序号非法，不删除
+    if(i<0)
+        return h;
+    node *p = NULL, *q = h; // 定位删除结点，试图让q指向要删除结点，p指向其前面的结点
+    for(int k = 0; k < i; k++)
+    {
+        if(q->next == NULL) // 后面没有结点了，序号非法
+            return h;
+        p = q;
+        q = q->next;
+    }
+    if(p) // p指向的结点存在，不是删除首结点
+    {
+        // 删除q指向的结点，让p指向结点的指针域指向q的后续结点
+        p->next = q->next;
+        // 释放空间
+        delete q;
+        return h;
+    }
+    else // 删除首结点
+    {
+        h = q->next; // 下一个结点成了首结点
+        // 释放空间
+        delete q;
+        return h;
+    }
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * delHas(node * h, int n)
+{
+    // 请在此添加代码，补全函数delHas
+    
+    node *p = NULL, *q = h;  // p为要删除结点的前结点，q指向要删除结点
+    while(q)
+    {// h为真，即h指向的结点存在
+        if(q->data == n)
+            break; // 找到了
+        if(q->next == NULL)  // 后面没有结点了，没有结点满足条件
+            return h;  // 不删除，直接返回
+        // 继续往后找，两个指针一起后移
+        p = q;
+        q = q->next;
+    }
+    // 删除q指向的结点
+    if(p == NULL)  // 删除头结点
+    {
+        h = q->next;  // 下一个结点变成头结点
+        delete q;  // 删除结点
+        return h;
+    }
+    // 不是头结点
+    p->next = q->next;  // 把q指向结点的指针域（q后面结点的地址）赋值给p指向结点的指针域
+    return h;
+
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 'delete', 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+int listLength(node * h)
+{
+    // 请在此添加代码，补全函数listLength
+    
+    int n = 0;
+    while(h)
+    {
+        n++;
+        h = h->next;
+    }
+    return n;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 'delete', 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mstack.h""
+
+// 函数empty：判断栈sk是否为空
+// 参数：sk-栈
+// 返回值：true-sk为空，false-sk不为空
+bool empty(intStack sk)
+{
+    // 请在此添加代码，补全函数empty
+    
+    return (listLength(sk) == 0);  // 链表长度为0，则栈为空
+
+    
+}
+
+// 函数pop：弹栈
+// 参数：sk-栈，传引用，弹栈可能会改变sk的值
+// 返回值：弹栈的弹出的整数，如果栈空，返回-1
+int pop(intStack &sk)
+{
+    // 请在此添加代码，补全函数pop
+    
+    if(empty(sk))  // 栈空，返回-1
+        return -1;
+    int n = sk->data;  // 获取栈顶结点(链首结点)的数据
+    sk = delAt(sk,0);  // 删除首结点（弹栈，第一个结点出栈）
+    return n;  // 返回弹栈数据
+
+    
+}
+
+// 函数push：压栈，将整数n压入栈sk中
+// 参数：sk-栈，传引用，压栈会改变sk的值，n-要压栈的整数
+// 返回值：无，采用链表实现栈，只要还有内存，压栈都会成功
+void push(intStack &sk, int n)
+{
+    // 请在此添加代码，补全函数push
+    
+
+    // 创建要压栈的结点
+    node *p = new node;
+    p->data = n;
+
+    // 压栈（插入链首）
+    sk = insertHead(sk,p);
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mqueue.h""
+
+// 函数queueEmpty：判断队列iq是否为空
+// 参数：iq-整数队列
+// 返回值：true-队列iq为空，false-iq不为空
+bool queueEmpty(intQueue iq)
+{
+    // 请在此添加代码，补全函数queueEmpty
+     
+    return (iq==NULL);  // iq为NULL，则队列为空
+
+    
+}
+
+// 函数enQueue：将整数num入列到iq
+// 参数：iq-整数队列，传引用，入列有可能改变队列头指针，num-入列的整数
+// 返回值：无，只要还有内存，入列总会成功
+void enQueue(intQueue &iq, int num)
+{
+    // 请在此添加代码，补全函数enQueue
+    
+
+    // 准备结点
+    node *t=new node;
+    t->data=num;
+    t->next=NULL;
+
+    // 结点插入到尾部
+    iq = insertTail(iq,t);
+
+    
+}
+
+// 函数deQueue：出列
+// 参数：iq-整数队列，传引用，出列有可能改变队列头指针
+// 返回值：出列结点的数据，如果队列为空，返回-1
+int deQueue(intQueue &iq)
+{
+    // 请在此添加代码，补全函数deQueue
+    
+    if(queueEmpty(iq))
+        return -1;
+
+    // 获取队列头结点的数据
+    int n = iq->data;
+
+    // 删除队列头结点（出列）
+    iq = delAt(iq,0);
+
+    // 返回出列数据
+    return n;
+
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mset.h""
+
+// 函数unionSet：求集合a和b的并集
+// 参数：a-集合，b-集合
+// 返回值：集合（集合a和b的并集）
+intSet unionSet(intSet a, intSet b)
+{
+    // 请在此添加代码，补全函数unionSet
+    
+
+    // 准备空集合
+    intSet c=NULL;
+
+    // 把a中每一个元素加入c中
+    node *p=a;
+    while(p)
+    {
+        addElement(c,p->data);
+        p=p->next;
+    }
+
+    // 把b中每一个元素加入c中
+    p=b;
+    while(p)
+    {
+        addElement(c,p->data);
+        p=p->next;
+    }
+    return c;
+    
+}
+
+// 函数intersection：求集合a和b的交集
+// 参数：a-集合，b-集合
+// 返回值：集合（集合a和b的交集）
+intSet intersection(intSet a, intSet b)
+{
+    // 请在此添加代码，补全函数intersection
+    
+
+    // 准备空集合
+    intSet c=NULL;
+    // 查看a中每一个元素
+    node *p=a;
+    while(p)
+    {
+        if(search(b,p->data))
+        {// 也在b中，则选入集合c
+            addElement(c,p->data);
+        }
+        p=p->next;
+    }
+    return c;
+    
+}
+
+// 函数addElement：在集合is中增加元素num
+// 参数：is-集合，num-要增加的元素
+// 返回值：无
+void addElement(intSet &is, int num)
+{
+    // 请在此添加代码，补全函数addElement
+    
+
+    // 首先确认num是否在is中
+    node *p=search(is,num);
+    if(p!=NULL)
+        return;
+
+    // 准备结点
+    p=new node;
+    p->data = num;
+    p->next = NULL;
+    is = insertHead(is,p);
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <stdio.h>
+
+// 函数extractDigit的功能：从文件a.txt中提取数值写入文件b.txt中
+void extractDigit();
+
+// 请在此添加代码，实现extractDigit函数
+
+
+char readADigit(FILE *fi)
+{
+    char c = fgetc(fi);  // 从文件读取一个字符
+    if(c==EOF)  // 是结束符则返回
+        return EOF;
+    while(c>'9' || c<'0')  // 如果不是数字字符，则继续读取下一个字符
+    {
+        c = fgetc(fi);  // 读取下一个字符
+        if(c==EOF)  // 是结束符则返回
+            return EOF;
+    }
+    return c;  // 返回读取的数字字符
+}
+
+// 函数extractDigit的功能：从文件a.txt中提取数值写入文件b.txt中
+void extractDigit()
+{
+    FILE *fi = fopen(""a.txt"",""r"");  // 以读的方式打开文件a.txt
+    FILE *fo = fopen(""b.txt"",""w"");  // 以写的方式打开文件b.txt
+    if(fi==NULL || fo==NULL)  // 如果某个文件打开失败，则返回
+        return;
+    char c;
+    int num=0,k=0;
+    c = readADigit(fi);  // 读取一个数字字符
+    while(c!=EOF)
+    {
+        num=num*10+c-'0';  // 计算数字字符构成的整数
+        k++;
+        if(k==3)  // 已经三位了
+        {
+            fprintf(fo,""%d "",num);  // 将计算的整数写入文件指针fo指向的文件
+            k=0;  // 重新计数
+            num=0;  // 重新计算
+    }
+        c = readADigit(fi);  // 读取下一个数字字符
+    }
+    if(k!=0)  // 如果有不到三位的数值，则写入文件b.txt
+    {
+        fprintf(fo,""%d "",num);
+    }
+    fclose(fi);  // 关闭文件fi
+    fclose(fo);  // 关闭文件fo
+}
+
+","[0, 0, 'new', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 'union', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+int readClothing(FILE *fp, clothing cloth[])
+{
+    // 请在此添加代码，补全函数readClothing
+    
+    int n;
+    // 读一个整数（服装信息数）
+    fread(&n,sizeof(n),1,fp);
+
+    // 读出n种服装信息到cloth中
+    fread(cloth,sizeof(clothing),n,fp);
+    return n;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+//函数count：统计文件fin中每种服装的销售总额，并写入文件fout中
+//参数fin：文件每种服装的销售情况，fout：每种服装销售总额的写入文件
+//返回值：无
+//说明：文件fin中，每种服装信息占一行，分别为服装编号，销售件数，每件的销售价格（整型）。
+//文件fout：每种服装统计信息占一行，分别为服装编号，销售总额（整型）,中间用一个空格隔开。
+
+void count(ifstream & fin, ofstream & fout)
+{
+    // 请在此添加代码，补全函数count
+    
+    char s[100];
+    fin>>s;
+    while(!fin.eof())
+    {
+        int i,n,c=0,t;
+        fin>>n;
+        for(i=0;i<n;i++)
+        {
+            fin>>t;
+            c+=t;
+        }
+        fout<<s<<"" ""<<c<<endl;
+        fin>>s;
+    }
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+int getNumber(ifstream &ifile, char *label)
+{
+    // 请在此添加代码，补全函数getNumber
+    
+    clothing  t;
+    // 读出种服装信息到t中
+    ifile.read((char*)&t,sizeof(clothing));
+    while(!ifile.eof())
+    {
+        if(strcmp(label, t.label)==0)
+            return t.numberRemaining;
+        ifile.read((char*)&t,sizeof(clothing));
+    }
+    return 0;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"
+//计算三个正整数的平均值
+double AvgCalculation(int x, int y, int z)
+{
+return (x+y+z)/3.0;
+}
+
+
+![](/attachments/download/252246)","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+double ComputeInfix(char* s)
+{
+    // 请在此添加代码，补全函数ComputeInfix，计算中缀表达式
+    
+    int i=0;
+    // 1
+    LinkStack* so=LS_Create(); // 运算符栈
+    LinkStack* sd=LS_Create(); //操作数栈
+
+    // 2
+    while(s[i]) {
+
+        // 2.1
+        if ('0'<=s[i] && s[i]<='9') {
+            LS_Push(sd, s[i++]-48);
+            continue;
+        }
+
+        // 2.2
+        if(s[i]=='('||LS_IsEmpty(so)) {
+            LS_Push(so, s[i++]); 
+            continue;
+        }
+
+        // 2.3 
+        if(s[i]==')') {
+            T topitem;
+            while(LS_Top(so,topitem) && topitem !='(' ) 
+                compute(so, sd);
+            LS_Pop(so,topitem);
+            i++;
+            continue;
+        }
+
+        // 2.4
+        if(s[i]=='*'||s[i]=='/') {
+            T c;
+            LS_Top(so,c);
+            if (c=='*' || c=='/') 
+                compute(so, sd);
+            LS_Push(so, s[i++]);
+            continue;
+        }
+
+        // 2.5
+        if(s[i]=='+'||s[i]=='-') {
+            T topitem;
+            while(LS_Top(so,topitem) && topitem !='(' ) 
+                compute(so, sd);
+            LS_Push(so, s[i++]);
+            continue;
+        }
+    }
+
+    // 3
+    while(!LS_IsEmpty(so)) 
+        compute(so, sd);
+
+    T res;
+    LS_Top(sd,res);
+
+    LS_Free(so);
+    LS_Free(sd);
+
+    return res;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+double ComputePostfix(char* s)
+{
+    // 请在此添加代码，补全函数ComputePostfix，计算后缀表达式
+    
+    LinkStack* sd=LS_Create();
+    int i=0;
+    T k,top1,top2;
+    while(s[i]) {
+        switch (s[i]) {
+        case '+':
+            LS_Pop(sd,top1);
+            LS_Pop(sd,top2);
+            k=top1+top2;
+            LS_Push(sd,k);
+            break;
+        case '-':
+            LS_Pop(sd,top1);
+            LS_Pop(sd,top2);
+            k=top2-top1;
+            LS_Push(sd,k);
+            break;
+        case '*':
+            LS_Pop(sd,top1);
+            LS_Pop(sd,top2);
+            k=top1*top2;
+            LS_Push(sd,k);
+            break;
+        case '/':
+            LS_Pop(sd,top1);
+            LS_Pop(sd,top2);
+            k=top2/top1;
+            LS_Push(sd,k);
+            break;
+        default:
+            LS_Push(sd, (int)(s[i]-48));
+        }
+        i++;
+    }
+    T res;
+    LS_Top(sd,res);
+    LS_Free(sd);
+    return res;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+int FindSubStr(char* t, char* p)
+/*
+从字符串t查找子字符串p。
+字符串以数值结尾，例如p=""str"",那么p[0]='s',p[1]='t',p[2]='r',p[3]=0。
+采用朴素的匹配算法，返回子字符串第一次出现的位置,例如t=""string ring"",p=""ring""，则返回2。
+若没有找到，则返回-1。
+*/
+{
+    // 请在此添加代码，补全函数FindSubStr
+    
+    int i=0, j=0;
+    while(p[i]!=0 && t[j]!=0) {
+        if (p[i]==t[j]) {
+            i ++;
+            j ++;
+        }
+        else {
+            j = j-i+1;
+            i = 0;
+        }
+    }
+    if (p[i] == 0) return j-i;
+    else return -1;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 'case', 0, 0, 0, 'def', 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'default', 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 'switch', 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+void KmpGenNext(char* p, int* next)
+//生成p的next数组, next数组长度大于等于字符串p的长度加1
+{
+	next[0]= -1;
+	int k= -1;
+	for (int i=1; p[i-1]!=0; i++) 
+	{    
+		while(k>=0&&p[k]!=p[i-1])   k=next[k];
+		k=k+1;
+		if (p[i]==p[k])  next[i]=next[k];
+		else	next[i]=k;
+	}
+}
+
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+void DirecInsSort(int* a, int n)
+// direct insert sorting
+{
+    int i, k;
+
+    for (i=1; i<n; i++)   {
+        // 请在此添加代码，补全函数DirecInsSort
+        
+        int temp=a[i];
+        //find k to insert a[i] between a[k-1] and a[k]
+        k=i;
+        while (k-1>=0 && temp<a[k-1]) // k>0 means k-1>=0
+        {   a[k]=a[k-1];  k--;   }
+        a[k]=temp;
+        
+    }
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+void QSort__(int* a, int low, int high)
+//快速排序私有函数，供QuickSort()调用
+//在a[low:high]中选择一个中心值，用该中心值将a[low:high]分割为两部分
+//然后对两个部分递归地进行该操作。
+{
+    int i, j;
+    if(low>=high) return;
+
+    Swap(a[low], a[rand()%(high-low+1)+low]); //select a pivot randomly
+
+    i=low; j=high;
+    int temp=a[i];
+    // 请在此添加代码，补全函数QSort__
+    
+    while (i<j){
+        while (i<j && temp<a[j]) j--;
+            if(i<j)  a[i++]=a[j];
+                while (i<j && a[i]<=temp) i++;
+                    if(i<j)  a[j--]=a[i];
+    }
+    a[i]=temp;
+    QSort__(a, low, i-1);
+    QSort__(a, i+1, high);
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+int BSL_FindKey(BSeqList* blist, int key)
+//在排序的顺序表中查找关键码值为key的结点，返回结点的编号
+//返回值大于等于时表示找到值为key的结点的编号，-1表示没有找到
+{
+    // 请在此添加代码，补全函数BSL_FindKey
+    
+    int k, r, m;
+    k=0; r=blist->len-1;
+    while (k<=r) {
+        m=(k+r)>>1; //m=(k+r)/2
+        if (key==blist->pkey[m]) return m;
+        else
+            if (key<blist->pkey[m])  r=m-1;
+            else k=m+1;
+    }
+    return -1;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 'do', 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+bool ILH_InsKey(LHTable* pt, int x)
+//插入关键码x
+//返回true，表示插入成功
+//返回false，表示插入失败(关键码已经存在)
+{
+    // 请在此添加代码，补全函数ILH_InsKey
+    
+    int d=x%pt->n;
+    if (pt->pn[d].key==0) {
+        pt->pn[d].key=x;
+        return true;
+    }
+    else if (pt->pn[d].key==x) 
+        return false;
+
+    HNode* prev=&(pt->pn[d]);
+    HNode* curr=pt->pn[d].next;
+    while (curr && curr->key!=x) {prev=curr; curr=curr->next;}
+
+    if (curr) return  false;
+
+    HNode* pnode=(HNode*)malloc(sizeof(HNode));
+    pnode->key=x;
+    pnode->next=NULL;//pt->pn[d].next;
+    prev->next=pnode;
+    return true;
+    
+}
+
+bool ILH_DelKey(LHTable* pt, int x)
+//删除关键码
+//返回true表示该关键码存在，且成功删除
+//返回false表示该关键码不存在
+{
+    // 请在此添加代码，补全函数ILH_DelKey
+    
+    int d=x%pt->n;//关键码x的散列值d
+    if (pt->pn[d].key==0) {
+        return false;
+    }
+    else if (pt->pn[d].key==x)  {
+        if (pt->pn[d].next ==NULL) 
+            pt->pn[d].key=0;
+        else {
+            HNode* first=pt->pn[d].next;
+            pt->pn[d].key=first->key;
+            pt->pn[d].next=first->next;
+            free(first);
+        }
+        return true;
+    }
+    HNode* prev=&(pt->pn[d]);
+    HNode* curr=pt->pn[d].next;
+    while (curr && curr->key!=x) {prev=curr; curr=curr->next;}
+    if (curr==NULL) return false;
+    prev->next=curr->next;
+    free(curr);
+    return true;
+    
+}
+
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int a, b;
+    // 请在此添加你的代码，输入两个整数到a、b中，然后输出较大的数
+    
+    scanf(""%d%d"",&a,&b);
+    if(a>=b)
+		printf(""%d"",a);
+	else
+		printf(""%d"",b);
+    
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"
+//请在此处实现你的代码
+if (i1>i2) return NULL;
+     int k=0;
+     while (i1+k<=i2&&pa[p1]!=ia[i1+k]) k=k+1; 
+	 if(i1+k>i2) {
+		 return NULL;
+	 }
+	 TNode* t=new TNode; 
+	 t->data=pa[p1];
+	 t->left=InPreToTree(pa,ia,p1+1,p1+k,i1,i1+k-1); 
+	 t->right=InPreToTree(pa,ia,p1+k+1,p2,i1+k+1,i2);
+     return t;
+	 ","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"
+//请在此处实现你的代码
+	const int W=5;
+	int i,j;
+	if (r==NULL) return;
+	PrintTreeRootLeft(r->right, layer+1);
+	for(i=1; i<layer; i++) {
+		for (j=0;j<W;j++) printf(""%c"", '-');
+	}
+	for (j=0; j<W-1; j++) printf(""%c"",'-');
+	printf(""%c\n"", r->data);
+	PrintTreeRootLeft(r->left, layer+1);
+","[0, 0, 'new', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"
+	while (QueueNotEmpty) {
+		Out__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=0; j<=g->n-1;j++) {
+			if (HasEdge(curr,j) && !visited[j])In__(curr,j);
+		}
+
+	}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 'const', 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"
+/*请在BEGIN和END之间实现你的代码*/
+/*****BEGIN*****/
+const int MAX=1000;
+	Edge stack[MAX];
+	int top=-1;
+#define Push__(a,b)  {top++; stack[top].from=a; stack[top].to=b;}////
+#define Pop__(a,b)  {a=stack[top].from; b=stack[top].to; top--;}///////
+#define StakNotEmpty (top>=0?1:0)////
+#define HasEdge(i,j)  (g->adj[(i)*g->n+(j)]==1)
+
+	char* visited=(char*)malloc(sizeof(char)*g->n);
+	memset(visited, 0, sizeof(char)*g->n);
+
+	int parent=-1;  
+	int curr=start;
+	Push__(parent, curr); 
+	int k=0; //已经访问的结点数
+	while (StakNotEmpty) {
+		Pop__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=g->n-1; j>=0; j--) {
+			if (HasEdge(curr,j) && !visited[j]) Push__(curr,j);
+		}
+
+	}
+	free(visited);
+	return k;
+#undef Push__////////////
+#undef Pop__///////////////
+#undef StakNotEmpty//////////////
+#undef HasEdge
+/*****END*******/
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+bool SS_IsFull(SeqStack* stack)
+// 判断栈是否为满。为满返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top+1>=stack->max;
+
+    
+}
+
+bool SS_IsEmpty(SeqStack* stack)
+// 判断栈是否为空。为空返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top<0;
+
+    
+}
+
+int SS_Length(SeqStack* stack)
+// 获取栈元素个数
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return stack->top+1;
+
+    
+}
+
+bool SS_Push(SeqStack* stack, T x)
+// 将元素x进栈，若满栈则无法进栈，返回false，否则返回true
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (SS_IsFull(stack)) {
+        return false;
+    }
+    stack->top++;
+    stack->data[stack->top]=x;
+    return true;
+
+    
+}
+
+bool SS_Pop(SeqStack* stack, T &item)
+// 出栈的元素放入item。若出栈成功(栈不为空)，则返回true；否则(空栈)，返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    if (SS_IsEmpty(stack)) {
+        return false;
+    }
+    item = stack->data[stack->top];
+    stack->top--;
+    return true;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 'const', 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+bool LS_IsEmpty(LinkStack* ls)
+// 判断栈是否为空。为空返回true，否则返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return ls->len == 0;
+
+    
+}
+
+int LS_Length(LinkStack* ls)
+// 获取栈的长度
+{
+    // 请在这里补充代码，完成本关任务
+    
+    return ls->len;
+
+    
+}
+
+void LS_Push(LinkStack* ls, T x)
+// 将元素x进栈，若满栈则无法进栈，返回false，否则返回true
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=(LNode*)malloc(sizeof(LNode));
+    node->data=x;
+    node->next=ls->top;
+    ls->top = node;
+    ls->len ++;
+
+    
+}
+
+bool LS_Pop(LinkStack* ls, T& item)
+// 出栈的元素放入item。若出栈成功(栈不为空)，则返回true；否则(空栈)，返回false。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=ls->top;
+    if (node==NULL) {
+        return false;
+    }
+    item = node->data;
+    ls->top = node->next;
+    ls->len --;
+    free(node);
+    return true;
+
+    
+}
+
+bool LS_Top(LinkStack* ls, T& item)
+// 获取栈顶元素，若获取失败(空栈)，则返回false，否则返回true。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    LNode* node=ls->top;
+    if (node==NULL) {
+        return false;
+    }
+    item = node->data;
+    return true;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"
+#include<iostream>
+using namespace std;
+int main()
+	{
+	cout<<""hello world""<<endl;
+	return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"
+#ifdef  __cplusplus  
+//-----Begin-----
+//extern ""C"" {//告诉编译器，这部分代码按C语言的格式进行编译，而不是C++的
+extern ""C"" {
+     void sayHelloWorld();
+}
+//}
+//-----End-----
+#endif
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'extern', 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"C++
+#include <iostream>
+using namespace std;
+int main(){
+    int a[10]={1,2,3,4,5};
+    // 请在此补全代码，
+    //使用基于范围的for循环直接输出给定数组a，无需换行
+    /********* Begin *********/
+    for(int i:a){cout<<i;}
+    /********* End *********/
+    return 0;
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"
+//计算三个正整数的平均值
+double AvgCalculation(int x, int y, int z)
+{
+return (x+y+z)/3.0;
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node *insertTail(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertTail
+    
+    if(h == NULL) // 空链表单独处理
+    {
+        t->next = NULL; // 链表尾指针置为NULL
+        return t; // 返回第一个结点的地址（即链表头指针）
+    }
+    // 非空链表的情况
+    node *p = h;
+    // 让p指向最后一个结点
+    while(p->next)
+        p = p->next;
+    p->next = t; // 让最后一个结点的指针域指向结点t
+    t->next = NULL; // 链表尾指针置为NULL
+    return h;  // 返回第一个结点的地址（即链表头指针）
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 'do', 0, 0, 0, 'double', 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * insertHead(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertHead
+    
+    t->next = h;
+    return t;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * insertSort(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertSort
+    
+    node *p = NULL, *q = h;  // 定位第一个插入点：链首
+
+    // 查找插入点
+    while(q && q->data < t->data)
+    {// 两个指针并行后移
+        p = q;
+        q = q->next;
+    }
+
+    // 插入链首
+    if(p == NULL)
+    {
+        t->next = h;
+        return t;
+    }
+
+    // 插入链尾
+    if(q == NULL)
+    {
+        p->next = t;
+        t->next = NULL;
+    }
+
+    // 插入p、q之间
+    t->next = q;
+    p->next = t;
+    return h;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * search(node * h, int num)
+{
+    // 请在此添加代码，补全函数search
+    
+    while(h)
+    {// h为真，即h指向的结点存在
+        if(h->data == num)
+            return h;
+        h = h->next;  // 将该结点的指针域赋值给h，h就指向了下一个结点
+    }
+    return NULL; // 没找到包含num的结点
+
+    
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * delAt(node * h, int i)
+{
+    // 请在此添加代码，补全函数delAt
+    
+    // 序号非法，不删除
+    if(i<0)
+        return h;
+    node *p = NULL, *q = h; // 定位删除结点，试图让q指向要删除结点，p指向其前面的结点
+    for(int k = 0; k < i; k++)
+    {
+        if(q->next == NULL) // 后面没有结点了，序号非法
+            return h;
+        p = q;
+        q = q->next;
+    }
+    if(p) // p指向的结点存在，不是删除首结点
+    {
+        // 删除q指向的结点，让p指向结点的指针域指向q的后续结点
+        p->next = q->next;
+        // 释放空间
+        delete q;
+        return h;
+    }
+    else // 删除首结点
+    {
+        h = q->next; // 下一个结点成了首结点
+        // 释放空间
+        delete q;
+        return h;
+    }
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node * delHas(node * h, int n)
+{
+    // 请在此添加代码，补全函数delHas
+    
+    node *p = NULL, *q = h;  // p为要删除结点的前结点，q指向要删除结点
+    while(q)
+    {// h为真，即h指向的结点存在
+        if(q->data == n)
+            break; // 找到了
+        if(q->next == NULL)  // 后面没有结点了，没有结点满足条件
+            return h;  // 不删除，直接返回
+        // 继续往后找，两个指针一起后移
+        p = q;
+        q = q->next;
+    }
+    // 删除q指向的结点
+    if(p == NULL)  // 删除头结点
+    {
+        h = q->next;  // 下一个结点变成头结点
+        delete q;  // 删除结点
+        return h;
+    }
+    // 不是头结点
+    p->next = q->next;  // 把q指向结点的指针域（q后面结点的地址）赋值给p指向结点的指针域
+    return h;
+
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 'delete', 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+int listLength(node * h)
+{
+    // 请在此添加代码，补全函数listLength
+    
+    int n = 0;
+    while(h)
+    {
+        n++;
+        h = h->next;
+    }
+    return n;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 'delete', 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mstack.h""
+
+// 函数empty：判断栈sk是否为空
+// 参数：sk-栈
+// 返回值：true-sk为空，false-sk不为空
+bool empty(intStack sk)
+{
+    // 请在此添加代码，补全函数empty
+    
+    return (listLength(sk) == 0);  // 链表长度为0，则栈为空
+
+    
+}
+
+// 函数pop：弹栈
+// 参数：sk-栈，传引用，弹栈可能会改变sk的值
+// 返回值：弹栈的弹出的整数，如果栈空，返回-1
+int pop(intStack &sk)
+{
+    // 请在此添加代码，补全函数pop
+    
+    if(empty(sk))  // 栈空，返回-1
+        return -1;
+    int n = sk->data;  // 获取栈顶结点(链首结点)的数据
+    sk = delAt(sk,0);  // 删除首结点（弹栈，第一个结点出栈）
+    return n;  // 返回弹栈数据
+
+    
+}
+
+// 函数push：压栈，将整数n压入栈sk中
+// 参数：sk-栈，传引用，压栈会改变sk的值，n-要压栈的整数
+// 返回值：无，采用链表实现栈，只要还有内存，压栈都会成功
+void push(intStack &sk, int n)
+{
+    // 请在此添加代码，补全函数push
+    
+
+    // 创建要压栈的结点
+    node *p = new node;
+    p->data = n;
+
+    // 压栈（插入链首）
+    sk = insertHead(sk,p);
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mqueue.h""
+
+// 函数queueEmpty：判断队列iq是否为空
+// 参数：iq-整数队列
+// 返回值：true-队列iq为空，false-iq不为空
+bool queueEmpty(intQueue iq)
+{
+    // 请在此添加代码，补全函数queueEmpty
+     
+    return (iq==NULL);  // iq为NULL，则队列为空
+
+    
+}
+
+// 函数enQueue：将整数num入列到iq
+// 参数：iq-整数队列，传引用，入列有可能改变队列头指针，num-入列的整数
+// 返回值：无，只要还有内存，入列总会成功
+void enQueue(intQueue &iq, int num)
+{
+    // 请在此添加代码，补全函数enQueue
+    
+
+    // 准备结点
+    node *t=new node;
+    t->data=num;
+    t->next=NULL;
+
+    // 结点插入到尾部
+    iq = insertTail(iq,t);
+
+    
+}
+
+// 函数deQueue：出列
+// 参数：iq-整数队列，传引用，出列有可能改变队列头指针
+// 返回值：出列结点的数据，如果队列为空，返回-1
+int deQueue(intQueue &iq)
+{
+    // 请在此添加代码，补全函数deQueue
+    
+    if(queueEmpty(iq))
+        return -1;
+
+    // 获取队列头结点的数据
+    int n = iq->data;
+
+    // 删除队列头结点（出列）
+    iq = delAt(iq,0);
+
+    // 返回出列数据
+    return n;
+
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mset.h""
+
+// 函数unionSet：求集合a和b的并集
+// 参数：a-集合，b-集合
+// 返回值：集合（集合a和b的并集）
+intSet unionSet(intSet a, intSet b)
+{
+    // 请在此添加代码，补全函数unionSet
+    
+
+    // 准备空集合
+    intSet c=NULL;
+
+    // 把a中每一个元素加入c中
+    node *p=a;
+    while(p)
+    {
+        addElement(c,p->data);
+        p=p->next;
+    }
+
+    // 把b中每一个元素加入c中
+    p=b;
+    while(p)
+    {
+        addElement(c,p->data);
+        p=p->next;
+    }
+    return c;
+    
+}
+
+// 函数intersection：求集合a和b的交集
+// 参数：a-集合，b-集合
+// 返回值：集合（集合a和b的交集）
+intSet intersection(intSet a, intSet b)
+{
+    // 请在此添加代码，补全函数intersection
+    
+
+    // 准备空集合
+    intSet c=NULL;
+    // 查看a中每一个元素
+    node *p=a;
+    while(p)
+    {
+        if(search(b,p->data))
+        {// 也在b中，则选入集合c
+            addElement(c,p->data);
+        }
+        p=p->next;
+    }
+    return c;
+    
+}
+
+// 函数addElement：在集合is中增加元素num
+// 参数：is-集合，num-要增加的元素
+// 返回值：无
+void addElement(intSet &is, int num)
+{
+    // 请在此添加代码，补全函数addElement
+    
+
+    // 首先确认num是否在is中
+    node *p=search(is,num);
+    if(p!=NULL)
+        return;
+
+    // 准备结点
+    p=new node;
+    p->data = num;
+    p->next = NULL;
+    is = insertHead(is,p);
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""linearList.h""
+
+node *insertTail(node *h, node *t)
+{
+    // 请在此添加代码，补全函数insertTail
+    
+    if(h == NULL) // 空链表单独处理
+    {
+        t->next = NULL; // 链表尾指针置为NULL
+        return t; // 返回第一个结点的地址（即链表头指针）
+    }
+    // 非空链表的情况
+    node *p = h;
+    // 让p指向最后一个结点
+    while(p->next)
+        p = p->next;
+    p->next = t; // 让最后一个结点的指针域指向结点t
+    t->next = NULL; // 链表尾指针置为NULL
+    return h;  // 返回第一个结点的地址（即链表头指针）
+
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 'union', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mstack.h""
+
+// 函数empty：判断栈sk是否为空
+// 参数：sk-栈
+// 返回值：true-sk为空，false-sk不为空
+bool empty(intStack sk)
+{
+    // 请在此添加代码，补全函数empty
+    
+    return (listLength(sk) == 0);  // 链表长度为0，则栈为空
+
+    
+}
+
+// 函数pop：弹栈
+// 参数：sk-栈，传引用，弹栈可能会改变sk的值
+// 返回值：弹栈的弹出的整数，如果栈空，返回-1
+int pop(intStack &sk)
+{
+    // 请在此添加代码，补全函数pop
+    
+    if(empty(sk))  // 栈空，返回-1
+        return -1;
+    int n = sk->data;  // 获取栈顶结点(链首结点)的数据
+    sk = delAt(sk,0);  // 删除首结点（弹栈，第一个结点出栈）
+    return n;  // 返回弹栈数据
+
+    
+}
+
+// 函数push：压栈，将整数n压入栈sk中
+// 参数：sk-栈，传引用，压栈会改变sk的值，n-要压栈的整数
+// 返回值：无，采用链表实现栈，只要还有内存，压栈都会成功
+void push(intStack &sk, int n)
+{
+    // 请在此添加代码，补全函数push
+    
+
+    // 创建要压栈的结点
+    node *p = new node;
+    p->data = n;
+
+    // 压栈（插入链首）
+    sk = insertHead(sk,p);
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include ""mqueue.h""
+
+// 函数queueEmpty：判断队列iq是否为空
+// 参数：iq-整数队列
+// 返回值：true-队列iq为空，false-iq不为空
+bool queueEmpty(intQueue iq)
+{
+    // 请在此添加代码，补全函数queueEmpty
+     
+    return (iq==NULL);  // iq为NULL，则队列为空
+
+    
+}
+
+// 函数enQueue：将整数num入列到iq
+// 参数：iq-整数队列，传引用，入列有可能改变队列头指针，num-入列的整数
+// 返回值：无，只要还有内存，入列总会成功
+void enQueue(intQueue &iq, int num)
+{
+    // 请在此添加代码，补全函数enQueue
+    
+
+    // 准备结点
+    node *t=new node;
+    t->data=num;
+    t->next=NULL;
+
+    // 结点插入到尾部
+    iq = insertTail(iq,t);
+
+    
+}
+
+// 函数deQueue：出列
+// 参数：iq-整数队列，传引用，出列有可能改变队列头指针
+// 返回值：出列结点的数据，如果队列为空，返回-1
+int deQueue(intQueue &iq)
+{
+    // 请在此添加代码，补全函数deQueue
+    
+    if(queueEmpty(iq))
+        return -1;
+
+    // 获取队列头结点的数据
+    int n = iq->data;
+
+    // 删除队列头结点（出列）
+    iq = delAt(iq,0);
+
+    // 返回出列数据
+    return n;
+
+    
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 'new', 0, 0, 0, 0, 0, 'bool', 0, 0, 'true', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'false', 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"
+	while (QueueNotEmpty) {
+		Out__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=0; j<=g->n-1;j++) {
+			if (HasEdge(curr,j) && !visited[j])In__(curr,j);
+		}
+
+	}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"
+/*请在BEGIN和END之间实现你的代码*/
+/*****BEGIN*****/
+const int MAX=1000;
+	Edge stack[MAX];
+	int top=-1;
+#define Push__(a,b)  {top++; stack[top].from=a; stack[top].to=b;}////
+#define Pop__(a,b)  {a=stack[top].from; b=stack[top].to; top--;}///////
+#define StakNotEmpty (top>=0?1:0)////
+#define HasEdge(i,j)  (g->adj[(i)*g->n+(j)]==1)
+
+	char* visited=(char*)malloc(sizeof(char)*g->n);
+	memset(visited, 0, sizeof(char)*g->n);
+
+	int parent=-1;  
+	int curr=start;
+	Push__(parent, curr); 
+	int k=0; //已经访问的结点数
+	while (StakNotEmpty) {
+		Pop__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=g->n-1; j>=0; j--) {
+			if (HasEdge(curr,j) && !visited[j]) Push__(curr,j);
+		}
+
+	}
+	free(visited);
+	return k;
+#undef Push__////////////
+#undef Pop__///////////////
+#undef StakNotEmpty//////////////
+#undef HasEdge
+/*****END*******/
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"
+	while (QueueNotEmpty) {
+		Out__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=0; j<=g->n-1;j++) {
+			if (HasEdge(curr,j) && !visited[j])In__(curr,j);
+		}
+
+	}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 'const', 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"
+/*请在BEGIN和END之间实现你的代码*/
+/*****BEGIN*****/
+const int MAX=1000;
+	Edge stack[MAX];
+	int top=-1;
+#define Push__(a,b)  {top++; stack[top].from=a; stack[top].to=b;}////
+#define Pop__(a,b)  {a=stack[top].from; b=stack[top].to; top--;}///////
+#define StakNotEmpty (top>=0?1:0)////
+#define HasEdge(i,j)  (g->adj[(i)*g->n+(j)]==1)
+
+	char* visited=(char*)malloc(sizeof(char)*g->n);
+	memset(visited, 0, sizeof(char)*g->n);
+
+	int parent=-1;  
+	int curr=start;
+	Push__(parent, curr); 
+	int k=0; //已经访问的结点数
+	while (StakNotEmpty) {
+		Pop__(parent, curr); 
+		if (visited[curr]) continue;
+		visited[curr]=1;
+		tree[k].from=parent; tree[k].to=curr; k++;
+		int j;
+		for (j=g->n-1; j>=0; j--) {
+			if (HasEdge(curr,j) && !visited[j]) Push__(curr,j);
+		}
+
+	}
+	free(visited);
+	return k;
+#undef Push__////////////
+#undef Pop__///////////////
+#undef StakNotEmpty//////////////
+#undef HasEdge
+/*****END*******/
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 'const', 0, 0, 0, 0, 0, 0, 0, 'continue', 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 定义变量，m-苹果数，n-人数，x-人均苹果数
+    int m, n, x;
+
+    // 请在此添加代码，输入苹果数、人数，并计算人均苹果数
+    
+    scanf(""%d%d"",&m,&n);
+    x = m / n;
+    
+
+    // 输出人均苹果数
+    printf(""人均苹果数为：%d"",x);
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    float up, low;
+    // 请在此添加代码，输入身高，计算标准身材的体重上下限
+    
+    float h, w;
+    scanf(""%f"",&h);
+    w = (h - 100) * 0.9;
+    low = w * 0.9;
+    up = w * 1.1;
+    
+
+    // 输出标准身材的体重上下限
+    printf(""体重范围为：%.2f -- %.2f\n"",low,up);
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // c-存储输入的大写字母,d-存储加密后的大写字母
+    char c, d;
+
+    // step-秘钥，往前走的步数，大于等于，小于
+    int step;
+
+    // 请在此添加代码，输入明文、秘钥，计算密文存入d中
+    
+    cin >> c >> step;
+    d = c + step;
+    d = (d > 'Z') ? (d - 26) : d;
+    
+
+    // 输出密文
+    cout << d;
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'float', 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // c是存储输入的字符
+    char c;
+
+    // 输入字符
+    cin >> c;
+
+    // 请在此添加代码，输出c的位二进制表示
+    
+    cout << (int)(bool)(c & 0x80);
+    cout << (int)(bool)(c & 0x40);
+    cout << (int)(bool)(c & 0x20);
+    cout << (int)(bool)(c & 0x10);
+    cout << (int)(bool)(c & 0x08);
+    cout << (int)(bool)(c & 0x04);
+    cout << (int)(bool)(c & 0x02);
+    cout << (int)(bool)(c & 0x01);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int year;
+
+    // 请在此添加代码，输入年份，并判断是否是闰年，是则输出""Yes""，否则输出""No""
+    
+    cin >> year;
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+        cout << ""Yes"";
+    else
+        cout << ""No"";
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 'bool', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // y-年，m-月,d-日，n-第几天
+    int y, m, d, n;
+
+    // 请在此添加代码，输入年月日，计算并输出这天是第几天
+    
+    cin >> y >> m >> d;
+
+    n = d;
+    switch(m)
+    {
+        case 12:
+            n += 30;
+        case 11:
+            n += 31;
+        case 10:
+            n += 30;
+        case 9:
+            n += 31;
+        case 8:
+            n += 31;
+        case 7:
+            n += 30;
+        case 6:
+            n += 31;
+        case 5:
+            n += 30;
+        case 4:
+            n += 31;
+        case 3:
+            if((y % 4 == 0 && y % 100 != 0) || y % 400 == 0)
+                n += 29;
+            else
+                n += 28;
+        case 2:
+            n += 31;
+        case 1:;
+    }
+    
+
+    printf(""%d-%d-%d是第%d天"",y,m,d,n);
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // n-输入的数，m-重排后的数
+    int n, m;
+
+    // 请在此添加代码，输入一个小于1000的正整数，重排出最大的数存入m中
+    
+    cin >> n;
+
+    int a = n % 10, b, c, t;
+    n = n / 10;
+    b = n % 10;
+    c = n / 10;
+    if (a < b)
+    {
+        t = a; a = b; b = t;
+    }
+    if (a < c)
+    {
+        t = a; a = c; c = t;
+    }
+    if (b < c)
+    {
+        t = b; b = c; c = t;
+    }
+    m = a * 100 + b * 10 + c;
+    
+
+    // 输出重排后的数
+    cout << m;
+    return 0;
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'case', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 'switch', 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    // 请在此添加代码，输入一个各位数字不全相同的三位整数(也可以是位数或者两位数)，输出进入黑洞过程
+    
+    cin >> n;
+    int k = 1;
+    while(1)
+    {
+        int a = n % 10, b, c, t;
+        n = n / 10;
+        b = n % 10;
+        c = n / 10;
+        if(a < b)
+        {
+            t = a; a = b; b = t;
+        }
+        if(a < c)
+        {
+            t = a; a = c; c = t;
+        }
+        if(b < c)
+        {
+            t = b; b = c; c = t;
+        }
+        t = a * 100 + c - c * 100 - a;
+		if(t != 495)
+          cout << k << "":"" << a * 100 + b * 10 + c <<""-"" << a + b * 10 + c * 100 << ""="" << t << endl;
+		if( t == 495)
+		  cout << k << "":"" << a * 100 + b * 10 + c <<""-"" << a + b * 10 + c * 100 << ""="" << t << endl;
+        k++;
+        n = t;
+        if(t == 495)
+            break;
+    }
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+
+    // 请在此添加代码，输入正整数n，如果n是素数则输出“Yes”，否则输出“No”
+    
+    cin >> n;
+    if(n == 1)
+    {
+        cout << ""No"";
+        return 0;
+    }
+    int flag = 1;
+    for(int i = 2; i * i <= n; i++)
+        if(n % i == 0)
+        {
+            flag = 0;
+            break;
+        }
+    if(flag)
+        cout << ""Yes"";
+    else
+        cout << ""No"";
+    
+
+    return 0;
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含两种I/O库，可以使用任一种输入输出方式
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, k;
+    // 请在此添加代码，输入n和k，并输出n以内k个素数以及它们的和
+    
+    cin >> n >> k;
+    int t, m = 0, sum = 0;
+    for(t = n; t >= 2; t--)
+    {
+        int flag = 1;
+        for(int i = 2; i * i <= t; i++)
+            if(t % i == 0)
+            {
+                flag = 0;
+                break;
+            }
+        if(flag)
+        {
+            cout << t << "" "";
+            m++;
+            sum += t;
+            if(m == k)
+                break;
+        }
+    }
+    cout << sum;
+    
+
+    return 0;
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数trim：去掉字符串首尾空格
+// 参数：str-字符指针，指向输入的字符串
+// 返回值：字符指针，指向去掉首尾空格后的字符串（首地址）
+// 提示：可以字节在字符串str中操作
+char * trim(char * str);
+
+int main()
+{
+    // 定义存储字符串的一维字符数组
+    char s[1024];
+
+    // 输入一行字符，可以包含空格
+    // 输入的字符串存入s中，最多读取个字符，后面自动加上'\0'
+    cin.getline(s,1024);
+
+    // 输出去掉首尾空格后的字符串
+    cout << trim(s) << endl;
+
+    return 0;
+}
+
+// 函数trim：去掉字符串首尾空格
+// 参数：str-字符指针，指向输入的字符串
+// 返回值：字符指针，指向去掉首尾空格后的字符串（首地址）
+// 提示：可以字节在字符串str中操作
+char * trim(char * str)
+{
+    // 请在此添加代码，实现函数trim
+    
+    char *p = str;
+    while(*p != '\0')
+        p++;
+    p--;
+    while(p >= str && *p == ' ')
+    {
+        *p = '\0';
+        p--;
+    }
+    p = str;
+    while(*p == ' ')
+        p++;
+    return p;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数pswap：交换指针p和q指向的单元中的整数值
+// 参数：p,q-int类型指针，指向要交换的整数
+void pswap(int * p, int *q);
+
+int main()
+{
+    int a, b;
+    // 输入两个整数
+    cin >> a >> b;
+
+    // 调用pswap函数，交换a、b的值
+    pswap(&a,&b);
+
+    // 输出a、b的值
+    cout << a << "" "" << b << endl;
+
+    return 0;
+}
+
+//函数pswap：交换指针p和q指向的单元中的整数值
+//参数：p,q-int类型指针，指向要交换的整数
+void pswap(int * p, int *q)
+{
+    // 请在此添加代码，实现函数pswap
+    
+    int a = *p;
+    *p = *q;
+    *q = a;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数extractNum：选出str指向的字符串中的数字，并写回str
+// 参数：str-指向字符串
+void extractNum(char * str);
+
+int main()
+{
+    char s[1024];
+    // 输入一行字符
+    cin.getline(s,1024);
+    // 调用extractNum函数，选出数字
+    extractNum(s);
+    // 输出选出的数字
+    cout<<s<<endl;
+
+    return 0;
+}
+
+// 函数extractNum：选出str指向的字符串中的数字，并写回str
+// 参数：str-指向字符串
+void extractNum(char * str)
+{
+    // 请在此添加代码，实现函数extractNum
+    
+    char *p=str,*q=str;
+    int fuhao=1;
+    while(*q!='\0')
+    {
+        if(*q=='-' && fuhao)
+        {
+            *p++=*q++;
+            fuhao=0;
+        }
+        else if(*q>='0' && *q<='9')
+        {
+            fuhao=0;
+            *p++=*q++;
+        }
+        else
+            q++;
+    }
+    *p='\0';
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数toUp：将str指向的字符串中的小写字母变成对应的大写字母
+// 参数：str-指向字符串
+void toUp(char * str);
+
+int main()
+{
+    char s[1024];
+    // 输入一行字符
+    cin.getline(s,1024);
+
+    // 调用toUp函数，转换成大写字母
+    toUp(s);
+
+    // 输出变更后的字符串
+    cout<<s<<endl;
+
+    return 0;
+}
+
+// 函数toUp：将str指向的字符串中的小写字母变成对应的大写字母
+// 参数：str-指向字符串
+void toUp(char * str)
+{
+    // 请在此添加代码，实现函数toUp
+    
+    char *p=str;
+    while(*p)
+    {
+        if(*p>='a' && *p<='z')
+            *p=*p+'A'-'a';
+        p++;
+    }
+    
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含字符串函数库
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+// 函数frequency：计算子串在长串中出现的次数
+// 参数：substr-指向子串，str-指向长串
+// 返回值：出现的次数
+int frequency(char * substr, char * str);
+
+int main()
+{
+    char sub[128],str[1024];
+
+    // 输入子串
+    cin.getline(sub,128);
+
+    // 输入长串
+    cin.getline(str,1024);
+
+    // 调用frequency函数，计算子串在长串中出现的次数
+    int n = frequency(sub,str);
+
+    // 输出次数
+    cout<<n<<endl;
+
+    return 0;
+}
+
+// 函数frequency：计算子串在长串中出现的次数
+// 参数：substr-指向子串，str-指向长串
+// 返回值：出现的次数
+int frequency(char * substr, char * str)
+{
+    // 请在此添加代码，实现函数frequency
+    
+    int n=strlen(substr);
+    int t=0;
+    char *p=str;
+    while(p=strstr(p,substr))
+    {
+        t++;
+        p=p+n;
+    }
+    return t;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+using namespace std;
+
+// 函数strmncpy：字符串的部分复制，将s指向字符串从第m个字符开始的n个字符复制的t中
+// 参数：s-指向源字符串，t-指向目标字符串，m-起始位置，n-字符个数
+// 返回值：无
+void strmncpy(char *s, int m, int n, char *t);
+
+int main()
+{
+    char s[128],t[128];
+    int m,n;
+
+    // 输入源串
+    cin>>s;
+
+    // 输入m和n
+    cin>>m>>n;
+
+    // 字符串复制
+    strmncpy(s, m, n, t);
+
+    // 输出复制结果
+    cout<<""t:""<<t<<endl;
+
+    return 0;
+}
+
+// 函数strmncpy：字符串的部分复制，将s指向字符串从第m个字符开始的n个字符复制的t中
+// 参数：s-指向源字符串，t-指向目标字符串，m-起始位置，n-字符个数
+// 返回值：无
+void strmncpy(char *s, int m, int n, char *t)
+{
+    // 请在此添加代码，实现函数strmncpy
+    
+    int k=0;
+    while(s[k]!=0)k++;
+    if(k<=m)
+    {
+        *t='\0';
+        return;
+    }
+    char *p=s+m;
+    for(int i=0;i<n;i++)
+    {
+        *t=*p;
+        if(*t=='\0')
+            return;
+        t++;
+        p++;
+    }
+    *t='\0';
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+#include <stdio.h>
+
+// 函数extractDigit的功能：从文件a.txt中提取数值写入文件b.txt中
+void extractDigit();
+
+// 请在此添加代码，实现extractDigit函数
+
+
+char readADigit(FILE *fi)
+{
+    char c = fgetc(fi);  // 从文件读取一个字符
+    if(c==EOF)  // 是结束符则返回
+        return EOF;
+    while(c>'9' || c<'0')  // 如果不是数字字符，则继续读取下一个字符
+    {
+        c = fgetc(fi);  // 读取下一个字符
+        if(c==EOF)  // 是结束符则返回
+            return EOF;
+    }
+    return c;  // 返回读取的数字字符
+}
+
+// 函数extractDigit的功能：从文件a.txt中提取数值写入文件b.txt中
+void extractDigit()
+{
+    FILE *fi = fopen(""a.txt"",""r"");  // 以读的方式打开文件a.txt
+    FILE *fo = fopen(""b.txt"",""w"");  // 以写的方式打开文件b.txt
+    if(fi==NULL || fo==NULL)  // 如果某个文件打开失败，则返回
+        return;
+    char c;
+    int num=0,k=0;
+    c = readADigit(fi);  // 读取一个数字字符
+    while(c!=EOF)
+    {
+        num=num*10+c-'0';  // 计算数字字符构成的整数
+        k++;
+        if(k==3)  // 已经三位了
+        {
+            fprintf(fo,""%d "",num);  // 将计算的整数写入文件指针fo指向的文件
+            k=0;  // 重新计数
+            num=0;  // 重新计算
+    }
+        c = readADigit(fi);  // 读取下一个数字字符
+    }
+    if(k!=0)  // 如果有不到三位的数值，则写入文件b.txt
+    {
+        fprintf(fo,""%d "",num);
+    }
+    fclose(fi);  // 关闭文件fi
+    fclose(fo);  // 关闭文件fo
+}
+
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+int readClothing(FILE *fp, clothing cloth[])
+{
+    // 请在此添加代码，补全函数readClothing
+    
+    int n;
+    // 读一个整数（服装信息数）
+    fread(&n,sizeof(n),1,fp);
+
+    // 读出n种服装信息到cloth中
+    fread(cloth,sizeof(clothing),n,fp);
+    return n;
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+//函数count：统计文件fin中每种服装的销售总额，并写入文件fout中
+//参数fin：文件每种服装的销售情况，fout：每种服装销售总额的写入文件
+//返回值：无
+//说明：文件fin中，每种服装信息占一行，分别为服装编号，销售件数，每件的销售价格（整型）。
+//文件fout：每种服装统计信息占一行，分别为服装编号，销售总额（整型）,中间用一个空格隔开。
+
+void count(ifstream & fin, ofstream & fout)
+{
+    // 请在此添加代码，补全函数count
+    
+    char s[100];
+    fin>>s;
+    while(!fin.eof())
+    {
+        int i,n,c=0,t;
+        fin>>n;
+        for(i=0;i<n;i++)
+        {
+            fin>>t;
+            c+=t;
+        }
+        fout<<s<<"" ""<<c<<endl;
+        fin>>s;
+    }
+
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+int getNumber(ifstream &ifile, char *label)
+{
+    // 请在此添加代码，补全函数getNumber
+    
+    clothing  t;
+    // 读出种服装信息到t中
+    ifile.read((char*)&t,sizeof(clothing));
+    while(!ifile.eof())
+    {
+        if(strcmp(label, t.label)==0)
+            return t.numberRemaining;
+        ifile.read((char*)&t,sizeof(clothing));
+    }
+    return 0;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+void SL_InsAt(SqList* L, int i, ElemType e)
+// 在顺序表的第i个位置插入新元素e, 即在元素L->elem[i-1]之前插入
+// i的有效范围[1,L->length+1]
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+    if(i<1||i>L->length+1)
+	{
+		printf(""location error!\n"");
+	}
+	else
+	{
+		for(j=L->length-1;j>=i-1;j--)//后移
+			L->elem[j+1]=L->elem[j];
+		L->elem[i-1]=e;
+		L->length++;
+	}
+    
+}
+
+void SL_DelAt(SqList* L, int i)
+// 删除顺序表L的第i个元素
+//i的有效范围[1,L->length]
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+	if(i<1||i>L->length)
+	{
+		printf(""location error!\n"");
+	}
+	else
+	{
+		for(j=i;j<=L->length-1;j++)//前移
+			L->elem[j-1]=L->elem[j];
+		L->length--;		
+	}
+    
+}
+
+void SL_DelValue(SqList* L, ElemType x)
+// 删除第一个值为x的元素
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int i;
+	for(i=0;i<L->length;i++)
+		if(L->elem[i]==x)
+		{
+			SL_DelAt(L, i+1);break;
+		}			
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+void LL_Create_R(LinkList *L,int n)
+// 输入n个数据元素，采用尾插法，创建一个带头结点的单链表L。
+{
+    // 请在这里补充代码，完成本关任务
+    
+
+	LNode *r,*s; int i;
+	*L=(LNode *)malloc(sizeof(LNode));	(*L)->next=NULL; //建立一个带头结点的空链表 
+	r=*L;  //尾指针r指向头结点
+	for(i=0;i<n;i++)
+	{
+		s=(LNode *)malloc(sizeof(LNode)); //生成新结点
+		scanf(""%d"", &s->data); //输入元素值		
+		s->next=NULL; r->next=s; //插入到表尾 
+		r=s;  //r指向新的尾结点		
+	}
+
+	
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SL_InsAt(SqList* L, int i, ElemType e)
+// 在顺序表的第i个位置插入新元素e, 即在元素L->elem[i-1]之前插入
+// i的有效范围[1,L->length+1]，插入之前要判断表满
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+    if(i<1||i>L->length+1)//i值不合法
+	{
+		printf(""SL_InsAt(): The value of 'i' is not in the range [1,n+1].\n""); return;
+	}
+	if(L->length==MAXSIZE)//表满
+	{
+		printf(""SL_InsAt(): The list is full.\n""); return;
+	}
+	for(j=L->length-1;j>=i-1;j--)//后移
+		L->elem[j+1]=L->elem[j];
+	L->elem[i-1]=e;
+	L->length++;	
+    
+}
+
+void SL_DelAt(SqList* L, int i)
+// 删除顺序表L的第i个元素
+//i的有效范围[1,L->length]
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+	if(i<1||i>L->length)//i值不合法
+	{
+		printf(""SL_DelAt(): The value of 'i' is not in the range [1,n].\n""); return;
+	}
+	for(j=i;j<=L->length-1;j++)//前移
+		L->elem[j-1]=L->elem[j];
+	L->length--;	
+    
+}
+
+void SL_DelValue(SqList* L, ElemType x)
+// 删除第一个值为x的元素
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int i;
+	for(i=0;i<L->length;i++)
+		if(L->elem[i]==x)
+		{
+			SL_DelAt(L, i+1);break;
+		}			
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SL_GetAt(SqList L, int i, ElemType *e)
+// 获取顺序表L的第i个元素赋给e，i的有效范围[1,L.length]。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	if(i<1||i>L.length) {
+		printf(""SL_GetAt(): location error when reading elements of the slist!\n"");		
+		SL_Free(&L);
+		exit(0);
+	}
+	else 
+		*e=L.elem[i-1];
+	
+}
+
+int SL_FindValue(SqList L, ElemType x)
+// 在顺序表L中查找第一个值为x的元素，找到则返回该元素在表中的位置，否则返回0。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	int i;
+	for(i=0;i<L.length;i++)
+		if(L.elem[i]==x) return i+1;//查找成功，返回位置i+1
+	return 0; //查找失败，返回0
+	
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void MergeList_Sq(SqList LA,SqList LB,SqList *LC)
+//已知顺序表LA和LB的元素按值非递减排列
+//归并LA和LB得到新的顺序表LC，LC的元素也按值非递减排列。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	int i,j,k;
+	i=j=k=0; //i,j,k分别存放顺序表LA、LB和LC的元素下标，赋初值为0，
+	         //可以理解成i,j,k分别“指向”三个表的第一个元素。
+	LC->length=LA.length+LB.length;    //新表长度为待合并两表的长度之和
+	while(i<LA.length&&j<LB.length)  //合并
+		if(LA.elem[i]<=LB.elem[j]) //选取两表中值较小的元素
+			LC->elem[k++]=LA.elem[i++];
+		else
+			LC->elem[k++]=LB.elem[j++];
+	while(i<LA.length)  //将LA的剩余元素赋给LC
+		LC->elem[k++]=LA.elem[i++];
+	while(j<LB.length)  //将LB的剩余元素赋给LC
+		LC->elem[k++]=LB.elem[j++];
+	
+} 
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void LL_InsAt(LinkList L,int i,ElemType e)
+// 在带头结点的单链表L中第i个位置插入值为e的新元素，i的取值范围[1,n+1]
+{
+	// 请在这里补充代码，完成本关任务
+    
+	LNode *p,*s; int j;
+	p=L;j=0; 
+	while(p&&j<i-1)//查找第i-1个结点，p指向该结点
+	{
+		p=p->next;++j;
+	}
+	if(!p||j>i-1)	//i>n+1或者i<1，i值不合法
+	{
+		printf(""LL_InsAt(): The value of 'i' is not in the range [1,n+1].\n""); return;
+	}
+	s=(LNode *)malloc(sizeof(LNode)); //生成新结点s
+	s->data=e; //将结点s的数据域置为e
+	s->next=p->next; p->next=s;  //将结点s插入
+	
+}
+
+void LL_DelAt(LinkList L,int i)
+// 在带头结点的单链表L中，删除第i个元素，i的取值范围[1,n]
+{
+	// 请在这里补充代码，完成本关任务
+    
+	LNode *p,*s; int j;
+	p=L;j=0; 
+    while(p->next &&j<i-1)//查找第i-1个结点，p指向该结点
+	{
+		p=p->next; ++j; 
+    } 
+    if(!(p->next)||j>i-1) //i>n或者i<1，i值不合法
+	{
+		printf(""LL_DelAt(): The value of 'i' is not in the range [1,n].\n""); return;
+	}
+	s=p->next; p->next=s->next; free(s); //删除
+	
+}
+
+void LL_DelValue(LinkList L, ElemType e)
+// 删除第一个值为e的数据元素
+{
+	// 请在这里补充代码，完成本关任务
+    
+	LNode *p,*q;
+	p=L->next; q=L; //q指向p所指结点的前驱结点
+	while(p&&p->data!=e)
+	{
+		p=p->next; q=q->next;
+	}
+	if(p)//找到值为e的元素		
+	{
+		q->next=p->next; free(p); //删除p所指结点
+	}
+	
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void LL_GetAt(LinkList L, int i, ElemType *e)
+// 在带头结点的单链表L中获取第i个元素的值赋给e，i的取值范围[1,n]
+{
+	// 请在这里补充代码，完成本关任务
+    
+	LinkList p;int j;
+	p=L->next;j=1; //初始化
+	while(p&&j<i) //向后扫描，直到p指向第i个元素或p为空
+	{	
+		p=p->next; ++j;
+	}
+	if(!p || j>i) //i>n或者i<1，i值不合法
+	{
+		printf(""LL_GetAt(): The value of 'i' is not in the range [1,n].\n""); return;
+	}
+	*e=p->data; //取第i个元素
+	
+}
+
+LNode *LL_FindValue(LinkList L, ElemType e,int *i)
+//在带头结点的单链表L中查找第一个值为e的元素，
+//找到则将该元素在链表中的位置赋给i，并返回该结点指针，否则i赋值为0并返回空指针
+{
+	// 请在这里补充代码，完成本关任务
+    
+	LNode *p;
+	p=L->next; *i=1; 
+	while(p&&p->data!=e)
+	{
+		p=p->next; (*i)++;
+	}
+	if(!p) *i=0;
+	return p;
+	
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SL_InsAt(SqList* L, int i, ElemType e)
+// 在顺序表的第i个位置插入新元素e, 即在元素L->elem[i-1]之前插入
+// i的有效范围[1,L->length+1]，插入之前要判断表满
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+    if(i<1||i>L->length+1)//i值不合法
+	{
+		printf(""SL_InsAt(): The value of 'i' is not in the range [1,n+1].\n""); return;
+	}
+	if(L->length==MAXSIZE)//表满
+	{
+		printf(""SL_InsAt(): The list is full.\n""); return;
+	}
+	for(j=L->length-1;j>=i-1;j--)//后移
+		L->elem[j+1]=L->elem[j];
+	L->elem[i-1]=e;
+	L->length++;	
+    
+}
+
+void SL_DelAt(SqList* L, int i)
+// 删除顺序表L的第i个元素
+//i的有效范围[1,L->length]
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int j;
+	if(i<1||i>L->length)//i值不合法
+	{
+		printf(""SL_DelAt(): The value of 'i' is not in the range [1,n].\n""); return;
+	}
+	for(j=i;j<=L->length-1;j++)//前移
+		L->elem[j-1]=L->elem[j];
+	L->length--;	
+    
+}
+
+void SL_DelValue(SqList* L, ElemType x)
+// 删除第一个值为x的元素
+{
+    // 请在这里补充代码，完成本关任务
+    
+	int i;
+	for(i=0;i<L->length;i++)
+		if(L->elem[i]==x)
+		{
+			SL_DelAt(L, i+1);break;
+		}			
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SL_GetAt(SqList L, int i, ElemType *e)
+// 获取顺序表L的第i个元素赋给e，i的有效范围[1,L.length]。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	if(i<1||i>L.length) {
+		printf(""SL_GetAt(): location error when reading elements of the slist!\n"");		
+		SL_Free(&L);
+		exit(0);
+	}
+	else 
+		*e=L.elem[i-1];
+	
+}
+
+int SL_FindValue(SqList L, ElemType x)
+// 在顺序表L中查找第一个值为x的元素，找到则返回该元素在表中的位置，否则返回0。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	int i;
+	for(i=0;i<L.length;i++)
+		if(L.elem[i]==x) return i+1;//查找成功，返回位置i+1
+	return 0; //查找失败，返回0
+	
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'break', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SS_Push(SqStack *S, ElemType e)
+// 插入元素e为新的栈顶元素
+{
+	// 请在这里补充代码，完成本关任务
+    
+	if(SS_IsFull(*S)) return;//栈满
+	S->top++; S->elem[S->top]=e;
+    
+}
+
+void SS_Pop(SqStack *S, ElemType *e)
+// 删除S的栈顶元素，用e返回其值
+{
+	// 请在这里补充代码，完成本关任务
+    
+	if(SS_IsEmpty(*S)) return; //栈空
+	*e=S->elem[S->top]; S->top--;
+    
+}
+
+void SS_Top(SqStack S, ElemType *e)
+// 获取栈顶元素赋给e
+{
+	// 请在这里补充代码，完成本关任务
+    
+	if(SS_IsEmpty(S)) return; //栈空	
+	*e=S.elem[S.top];	
+	
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+//将元素e进栈
+void LS_Push(LinkStack *S, ElemType e)
+{
+    // 请在这里补充代码，完成本关任务
+    
+	StackNode *p;
+	p=(StackNode *)malloc(sizeof(StackNode));
+	p->data=e;
+	p->next=*S;
+	*S=p;
+    
+}
+
+//出栈。出栈元素赋给e
+void LS_Pop(LinkStack *S, ElemType *e)
+{
+    // 请在这里补充代码，完成本关任务
+    
+	StackNode *p;
+	if(LS_IsEmpty(*S)) return;
+	p=*S;
+	*e=p->data;
+	*S=p->next;
+	free(p);
+    
+}
+
+//读栈顶元素赋给e。
+void LS_Top(LinkStack S, ElemType *e)
+{
+    // 请在这里补充代码，完成本关任务
+    
+	if(LS_IsEmpty(S)) return;
+	*e=S->data;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void SQ_In(SqQueue *Q, ElemType e)
+// 将e入队。即：插入元素e为Q的新的队尾元素。
+{
+    // 请在这里补充代码，完成本关任务
+    
+	if(SQ_IsFull(*Q)) return;//队满
+	Q->elem[Q->rear]=e;Q->rear=(Q->rear+1)%MAXSIZE;
+    
+}
+
+void SQ_Out(SqQueue *Q, ElemType *e)
+// 从队列Q出队一个元素，即：删除Q的队头元素，用e返回其值。
+{
+    // 请在这里补充代码，完成本关任务
+    
+	if(SQ_IsEmpty(*Q)) return; //队空
+	*e=Q->elem[Q->front];Q->front=(Q->front+1)%MAXSIZE;
+    
+}
+
+void SQ_Head(SqQueue Q, ElemType *head)
+// 获取队列的队头元素，用head返回其值。
+{
+	// 请在这里补充代码，完成本关任务
+    
+    if( SQ_IsEmpty(Q) ) return; //队空
+    *head = Q.elem[Q.front];
+	
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+int LQ_Length(LinkQueue Q)
+// 求队列的长度
+{
+    // 请在这里补充代码，完成本关任务
+    
+	QNode *p;int n;	
+	p=Q.front->next;n=0;
+	while(p)
+	{
+		n++;p=p->next;
+	}
+	return n;
+    
+}
+
+void LQ_In(LinkQueue *Q, ElemType e)
+// 将e入队。即：插入元素e为Q的新的队尾元素。
+{
+    // 请在这里补充代码，完成本关任务
+    
+	QNode* p;
+	p=(QNode *)malloc(sizeof(QNode));
+	p->data=e;
+	p->next=NULL;
+	Q->rear->next=p;
+	Q->rear=p;
+    
+}
+
+void LQ_Out(LinkQueue *Q, ElemType *e)
+//从队列Q出队一个元素，即：删除Q的队头元素，用e返回其值。
+{
+    // 请在这里补充代码，完成本关任务
+    
+	QNode *p;
+	if(LQ_IsEmpty(*Q)) return;
+	p=Q->front->next;
+	*e=p->data;
+	Q->front->next=p->next;
+	if(Q->front->next==NULL)//若只有一个结点，删除后还要修改尾指针
+		Q->rear=Q->front;
+	free(p);
+    
+}
+
+void LQ_Head(LinkQueue Q, ElemType *head)
+//获取队列的队头元素，用head返回其值。
+{
+	// 请在这里补充代码，完成本关任务
+    
+    if(LQ_IsEmpty(Q)) return;
+    *head = Q.front->next->data;
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+int StrIndex_BF(SString s, SString t, int pos)
+//从主串s的第pos个字符开始查找子串t。
+//若找到，则返回子串t在主串s中第一次出现的位置，否则返回0。
+{
+    // 请在这里补充代码，完成本关任务
+    
+    int i,j;
+	i=pos;j=1;
+	while(i<=s[0]&&j<=t[0])
+		if(s[i]==t[j]) //若字符相等，则继续比较
+		{
+			i++;j++;
+		}
+		else //若字符不等，则回溯，进行下一趟比较
+		{
+			i=i-j+2; //i回退到S的下一个起始位置
+			j=1;
+		}
+	if(j>t[0]) return i-j+1; //匹配成功，返回t在s中的位置
+	else return 0; //匹配失败，返回0  
+    
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 'sizeof', 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应的参考代码实现如下：
+
+void GetNext(SString t, int next[])
+//求模式串T的next值并存入next数组中
+{
+	// 请在这里补充代码，完成本关任务
+    
+       int j,k;
+       j=1;k=0;next[1]=0;
+       while(j<t[0])
+       if(t[j]==t[k]||k==0)  next[++j]=++k;
+       else  k=next[k]; 
+	/********** End   *********/
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"
+void SubStr(SString t, SString s,int i,int len)
+//从s的第i个字符开始截取长度为len的子串存入t中。
+//其中1�Qi�Q串s的长度, 0�Qlen�Q 串s的长度-i+1。
+//若i和len超出取值范围，则输出""error""；否则输出子串t。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	int j,k;
+	if(i<1 || i>s[0] || len<0 || len>s[0]-i+1)
+	{
+		printf(""error"");return;
+	}
+	for(k=1,j=i;k<=len;j++,k++)
+		t[k]=s[j];
+	t[0]=len; 
+	t[k]='\0'; //在串尾存储一个结束符'\0'
+	puts(t+1);
+  
+}
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+// 定义main函数
+int main()
+{
+    // 请在此添加‘重要的事情说三遍’的代码
+    
+    char x = getchar();
+    putchar(x);
+    putchar(x);
+    putchar(x);
+    putchar('!');
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含标准输入输出函数库
+#include <stdio.h>
+
+int main()
+{
+    // 声明两个整型变量，用于存储输入的两个整数
+    int x, y;
+
+    // 请在此添加你的代码，输入两个整数到x、y中，然后按要求格式输出四则运算式子
+    
+    scanf(""%d%d"",&x,&y);
+
+    printf(""%5d + %-5d = %10d\n"", x, y, x + y);
+    printf(""%5d - %-5d = %10d\n"", x, y, x - y);
+    printf(""%5d * %-5d = %10d\n"", x, y, x * y);
+    printf(""%5d / %-5d = %10d"", x, y, x / y);
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'char', 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+// 包含I/O流库iostream
+#include <iostream>
+
+// 加载名字空间std
+using namespace std;
+
+int main()
+{
+    // 声明三个变量，分别用来存储年、月、日
+    int y, m, d;
+
+    // 请在此添加你的代码，输入你的生日，并按指定格式输出信息
+    
+    cin >> y >> m >> d;
+    cout << ""Hello! "" << m << "" "" << d << "" "" << y;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]"
+"本关任务对应参考代码实现如下：
+
+#include <iostream>
+
+// 包含流操作算子库
+#include <iomanip>
+using namespace std;
+
+// 定义常量PI，后面可以直接用PI代替后面的数值
+#define PI 3.14159265358979323846
+
+int main()
+{
+    int n;
+    // 请在此添加你的代码，输入n，按不同的精度输出PI
+    
+    // 输入n
+    cin >> n;
+
+    // 输出PI
+    cout << setiosflags(ios::fixed) << setprecision(n) << PI << endl;
+    cout << setprecision(n + 1) << PI << endl;
+    cout << setprecision(n + 2) << PI << endl;
+    cout << setprecision(n + 3) << PI << endl;
+    cout << setprecision(n + 4) << PI;
+    
+
+    return 0;
+}
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+void MergeList_Sq(SqList LA,SqList LB,SqList *LC)
+//已知顺序表LA和LB的元素按值非递减排列
+//归并LA和LB得到新的顺序表LC，LC的元素也按值非递减排列。
+{
+	// 请在这里补充代码，完成本关任务
+    
+	int i,j,k;
+	i=j=k=0; //i,j,k分别存放顺序表LA、LB和LC的元素下标，赋初值为0，
+	         //可以理解成i,j,k分别“指向”三个表的第一个元素。
+	LC->length=LA.length+LB.length;    //新表长度为待合并两表的长度之和
+	while(i<LA.length&&j<LB.length)  //合并
+		if(LA.elem[i]<=LB.elem[j]) //选取两表中值较小的元素
+			LC->elem[k++]=LA.elem[i++];
+		else
+			LC->elem[k++]=LB.elem[j++];
+	while(i<LA.length)  //将LA的剩余元素赋给LC
+		LC->elem[k++]=LA.elem[i++];
+	while(j<LB.length)  //将LB的剩余元素赋给LC
+		LC->elem[k++]=LB.elem[j++];
+	
+} 
+","[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'def', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'return', 0, 0, 0, 0, 0, 0, 0, 0, 'using', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'namespace', 0]"
+"本关任务对应的参考代码实现如下：
+
+void MergeList_L(LinkList LA,LinkList LB,LinkList *LC)
+//已知单链表LA和LB的元素按值非递减排列
+//归并LA和LB得到新的单链表LC，LC的元素也按值非递减排列。
+{
+        // 请在这里补充代码，完成本关任务
+    
+        LNode *pa,*pb,*pc;
+        pa=LA->next;  pb=LB->next;
+        pc=(*LC)=LA;  //用LA的头结点作为LC的头结点
+        while(pa && pb)
+                if(pa->data<=pb->data)
+                {
+                        pc->next=pa;pc=pa;pa=pa->next;
+                }
+                else
+                {
+                        pc->next=pb; pc=pb; pb=pb->next;
+                }
+        pc->next=pa?pa:pb;  //插入剩余段
+        free(LB);     //释放LB的头结点
+        
+}  
+","[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 'int', 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
+,"[0, 'else', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'if', 0, 0, 0, 0, 0, 'void', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 'while', 0, 0, 0]"
