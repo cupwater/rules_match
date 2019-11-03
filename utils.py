@@ -27,7 +27,7 @@ def remove_annotation(_str):
 def separate_local_global_contents(_str):
     res_index = []
     _stack = []
-    for i, letter in enumerate(_str)
+    for i, letter in enumerate(_str):
         if letter == '{':
             _stack.append(i)
         elif letter == '}':
@@ -42,34 +42,74 @@ def separate_local_global_contents(_str):
             global_content = global_content + _str[i:(i+1)]
     return local_content, global_content
 
+
 # get all function and their content, 
 # return a list of 4-tuples: [fc_sidx, fd_eidx, fc_sidx, fc_eidx], record the start and end index of declaration and contents
 def get_all_functions(_str, fun_declar):
     fun_contents_list = []
     fun_list = re.finditer(fun_declar, _str)
-    fun_idxs_list
+    fun_idxs_list = []
+    last_idx = 0
     for _fun in fun_list:
         fd_sidx = _fun.start() # function declaration start index
+        fd_eidx = -1 # function declaration end index
         fc_sidx = -1 # function content start index
         fc_eidx = -1 # function content start index
         _stack = []
         for i, letter in enumerate(_str[fd_sidx:]):
             # only function announcement, but declaration
-            if letter == ';':
+            if letter == ';' and i + last_idx <= fd_eidx + 1:
                 fc_eidx = i + fd_sidx
                 break
             if letter == '{':
-                fd_eidx = i + fd_sidx - 1
-                fc_sidx = i + fd_sidx
                 _stack.append(i)
-            elif letter == '}':
                 if len(_stack) == 1:
-                    fc_eidx = i + fd_sidx
+                    fd_eidx = i + fd_sidx - 1
+                    fc_sidx = i + fd_sidx
+            elif letter == '}':
+                _stack.pop()
+                if len(_stack) == 0:
+                    fc_eidx = i + fd_sidx + 1
+                    last_idx = fc_eidx
                     break
+                    
         if fc_eidx == -1:
             fc_eidx = len(_str)
-        fun_idxs_list.append([fd_sidx, fd_sidx, fc_sidx, fc_eidx])
+        fun_idxs_list.append([fd_sidx, fd_eidx, fc_sidx, fc_eidx])
     return fun_idxs_list
+
+# get all function and their content, 
+# return a list of 4-tuples: [fc_sidx, fd_eidx, fc_sidx, fc_eidx], record the start and end index of declaration and contents
+def separate_local_global(_str):
+    global_list = []
+    local_list = []
+    _stack = []
+    for i, letter in enumerate(_str):
+        if letter == '{':
+            _stack.append(i)
+            if len(_stack) == 1:
+                sidx = i
+        elif letter == '}':
+            _stack.pop()
+            if len(_stack) == 0:
+                eidx = i
+                local_list.append([sidx, eidx])
+    if len(local_list) == 0:
+        global_list.append([0, len(_str)-1])
+        return _str, ''
+    else:
+        g_idx = 0
+        global_content = ''
+        local_content = ''
+        for i in range(len(local_list)):
+            # global_list.append([g_idx, local_list[i][0]])
+            global_content = global_content + _str[g_idx:local_list[i][0]] + ' '
+            g_idx = local_list[i][1]+1
+            local_content = local_content + _str[local_list[i][0]:local_list[i][1]+1]
+        global_list.append([local_list[-1][1], len(_str)-1])
+    # concat the multi segment local strs and multi-segment global str
+    return  global_content, local_content
+    # return global_list, local_list
 
 def check_array_params(fun_declar_str, fun_content_str, array_pattern):
     array_list = re.finditer(array_pattern, fun_declar)
