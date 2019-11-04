@@ -136,30 +136,40 @@ def check_global_var(global_content, var_pattern):
 
 def check_array_param(fun_heads_list, fun_contents_list, ptr_var_declar_pattern):
     for _fun_head, _fun_content in zip(fun_heads_list, fun_contents_list):
+        print(_fun_head)
         res = ptr_var_declar_pattern.search(_fun_head)
-        if res:
+        if res != None:
+            return 1
             match_content = res.group()
+            print(match_content)
             ptr_name = match_content.split('*')[1]
             key_res = isIncludeKeyWord(_fun_content, ptr_name)
             if key_res == 1:
                 return 1
     return 0
 
-def check_static_member_fun(fun_heads_list):
-    for _fun_head in fun_heads_list:
-        if 'static' in _fun_head:
-            return 1
+# def check_static_member_fun(fun_heads_list):
+#     for _fun_head in fun_heads_list:
+#         print(_fun_head)
+#         if 'static' in _fun_head:
+#             return 1
+#     return 0
+def check_static_member_fun(_str):
+    static_fun_declar = var_declar + left_brackets + varORarray_declar + repeat_varORarray_declar + right_brackets
+    res = re.search(static_fun_declar, _str)
+    if res != None:
+        return 1
     return 0
 
 def check_polym_class(_str):
-    cls_declar = 'class' + '\s*' + cls_name + '\s*:\s*' + 'public' + cls_name
+    cls_declar = 'class\s*' + cls_name + '\s*:\s*' + 'public\s*'  + cls_name
     polym_pattern = re.compile(cls_declar)
     polym_match_list = re.finditer(polym_pattern, _str)
     if polym_match_list is None:
         return 0
     for _polym in polym_match_list:
-        _res = polym.group()
-        _cls_name = _res.split(':')[1].split(' ')[1]
+        _res = _polym.group()
+        _cls_name = _res.split(':')[1].split(' ')[-1]
         if re.search('class \s*' + _cls_name + '\s*\{', _str) != None:
             return 1
     return 0
@@ -187,10 +197,10 @@ def complex_pattern_checking(_str, pattern_dict):
     match_res = {}
     # first check the overload function
     match_res['overload_fun'] = check_overload_fun(fun_heads_list)
-    match_res['local_var']    = check_local_var(local_content, pattern_dict['variable_definitions'])
-    match_res['global_var']   = check_global_var(global_content, pattern_dict['variable_definitions'])
+    match_res['local_var']    = check_local_var(local_content, pattern_dict['variable_declaration1'])
+    match_res['global_var']   = check_global_var(global_content, pattern_dict['variable_declaration1'])
     match_res['array_param']  = check_array_param(fun_heads_list, fun_contents_list, pattern_dict['pointer_variable_declaration'])
-    match_res['static_member_fun'] = check_static_member_fun(fun_heads_list)
+    match_res['static_member_fun'] = check_static_member_fun(_str)
     match_res['polym_class'] = check_polym_class(_str)
     match_res['ptr_arith'] = check_ptr_arith(_str)
     return match_res

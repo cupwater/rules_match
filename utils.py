@@ -28,17 +28,32 @@ colon = ":"
 or_def = '|'
 none_def = ''
 
+# array1d_key = var_name + left_square + num_key + right_square
+# arraynd_key = array1d_key + '(\[[0-9]*\])*'
+# array_key   = '(' + array1d_key + or_def + arraynd_key + ')'
+# varORarray_key = '(' + var_name + or_def + array1d_key + or_def + arraynd_key + ')'
+# repeat_varORarray_key = '(' + ',\s*' + varORarray_key + ')*'
+
+# var_declar = type_key + sp + var_name
+# array1d_declar = var_declar + left_square + num_key + right_square
+# arraynd_declar = array1d_declar + '(\[[0-9]*\])*'
+# array_declar   = '(' + array1d_declar + or_def + arraynd_declar + ')'
+# varORarray_declar = '(' + var_declar + or_def + array1d_declar + or_def + arraynd_declar + ')'
+# repeat_varORarray_declar = '(' + ',\s*' + varORarray_declar + ')*'
+
+
+ptr_declar = type_key + sp + '\*(\*)*' + var_name
 array1d_key = var_name + left_square + num_key + right_square
 arraynd_key = array1d_key + '(\[[0-9]*\])*'
-array_key   = '(' + array1d_key + or_def + arraynd_key + ')'
-varORarray_key = '(' + var_name + or_def + array1d_key + or_def + arraynd_key + ')'
+array_key   = '(' + array1d_key + or_def + arraynd_key + or_def + ptr_declar + ')'
+varORarray_key = '(' + var_name + or_def + array1d_key + or_def + arraynd_key + or_def + ptr_declar + ')'
 repeat_varORarray_key = '(' + ',\s*' + varORarray_key + ')*'
 
 var_declar = type_key + sp + var_name
 array1d_declar = var_declar + left_square + num_key + right_square
 arraynd_declar = array1d_declar + '(\[[0-9]*\])*'
-array_declar   = '(' + array1d_declar + or_def + arraynd_declar + ')'
-varORarray_declar = '(' + var_declar + or_def + array1d_declar + or_def + arraynd_declar + ')'
+array_declar   = '(' + array1d_declar + or_def + arraynd_declar + or_def + ptr_declar + ')'
+varORarray_declar = '(' + var_declar + or_def + array1d_declar + or_def + arraynd_declar + or_def + ptr_declar + ')'
 repeat_varORarray_declar = '(' + ',\s*' + varORarray_declar + ')*'
 
 pattern_intro1 = re.compile("//")
