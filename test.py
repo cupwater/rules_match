@@ -14,8 +14,8 @@ pattern_key = simple_pattern.pattern_dict
 content_str = '#include <math.h> double SquareRoot(float n) { return n > 0 ? sqrt(n) : -1; } double SquareRoot1(int a, double n1[10], float n) { int xxxx = 100; return n > 0 ? sqrt(n) : -1; }'
 
 
-
-# res = get_all_functions(content_str, pattern_dict['function_declaration'])
-# global_content, local_content = separate_local_global(content_str)
-
-# # check if there is any 
+content_str = remove_annotation(content_str)
+simple_matched_result_dict = rule_match(content_str, pattern_dict)
+# print(simple_matched_result_dict)
+complex_matched_result_dict = complex_pattern.complex_pattern_checking(content_str, pattern_dict)
+print(complex_matched_result_dict)

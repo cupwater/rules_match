@@ -128,7 +128,7 @@ def check_local_var(local_content, var_pattern):
         return 0
 
 def check_global_var(global_content, var_pattern):
-    res = var_pattern.search(local_content)
+    res = var_pattern.search(global_content)
     if res:
         return 1
     else : 
@@ -162,6 +162,7 @@ def check_polym_class(_str):
         _cls_name = _res.split(':')[1].split(' ')[1]
         if re.search('class \s*' + _cls_name + '\s*\{', _str) != None:
             return 1
+    return 0
 
 def check_ptr_arith(_str):
     ptr_declar = type_key + sp + "\*(\*)*" + var_name
@@ -172,6 +173,7 @@ def check_ptr_arith(_str):
         _ptr_name = _res.split('*')[-1]
         if re.search(_ptr_name + '(\+\+|\+|--|-)', _str) != None:
             return 1 
+    return 0
 
 # check complex patterns
 def complex_pattern_checking(_str, pattern_dict):
@@ -180,14 +182,13 @@ def complex_pattern_checking(_str, pattern_dict):
     fun_heads_list = []
     fun_contents_list = []
     for i in range(len(fun_head_content_idxs)):
-        fun_heads_list.append(_str[i][0]:_str[i][1])
-        fun_contents_list.append(_str[i][2]:_str[i][3])
-    
+        fun_heads_list.append(_str[fun_head_content_idxs[i][0]:fun_head_content_idxs[i][1]])
+        fun_contents_list.append(_str[fun_head_content_idxs[i][2]:fun_head_content_idxs[i][3]])
     match_res = {}
     # first check the overload function
     match_res['overload_fun'] = check_overload_fun(fun_heads_list)
-    match_res['local_var']    = check_local_var(local_content, pattern_dict['var_declar'])
-    match_res['global_var']   = check_global_var(global_content, pattern_dict['var_declar'])
+    match_res['local_var']    = check_local_var(local_content, pattern_dict['variable_definitions'])
+    match_res['global_var']   = check_global_var(global_content, pattern_dict['variable_definitions'])
     match_res['array_param']  = check_array_param(fun_heads_list, fun_contents_list, pattern_dict['pointer_variable_declaration'])
     match_res['static_member_fun'] = check_static_member_fun(fun_heads_list)
     match_res['polym_class'] = check_polym_class(_str)
