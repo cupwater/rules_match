@@ -1,8 +1,62 @@
 # encoding: UTF-8
+"""
+ this file contains all regex rules used for matching
+ author:xxx
+ date: 2019.10.24
+"""
 import re
+
+num_ch = "[0-9]"
+type_key = "(int|float|bool|char|double|void|wchar_t)"
+acemodi_key = "(public|private|protected)"
+var_name = "[a-zA-Z_][a-zA-Z0-9_]*"
+member_name = "[a-z][a-zA-Z0-9_]*"
+cls_name = "[A-Z][a-zA-Z0-9_]*"
+sp_line = "\n\n*"
+sp = "\s*"
+left_square = "\["
+right_square = "\]"
+left_brackets = "\("
+right_brackets = "\)"
+left_curbra = "\{"  # curba: curly brackets
+right_curbra = "\}"
+left_brackets_comma = "(,"
+right_brackets_star = ")*"
+num_key = "[0-9]*"
+title_def = ";"
+colon = ":"
+or_def = '|'
+none_def = ''
+
+array1d_key = var_name + left_square + num_key + right_square
+arraynd_key = array1d_key + '(\[[0-9]*\])*'
+array_key   = '(' + array1d_key + or_def + arraynd_key + ')'
+varORarray_key = '(' + var_name + or_def + array1d_key + or_def + arraynd_key + ')'
+repeat_varORarray_key = '(' + ',\s*' + varORarray_key + ')*'
+
+var_declar = type_key + sp + var_name
+array1d_declar = var_declar + left_square + num_key + right_square
+arraynd_declar = array1d_declar + '(\[[0-9]*\])*'
+array_declar   = '(' + array1d_declar + or_def + arraynd_declar + ')'
+varORarray_declar = '(' + var_declar + or_def + array1d_declar + or_def + arraynd_declar + ')'
+repeat_varORarray_declar = '(' + ',\s*' + varORarray_declar + ')*'
 
 pattern_intro1 = re.compile("//")
 pattern_intro2 = re.compile("/\*\S*\*/")
+
+
+def check_pattern(_str, pattern, rule_name):
+    res = pattern.search(_str)
+    if res:
+        return 1
+    else : 
+        return 0
+
+def rule_match(_str, pattern_dict):
+    matched_result_dict = {}
+    for key, value in pattern_dict.items():
+        matched_result_dict[key] = check_pattern(_str, value, key)
+    return matched_result_dict
 
 def remove_annotation(_str):
     content_array = _str.split("\n")
@@ -23,106 +77,3 @@ def remove_annotation(_str):
         for res in reslist:
             tmpstr = tmpstr.replace(res,"")
     return tmpstr
-
-def separate_local_global_contents(_str):
-    res_index = []
-    _stack = []
-    for i, letter in enumerate(_str):
-        if letter == '{':
-            _stack.append(i)
-        elif letter == '}':
-            if len(_stack) == 1:
-                res_index.extend([_stack[0], i])
-            _stack.pop()
-    local_content = ''
-    global_content = ''
-    for i in range(int(len(res_index)/2)):
-        if i == 0:
-            local_content = local_content + _str[0:i]
-            global_content = global_content + _str[i:(i+1)]
-    return local_content, global_content
-
-
-# get all function and their content, 
-# return a list of 4-tuples: [fc_sidx, fd_eidx, fc_sidx, fc_eidx], record the start and end index of declaration and contents
-def get_all_functions(_str, fun_declar):
-    fun_contents_list = []
-    fun_list = re.finditer(fun_declar, _str)
-    fun_idxs_list = []
-    last_idx = 0
-    for _fun in fun_list:
-        fd_sidx = _fun.start() # function declaration start index
-        fd_eidx = -1 # function declaration end index
-        fc_sidx = -1 # function content start index
-        fc_eidx = -1 # function content start index
-        _stack = []
-        for i, letter in enumerate(_str[fd_sidx:]):
-            # only function announcement, but declaration
-            if letter == ';' and i + last_idx <= fd_eidx + 1:
-                fc_eidx = i + fd_sidx
-                break
-            if letter == '{':
-                _stack.append(i)
-                if len(_stack) == 1:
-                    fd_eidx = i + fd_sidx - 1
-                    fc_sidx = i + fd_sidx
-            elif letter == '}':
-                _stack.pop()
-                if len(_stack) == 0:
-                    fc_eidx = i + fd_sidx + 1
-                    last_idx = fc_eidx
-                    break
-                    
-        if fc_eidx == -1:
-            fc_eidx = len(_str)
-        fun_idxs_list.append([fd_sidx, fd_eidx, fc_sidx, fc_eidx])
-    return fun_idxs_list
-
-# get all function and their content, 
-# return a list of 4-tuples: [fc_sidx, fd_eidx, fc_sidx, fc_eidx], record the start and end index of declaration and contents
-def separate_local_global(_str):
-    global_list = []
-    local_list = []
-    _stack = []
-    for i, letter in enumerate(_str):
-        if letter == '{':
-            _stack.append(i)
-            if len(_stack) == 1:
-                sidx = i
-        elif letter == '}':
-            _stack.pop()
-            if len(_stack) == 0:
-                eidx = i
-                local_list.append([sidx, eidx])
-    if len(local_list) == 0:
-        global_list.append([0, len(_str)-1])
-        return _str, ''
-    else:
-        g_idx = 0
-        global_content = ''
-        local_content = ''
-        for i in range(len(local_list)):
-            # global_list.append([g_idx, local_list[i][0]])
-            global_content = global_content + _str[g_idx:local_list[i][0]] + ' '
-            g_idx = local_list[i][1]+1
-            local_content = local_content + _str[local_list[i][0]:local_list[i][1]+1]
-        global_list.append([local_list[-1][1], len(_str)-1])
-    # concat the multi segment local strs and multi-segment global str
-    return  global_content, local_content
-    # return global_list, local_list
-
-def check_array_params(fun_declar_str, fun_content_str, array_pattern):
-    array_list = re.finditer(array_pattern, fun_declar)
-    for _array in array_list:
-        # first, get the array name
-        array_name = _array.split(' ')[1]
-        if array_name in fun_content_str:
-            return 1
-        else: 
-            continue
-    return 0
-
-
-
-
-    

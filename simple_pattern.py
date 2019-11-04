@@ -7,43 +7,7 @@
 """
 
 import re
-
-num_ch = "[0-9]"
-type_key = "(int|float|bool|char|double|void|wchar_t)"
-acemodi_key = "(public|private|protected)"
-var_name = "[a-zA-Z_][a-zA-Z0-9_]*"
-member_name = "[a-z][a-zA-Z0-9_]*"
-cls_name = "[A-Z][a-zA-Z0-9_]*"
-sp_line = "\n\n*"
-sp = "\s*"
-left_square = "\["
-right_square = "\]"
-left_brackets = "\("
-right_brackets = "\)"
-left_curbra = "\{"  # curba: curly brackets
-right_curbra = "\}"
-left_brackets_comma = "(,"
-right_brackets_star = ")*"
-num_key = "[0-9]*"
-title_def = ";"
-colon = ":"
-or_def = '|'
-none_def = ''
-
-array1d_key = var_name + left_square + num_key + right_square
-arraynd_key = array1d_key + '(\[[0-9]*\])*'
-array_key   = '(' + array1d_key + or_def + arraynd_key + ')'
-varORarray_key = '(' + var_name + or_def + array1d_key + or_def + arraynd_key + ')'
-repeat_varORarray_key = '(' + ',\s*' + varORarray_key + ')*'
-
-var_declar = type_key + sp + var_name
-array1d_declar = var_declar + left_square + num_key + right_square
-arraynd_declar = array1d_declar + '(\[[0-9]*\])*'
-array_declar   = '(' + array1d_declar + or_def + arraynd_declar + ')'
-varORarray_declar = '(' + var_declar + or_def + array1d_declar + or_def + arraynd_declar + ')'
-repeat_varORarray_declar = '(' + ',\s*' + varORarray_declar + ')*'
-
-
+from utils import *
 
 pattern_dict = {
     "deconstruct": "~" + var_name + left_brackets + sp + right_brackets,
