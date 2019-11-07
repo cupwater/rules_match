@@ -1,10 +1,10 @@
 import os
 import numpy as np
 
-match_result = np.loadtxt('match_result.txt')
-name_list = open('pattern_name.txt').readlines()
+match_result = np.loadtxt('./data/match_result.txt')
+name_list = open('./data/pattern_name.txt').readlines()
 name2semantic_dict = {}
-name2semantic_in = open('name2semantic.txt').readlines()
+name2semantic_in = open('./data/name2semantic.txt').readlines()
 
 for _str in name2semantic_in:
     name, sematic = _str.split(':')
@@ -18,7 +18,7 @@ for prow_idx in range(match_result.shape[1]):
             corpo_pairs[prow_idx, pcol_idx] += match_result[data_idx][prow_idx]*match_result[data_idx][pcol_idx]
 
 corpo_pairs_res = []
-corpo_pairs_out = open('corpo_pairs_res.txt', 'w')
+corpo_pairs_out = open('./data/corpo_pairs_res.txt', 'w')
 # save the corporate resutls
 for row_idx in range(corpo_pairs.shape[0]):
     for col_idx in range(row_idx+1, corpo_pairs.shape[1]):

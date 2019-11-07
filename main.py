@@ -7,11 +7,8 @@ import complex_pattern
 import numpy as np
 from utils import *
 
-
-
-
 if __name__ == '__main__':
-    df_answer = pd.read_csv("./challenge_answer.csv")
+    df_answer = pd.read_csv("./data/challenge_answer.csv")
     result_rule = []
     pattern_name = ''
     pattern_dict = simple_pattern.get_all_patterns()

@@ -10,10 +10,6 @@ import re
 from utils import *
 
 pattern_dict = {
-
-
-
-
     "deconstruct": "~" + var_name + left_brackets + sp + right_brackets,
     "pointer": type_key + sp + "\*" + var_name,
     "memory_address": "&" + var_name,
