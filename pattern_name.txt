@@ -11,6 +11,7 @@ signed_def
 goto_def
 strstr_def
 friend_def
+pow
 true_def
 switch_def
 pointer_to_structure
@@ -23,6 +24,7 @@ strlen_def
 sqrt2
 derived_class
 break_def
+double_def
 vertical_def
 clog_def
 float_E
@@ -34,6 +36,9 @@ class_def
 alarm_def
 intro1
 intro2
+plus_def
+array_as_parameters2
+array_as_parameters1
 float_e
 base_class
 formal_parameter
@@ -42,13 +47,16 @@ sin2
 sin1
 private_inheritance
 right_move_def
-pure_virtual_function
+if_else
+tab_def
 and_assign_def
+array
 miscellaneous_data_type_cast
 return_pointer_from_function
 fstream_def
 operator_def
 logi_and_def
+do_while
 log2
 log1
 strcat_def
@@ -63,6 +71,7 @@ function_declaration
 actual_parameter2
 assign_value_def
 xor_assign_def
+back_sp_def
 object_def
 false_def
 pointer_array
@@ -70,7 +79,6 @@ cin_def
 enum_def
 hexadecimal
 variable_declaration1
-public_member
 this_def
 sub_def
 strchr_def
@@ -80,7 +88,7 @@ protected_inheritance
 bool_def
 scanf_def
 iomanip_def
-array
+public_member
 residual_def
 nlt_def
 pointer_call
@@ -110,6 +118,7 @@ auto_def
 right_move_assign_def
 initialize_array
 cout_def
+include_def
 plus_assign_def
 array_declaration
 variable_declaration2
@@ -118,6 +127,7 @@ or_assign_def
 times_def
 datamember
 main_def
+return_type1
 sizeof_def
 float_def
 null_pointer
@@ -139,8 +149,10 @@ page_break_def
 logi_or_def
 unsigned_def
 no_def
-if_else
+pure_virtual_function
 left_move_assign_def
+const_def
+void_def
 sub_assign_def
 return_type
 int_def
@@ -149,7 +161,8 @@ strcmp_def
 printf_def
 continue_def
 char_def
-plus_def
+if_def
+string_char
 long_def
 public_inheritance
 overload_fun

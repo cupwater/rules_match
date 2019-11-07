@@ -10,6 +10,10 @@ import re
 from utils import *
 
 pattern_dict = {
+
+
+
+
     "deconstruct": "~" + var_name + left_brackets + sp + right_brackets,
     "pointer": type_key + sp + "\*" + var_name,
     "memory_address": "&" + var_name,
@@ -80,7 +84,6 @@ pattern_dict = {
     "protected_member": "class" + sp + cls_name + sp + sp_line + left_curbra + sp + sp_line + sp + "protected:" + sp + sp_line + sp + var_declar + title_def,
     "intro1": "//",
     "intro2": "/\*\S*\*/",
-    
     "struct_def" : "struct",
     "class_def": "class",
     "include_def":  "#include",
