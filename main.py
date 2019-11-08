@@ -7,10 +7,6 @@ import complex_pattern
 import numpy as np
 from utils import *
 
-
-"class\s*[A-Z][A-Za-z0-9_]*\s*:\s*(public|private|protected)\s*[A-Z][A-Za-z0-9_]*"
-
-
 if __name__ == '__main__':
     df_answer = pd.read_csv("./data/challenge_answer.csv")
     result_rule = []
@@ -33,11 +29,11 @@ if __name__ == '__main__':
         #     continue
     result_array = np.array(result_rule)
     result_name = pattern_name
-    np.savetxt('match_result.txt', result_array, fmt='%d')
-    result_name_out = open('pattern_name.txt', 'w')
+    np.savetxt('./data/match_result.txt', result_array, fmt='%d')
+    result_name_out = open('./data/pattern_name.txt', 'w')
     result_name_out.writelines('\n'.join(result_name))
     result_name_out.close()
-    with open("./code_rule.pkl","wb") as file:
+    with open("./data/code_rule.pkl","wb") as file:
         pickle.dump(result_rule, file)
 
 # pattern_dict = simple_pattern.get_all_patterns()

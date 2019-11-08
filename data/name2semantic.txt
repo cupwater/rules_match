@@ -1,178 +1,178 @@
-deconstruct: 构造器
-pointer: 指针
-memory_address: 内存地址
-func: 类成员函数
-array: 访问数组元素
-multiarray: 多维数组
-datamember: 数据成员
-pass_value_call: 传值调用
-variable_declaration1: 变量声明
-variable_declaration2: 变量声明
-object_def: 对象
-function_declaration: 函数声明
-base_class: 基类
-string_char: 字符串
-variable_definitions: 变量定义
-function_definitions: 函数定义
-return_type: 返回类型
-return_type1: 返回类型
-array_as_parameters1: 数组作为参数
-array_as_parameters2: 数组作为参数
-datamember: 数据成员
-pointer_variable_declaration: 指针变量的声明
-pointer_array: 指针数组
-reference_statement: 引用声明
-pointer_to_structure: 指向结构的指针
-string: String串
-derived_class: 派生类
-pure_virtual_function: 纯虚函数
-hexadecimal: 整数常量-十六进制
-octal: 整数常量-八进制
-decimal: 整数常量-十进制
-float_number: 浮点常量-小数]"
-float_e: 浮点常量-e表示小数
-float_E: 浮点常量-e表示小数]"
-pattern_str: 字符常量
-miscellaneous_operator_choose: 杂项运算符-选择运算
-miscellaneous_operator_comma: 杂项运算符-逗号运算
-miscellaneous_data_type_cast: 杂项运算符-强制转换数据类型
-do_while: do-while循环
-if_else: if-else循环
-formal_parameter: 形式参数
-actual_parameter1: 实际参数
-actual_parameter2: 实际参数
-pointer_call: 指针调用
-reference_call: 引用调用
-cos1: 余弦函数
-cos2: 余弦函数
-sin1: 正弦函数
-sin2: 正弦函数
-tan1: 正切函数
-tan2: 正切函数
-log1: 对数函数
-log2: 对数函数
-pow: 指数函数
-sqrt1: 平方根函数
-sqrt2: 平方根函数
-array_declaration: 数组声明
-initialize_array: 初始化数组
-null_pointer: 空指针
-pointer_to_pointer: 指向指针的指针
-pass_pointer_to_function: 传递指针给函数
-return_pointer_from_function: 从函数返回指针
-public_inheritance: 公有继承
-protected_inheritance: 保护继承
-private_inheritance: 私有继承
-public_member: 公有成员
-private_member: 私有成员
-protected_member: 私有成员
-intro1: 注释
-intro2: 注释
-struct_def: 结构
-class_def: 类
-include_def: 预处理指令#include
-inline_def: 内置函数
-iostream_def: iostream
-iomanip_def: iomanip
-namespace_def: 命名空间
-char_def: 字符串
-string_def: String串
-friend_def: 友元函数
-this_def: this指针
-operator_def: 运算符重载
-bool_def: 布尔型
-int_def: 整型
-float_def: 浮点型
-double_def: 双浮点型
-void_def: 无类型
-wchar_t_def: 宽字符串
-virtual_def: 虚函数
-true_def: TRUE
-false_def: FALSE
-alarm_def: 警报铃声
-back_sp_def: 退格键
-page_break_def: 换页符
-line_break_def: 换行符
-enter_def: 回车
-tab_def: 水平制表符
-vertical_def: 垂直制表符
-const_def: const
-#define_def: #define
-signed_def: 有符号型
-unsigned_def: 无符号型
-long_def: 长型
-short_def: 短型
-break_def: break语句
-continue_def: continue语句
-goto_def: goto语句
-if_def: if语句
-switch_def: switch语句
-main_def: 主函数main()
-srand_def: 随机数函数
-rand_def: 随机数函数
-strcpy_def: 复制字符串s2到字符串s1函数
-strcat_def: 连接字符串s2到字符串s1的末尾函数
-strlen_def: 返回字符串s1的长度函数
-strcmp_def: 比较字符串s1与s2的长度并返回相应值的函数
-strchr_def: 返回指针并指向s1中字符ch第一次出现的位置函数
-strstr_def: 返回指针并指向s1中字符串s2第一次出现的位置函数
-fstream_def: fstream
-cin_def: 标准输入流cin
-cout_def: 标准输出流cout
-cerr_def: cerr
-clog_def: clog
-setw_def: setw
-setprecision_def: setprecision
-using_def: using指令
-xor_assign_def: 赋值运算符
-printf_def: c++库函数printf()
-scanf_def: c++库函数scanf()
-sizeof_def: 杂项运算符
-enum_def: 枚举类型
-plus_def: 算术运算符
-sub_def: 算术运算符
-times_def: 算术运算符
-div_def: 算术运算符
-residual_def: 算术运算符
-increase_def: 算术运算符
-decrease_def: 算术运算符
-equal_def: 关系运算符
-nonequal_def: 关系运算符
-lt_def: 关系运算符
-gt_def: 关系运算符
-ngt_def: 关系运算符
-nlt_def: 关系运算符
-logi_and_def: 逻辑运算符
-logi_or_def: 逻辑运算符
-no_def: 逻辑运算符
-and_def: 位运算符
-or_def: 位运算符
-xor_def: 位运算符
-complement_def: 位运算符
-left_move_def: 位运算符
-right_move_def: 位运算符
-assign_value_def: 赋值运算符
-plus_assign_def: 赋值运算符
-sub_assign_def: 赋值运算符
-times_assign_def: 赋值运算符
-div_assign_def: 赋值运算符
-residual_assign_def: 赋值运算符
-left_move_assign_def: 赋值运算符
-right_move_assign_def: 赋值运算符
-and_assign_def: 赋值运算符
-or_assign_def: 赋值运算符
-auto_def: auto存储类
-register_def: register存储类
-static_def: static存储类
-extem_def: extern存储类
-mutable_def: mutable存储类
-thread_local_def: thread_local存储类
-while_def: while循环
-for_def: for循环
-overload_fun: 函数重载
-local_var: 局部变量
-global_var: 全局变量
-array_param: 数组作为参数
-static_member_fun: 静态成员函数
-polym_class: 继承
-ptr_arith: 指针运算
+deconstruct:构造器
+pointer:指针
+memory_address:内存地址
+func:类成员函数
+array:访问数组元素
+multiarray:多维数组
+datamember:数据成员
+pass_value_call:传值调用
+variable_declaration1:变量声明
+variable_declaration2:变量声明
+object_def:对象
+function_declaration:函数声明
+base_class:基类
+string_char:字符串
+variable_definitions:变量定义
+function_definitions:函数定义
+return_type:返回类型
+return_type1:返回类型
+array_as_parameters1:数组作为参数
+array_as_parameters2:数组作为参数
+datamember:数据成员
+pointer_variable_declaration:指针变量的声明
+pointer_array:指针数组
+reference_statement:引用声明
+pointer_to_structure:指向结构的指针
+string:String串
+derived_class:派生类
+pure_virtual_function:纯虚函数
+hexadecimal:整数常量-十六进制
+octal:整数常量-八进制
+decimal:整数常量-十进制
+float_number:浮点常量-小数]"
+float_e:浮点常量-e表示小数
+float_E:浮点常量-e表示小数]"
+pattern_str:字符常量
+miscellaneous_operator_choose:杂项运算符-选择运算
+miscellaneous_operator_comma:杂项运算符-逗号运算
+miscellaneous_data_type_cast:杂项运算符-强制转换数据类型
+do_while:do-while循环
+if_else:if-else循环
+formal_parameter:形式参数
+actual_parameter1:实际参数
+actual_parameter2:实际参数
+pointer_call:指针调用
+reference_call:引用调用
+cos1:余弦函数
+cos2:余弦函数
+sin1:正弦函数
+sin2:正弦函数
+tan1:正切函数
+tan2:正切函数
+log1:对数函数
+log2:对数函数
+pow:指数函数
+sqrt1:平方根函数
+sqrt2:平方根函数
+array_declaration:数组声明
+initialize_array:初始化数组
+null_pointer:空指针
+pointer_to_pointer:指向指针的指针
+pass_pointer_to_function:传递指针给函数
+return_pointer_from_function:从函数返回指针
+public_inheritance:公有继承
+protected_inheritance:保护继承
+private_inheritance:私有继承
+public_member:公有成员
+private_member:私有成员
+protected_member:私有成员
+intro1:注释
+intro2:注释
+struct_def:结构
+class_def:类
+include_def:预处理指令#include
+inline_def:内置函数
+iostream_def:iostream
+iomanip_def:iomanip
+namespace_def:命名空间
+char_def:字符串
+string_def:String串
+friend_def:友元函数
+this_def:this指针
+operator_def:运算符重载
+bool_def:布尔型
+int_def:整型
+float_def:浮点型
+double_def:双浮点型
+void_def:无类型
+wchar_t_def:宽字符串
+virtual_def:虚函数
+true_def:TRUE
+false_def:FALSE
+alarm_def:警报铃声
+back_sp_def:退格键
+page_break_def:换页符
+line_break_def:换行符
+enter_def:回车
+tab_def:水平制表符
+vertical_def:垂直制表符
+const_def:const
+#define_def:#define
+signed_def:有符号型
+unsigned_def:无符号型
+long_def:长型
+short_def:短型
+break_def:break语句
+continue_def:continue语句
+goto_def:goto语句
+if_def:if语句
+switch_def:switch语句
+main_def:主函数main()
+srand_def:随机数函数
+rand_def:随机数函数
+strcpy_def:复制字符串s2到字符串s1函数
+strcat_def:连接字符串s2到字符串s1的末尾函数
+strlen_def:返回字符串s1的长度函数
+strcmp_def:比较字符串s1与s2的长度并返回相应值的函数
+strchr_def:返回指针并指向s1中字符ch第一次出现的位置函数
+strstr_def:返回指针并指向s1中字符串s2第一次出现的位置函数
+fstream_def:fstream
+cin_def:标准输入流cin
+cout_def:标准输出流cout
+cerr_def:cerr
+clog_def:clog
+setw_def:setw
+setprecision_def:setprecision
+using_def:using指令
+xor_assign_def:赋值运算符
+printf_def:c++库函数printf()
+scanf_def:c++库函数scanf()
+sizeof_def:杂项运算符
+enum_def:枚举类型
+plus_def:算术运算符
+sub_def:算术运算符
+times_def:算术运算符
+div_def:算术运算符
+residual_def:算术运算符
+increase_def:算术运算符
+decrease_def:算术运算符
+equal_def:关系运算符
+nonequal_def:关系运算符
+lt_def:关系运算符
+gt_def:关系运算符
+ngt_def:关系运算符
+nlt_def:关系运算符
+logi_and_def:逻辑运算符
+logi_or_def:逻辑运算符
+no_def:逻辑运算符
+and_def:位运算符
+or_def:位运算符
+xor_def:位运算符
+complement_def:位运算符
+left_move_def:位运算符
+right_move_def:位运算符
+assign_value_def:赋值运算符
+plus_assign_def:赋值运算符
+sub_assign_def:赋值运算符
+times_assign_def:赋值运算符
+div_assign_def:赋值运算符
+residual_assign_def:赋值运算符
+left_move_assign_def:赋值运算符
+right_move_assign_def:赋值运算符
+and_assign_def:赋值运算符
+or_assign_def:赋值运算符
+auto_def:auto存储类
+register_def:register存储类
+static_def:static存储类
+extem_def:extern存储类
+mutable_def:mutable存储类
+thread_local_def:thread_local存储类
+while_def:while循环
+for_def:for循环
+overload_fun:函数重载
+local_var:局部变量
+global_var:全局变量
+array_param:数组作为参数
+static_member_fun:静态成员函数
+polym_class:继承
+ptr_arith:指针运算
