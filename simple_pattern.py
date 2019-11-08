@@ -22,7 +22,7 @@ pattern_dict = {
     "variable_declaration2": "extern" + sp + var_declar + repeat_varORarray_key + title_def,
     "object_def": cls_name + sp + cls_name + repeat_varORarray_key+ title_def,
     "function_declaration": var_declar + left_brackets + varORarray_declar + repeat_varORarray_declar + right_brackets,
-    "base_class": "class" + sp + cls_name + colon + sp + acemodi_key + sp + cls_name,
+    "base_class": "class" + sp + cls_name + sp + colon + sp + acemodi_key + sp + cls_name,
     "string_char": "char" + sp + member_name + left_square + num_key + right_square,
     "variable_definitions": type_key + sp + member_name + left_brackets_comma + sp + member_name + right_brackets_star,
     "function_definitions": type_key + sp + member_name + left_brackets + type_key + sp + member_name + left_brackets_comma + sp + type_key + sp + member_name + right_brackets_star + right_brackets,
