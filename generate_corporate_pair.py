@@ -23,7 +23,9 @@ corpo_pairs_out = open('./data/corpo_pairs_res.txt', 'w')
 for row_idx in range(corpo_pairs.shape[0]):
     for col_idx in range(row_idx+1, corpo_pairs.shape[1]):
         if corpo_pairs[row_idx, col_idx] > 0:
-            _str = name_list[row_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0] + ',' + name_list[col_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0] + ',' + str(int(corpo_pairs[row_idx, col_idx]))
+            # _str = name_list[row_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0] + ',' + name_list[col_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0] + ',' + str(int(corpo_pairs[row_idx, col_idx]))
+            # corpo_pairs_res.append(_str)
+            _str = str(row_idx) + ',' + name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0] + ',' + str(col_idx)  + ',' + name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0] + ',' + str(int(corpo_pairs[row_idx, col_idx]))
             corpo_pairs_res.append(_str)
 corpo_pairs_out.writelines('\n'.join(corpo_pairs_res))
 corpo_pairs_out.close()

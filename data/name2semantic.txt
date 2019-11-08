@@ -75,7 +75,7 @@ inline_def:内置函数
 iostream_def:iostream
 iomanip_def:iomanip
 namespace_def:命名空间
-char_def:字符串
+char_def:字符型
 string_def:String串
 friend_def:友元函数
 this_def:this指针
