@@ -19,7 +19,17 @@ for _pair in corpo_pairs_list:
     G.add_edge(pair_a, pair_b)
 # nx.draw(G)
 # plt.savefig("path.png")
-from networkx.algorithms.centrality import degree_centrality, closeness_centrality, betweenness_centrality
+from networkx.algorithms.centrality import degree_centrality, closeness_centrality,betweenness_centrality,communicability_betweenness_centrality
 degree_res = degree_centrality(G)
 closeness_res = closeness_centrality(G)
-betweenness_res = betweenness_centrality(G)
+betweenness_res = communicability_betweenness_centrality(G)
+
+
+centrality_out = open('./data/centrality.txt', 'w')
+centrality_out.write('pattern,degree,closeness,betweenness')
+for key, value in degree_res.items():
+    centrality_out.write('\n' + key + '\t %.2f \t %.2f \t %.2f'%(value,closeness_res[key],betweenness_res[key]))
+centrality_out.close()
+print(degree_res)
+print(closeness_res)
+print(betweenness_res)
