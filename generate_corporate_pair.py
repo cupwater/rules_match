@@ -31,7 +31,7 @@ for row_idx in range(corpo_pairs.shape[0]):
         if corpo_pairs[row_idx, col_idx] > 0:
             pair_a_name = name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0]
             pair_b_name = name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0]
-            _str = str(name_index_dict[pair_a_name]) + ',' + pair_a_name + ',前驱,' + str(name_index_dict[pair_b_name]) + ',' + pair_b_name
+            _str = str(name_index_dict[pair_a_name]) + ',' + pair_a_name + ',协同,' + str(name_index_dict[pair_b_name]) + ',' + pair_b_name + ',' + str(int(corpo_pairs[row_idx, col_idx]))
             # _str = name_list[row_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0] + ',' + name_list[col_idx].split('\n')[0] + ',' + name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0] + ',' + str(int(corpo_pairs[row_idx, col_idx]))
             # corpo_pairs_res.append(_str)
             # _str = str(row_idx) + ',' + name2semantic_dict[name_list[row_idx].split('\n')[0]].split('\n')[0] + '前驱,' + str(col_idx)  + ',' + name2semantic_dict[name_list[col_idx].split('\n')[0]].split('\n')[0] + ',' + str(int(corpo_pairs[row_idx, col_idx]))
