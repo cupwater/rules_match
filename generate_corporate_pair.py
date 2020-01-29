@@ -2,7 +2,7 @@
 import os
 import numpy as np
 
-match_result = np.loadtxt('./data/match_result.txt')
+match_result = np.loadtxt('./data/match_result_newdata.txt')
 name_list = open('./data/pattern_name.txt').readlines()
 name2semantic_dict = {}
 name2semantic_in = open('./data/name2semantic.txt').readlines()
@@ -26,7 +26,7 @@ for prow_idx in range(match_result.shape[1]):
 
 corpo_res_name_list = {}
 corpo_pairs_res = []
-corpo_pairs_out = open('./data/corpo_pairs_res.txt', 'w')
+corpo_pairs_out = open('./data/corpo_pairs_res_newdata.txt', 'w')
 # save the corporate resutls
 for row_idx in range(corpo_pairs.shape[0]):
     for col_idx in range(row_idx+1, corpo_pairs.shape[1]):
@@ -60,17 +60,17 @@ for _pair in prerequi_pair:
 exist_inCorpo_nexist_inPrere_list = list(set(corpo_res_name_list.keys()) - set(prerequi_res.keys()))
 exist_inPrere_nexist_inCorpo_list = list(set(prerequi_res.keys()) - set(corpo_res_name_list.keys()))
 
-exist_inCorpo_nexist_inPrere_out = open('./data/exist_inCorpo_nexist_inPrere_list.txt','w')
+exist_inCorpo_nexist_inPrere_out = open('./data/exist_inCorpo_nexist_inPrere_list_newdata.txt','w')
 exist_inCorpo_nexist_inPrere_out.writelines('\n'.join(exist_inCorpo_nexist_inPrere_list))
 exist_inCorpo_nexist_inPrere_out.close()
 
-exist_inPrere_nexist_inCorpo_out = open('./data/exist_inPrere_nexist_inCorpo_list.txt','w')
+exist_inPrere_nexist_inCorpo_out = open('./data/exist_inPrere_nexist_inCorpo_list_newdata.txt','w')
 exist_inPrere_nexist_inCorpo_out.writelines('\n'.join(exist_inPrere_nexist_inCorpo_list))
 exist_inPrere_nexist_inCorpo_out.close()
 
 
 corpo_pairs_res = []
-corpo_pairs_out = open('./data/corpo_pairs_res_1.txt', 'w')
+corpo_pairs_out = open('./data/corpo_pairs_res_newdata_exist.txt', 'w')
 # save the corporate resutls
 for row_idx in range(corpo_pairs.shape[0]):
     for col_idx in range(row_idx+1, corpo_pairs.shape[1]):

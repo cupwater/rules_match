@@ -57,7 +57,8 @@ def get_all_functions(_str, fun_declar):
                     fd_eidx = i + fd_sidx - 1
                     fc_sidx = i + fd_sidx
             elif letter == '}':
-                _stack.pop()
+                if len(_stack)>0:
+                    _stack.pop()
                 if len(_stack) == 0:
                     fc_eidx = i + fd_sidx + 1
                     last_idx = fc_eidx
@@ -80,7 +81,8 @@ def separate_local_global(_str):
             if len(_stack) == 1:
                 sidx = i
         elif letter == '}':
-            _stack.pop()
+            if len(_stack) > 0:
+                _stack.pop()
             if len(_stack) == 0:
                 eidx = i
                 local_list.append([sidx, eidx])
@@ -114,7 +116,13 @@ def check_overload_fun(fun_heads_list):
     for _str in fun_heads_list:
         if ';' in _str:
             continue
-        fun_name_list.append(_str.split('(')[0].split(' ')[1])
+        fun_head = _str.split('(')[0]
+        # print(fun_head)
+        # fun_name_list.append(_str.split('(')[0].split(' ')[1])
+        if len(fun_head.split(' ')) >1:
+            fun_name_list.append(_str.split('(')[0].split(' ')[1])
+        else :
+            fun_name_list.append(fun_head)
     if len(fun_name_list) != len(set(fun_name_list)):
         return 1
     else:
