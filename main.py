@@ -7,18 +7,18 @@ import complex_pattern
 import numpy as np
 from utils import *
 
+
 if __name__ == '__main__':
-    df_answer = pd.read_csv("./data/result.csv")
+    df_answer = pd.read_csv("./data/new_data/result.csv")
     result_rule = []
     pattern_name = ''
     pattern_dict = simple_pattern.get_all_patterns()
     # base_class = re.compile("class" + sp + cls_name + sp + colon + sp + acemodi_key + sp + cls_name)
     for i, row in df_answer.iterrows():
-        print(i)
         if isinstance(row["answer_contents"], str) and i >3:
             content_str = remove_annotation(row["answer_contents"])
             # print(content_str)
-            print("runing {} !".format(str(i)))
+            # print("runing {} !".format(str(i)))
             # content_str = '#include <math.h> class A {int a=10; static int xy(int *a, int b) {int x=10; a=10; } class B : private A {int x; int y;} float x; double SquareRoot(float n) { return n > 0 ? sqrt(n) : -1; } double SquareRoot1(int a, double n1[10], float n) { static int xxxx = 100; return n > 0 ? sqrt(n) : -1; }'
             # baseclass_res = base_class.search(content_str)
             # if baseclass_res:
@@ -30,13 +30,20 @@ if __name__ == '__main__':
         # else :
         #     continue
     result_array = np.array(result_rule)
-    result_name = pattern_name
-    np.savetxt('./data/match_result_newdata.txt', result_array, fmt='%d')
+    pattern_show_num = np.sum(result_array, axis=0)
+    np.savetxt('./data/new_data/pattern_show_num.txt', pattern_show_num, fmt='%d')
+    np.savetxt('./data/new_data/match_result_newdata.txt', result_array, fmt='%d')
 
-    result_name_out = open('./data/pattern_name_newdata.txt', 'w')
-    result_name_out.writelines('\n'.join(result_name))
-    result_name_out.close()
-    with open("./data/code_rule_newdata.pkl","wb") as file:
+    pattern_name_num = [ pattern_name[i] + ': ' + str(pattern_show_num[i]) for i in range(len(pattern_name)) ]
+    pattern_name_num_out = open('./data/new_data/pattern_name_num.txt', 'w')
+    pattern_name_num_out.writelines('\n'.join(pattern_name_num))
+    pattern_name_num_out.close()
+
+
+    pattern_name_out = open('./data/new_data/pattern_name_newdata.txt', 'w')
+    pattern_name_out.writelines('\n'.join(pattern_name))
+    pattern_name_out.close()
+    with open("./data/new_data/code_rule_newdata.pkl","wb") as file:
         pickle.dump(result_rule, file)
 
 # pattern_dict = simple_pattern.get_all_patterns()

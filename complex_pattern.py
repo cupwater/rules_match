@@ -144,12 +144,12 @@ def check_global_var(global_content, var_pattern):
 
 def check_array_param(fun_heads_list, fun_contents_list, ptr_var_declar_pattern):
     for _fun_head, _fun_content in zip(fun_heads_list, fun_contents_list):
-        print(_fun_head)
+        # print(_fun_head)
         res = ptr_var_declar_pattern.search(_fun_head)
         if res != None:
             return 1
             match_content = res.group()
-            print(match_content)
+            # print(match_content)
             ptr_name = match_content.split('*')[1]
             key_res = isIncludeKeyWord(_fun_content, ptr_name)
             if key_res == 1:

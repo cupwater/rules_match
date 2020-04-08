@@ -76,7 +76,6 @@ iostream_def:iostream
 iomanip_def:iomanip
 namespace_def:命名空间
 char_def:字符型
-string_def:String串
 friend_def:友元函数
 this_def:this指针
 operator_def:运算符重载

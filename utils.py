@@ -70,7 +70,6 @@ def check_pattern(_str, pattern, rule_name):
 def rule_match(_str, pattern_dict):
     matched_result_dict = {}
     for key, value in pattern_dict.items():
-        print key
         matched_result_dict[key] = check_pattern(_str, value, key)
     return matched_result_dict
 

@@ -95,7 +95,6 @@ residual_def
 nlt_def
 pointer_call
 extem_def
-string_def
 variable_definitions
 setw_def
 tan2
