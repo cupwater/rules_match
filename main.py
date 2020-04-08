@@ -39,6 +39,18 @@ if __name__ == '__main__':
     pattern_name_num_out.writelines('\n'.join(pattern_name_num))
     pattern_name_num_out.close()
 
+    name_pattern_dict = {}
+    old_name2semantic_list = open('data/name2semantic.txt').readlines()
+    for line in old_name2semantic_list:
+        name_pattern_dict[line.split(':')[0]] = line.split(':')[1].split('\n')[0]
+
+    new_name2semantic_list = []
+    for name in pattern_name:
+        if name in name_pattern_dict:
+            new_name2semantic_list.append(name + ':' + name_pattern_dict[name])
+    new_name2semantic_out = open('data/new_data/name2semantic.txt', 'w')
+    new_name2semantic_out.writelines('\n'.join(new_name2semantic_list))
+    new_name2semantic_out.close()
 
     pattern_name_out = open('./data/new_data/pattern_name_newdata.txt', 'w')
     pattern_name_out.writelines('\n'.join(pattern_name))
