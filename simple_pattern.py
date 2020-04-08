@@ -7,6 +7,7 @@
 """
 
 import re
+import collections
 from utils import *
 
 pattern_dict = {
@@ -186,7 +187,7 @@ pattern_dict = {
 
 
 def get_all_patterns(rules_dict = pattern_dict):
-    compile_res = {}
+    compile_res = collections.OrderedDict()
     for key, value in pattern_dict.items():
         compile_res[key] = re.compile(value)
     return compile_res

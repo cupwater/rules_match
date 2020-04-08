@@ -5,6 +5,7 @@ import pickle
 import simple_pattern
 import complex_pattern
 import numpy as np
+import collections
 from utils import *
 
 

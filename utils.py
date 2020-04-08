@@ -5,6 +5,7 @@
  date: 2019.10.24
 """
 import re
+import collections
 
 num_ch = "[0-9]"
 type_key = "(int|float|bool|char|double|void|wchar_t)"
@@ -68,7 +69,7 @@ def check_pattern(_str, pattern, rule_name):
         return 0
 
 def rule_match(_str, pattern_dict):
-    matched_result_dict = {}
+    matched_result_dict = collections.OrderedDict()
     for key, value in pattern_dict.items():
         matched_result_dict[key] = check_pattern(_str, value, key)
     return matched_result_dict

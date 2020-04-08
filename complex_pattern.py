@@ -8,6 +8,7 @@
 """
 
 import re
+import collections
 from utils import *
 import simple_pattern
 
@@ -202,7 +203,7 @@ def complex_pattern_checking(_str, pattern_dict):
     for i in range(len(fun_head_content_idxs)):
         fun_heads_list.append(_str[fun_head_content_idxs[i][0]:fun_head_content_idxs[i][1]])
         fun_contents_list.append(_str[fun_head_content_idxs[i][2]:fun_head_content_idxs[i][3]])
-    match_res = {}
+    match_res = collections.OrderedDict()
     # first check the overload function
     match_res['overload_fun'] = check_overload_fun(fun_heads_list)
     match_res['local_var']    = check_local_var(local_content, pattern_dict['variable_declaration1'])
