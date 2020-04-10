@@ -1,0 +1,134 @@
+deconstruct:析构函数:destructors
+pointer:指针:pointer
+memory_address:内存地址:address
+func:类成员函数:member function
+array:访问数组元素:access array elements
+multiarray:多维数组:multi-dimensional array
+datamember:数据成员:data member
+pass_value_call:传值调用:call by value
+object_def:对象:object
+function_declaration:函数声明:function declaration
+base_class:基类:base class
+string_char:字符串:c-style string
+variable_definitions:变量定义:variable definition
+function_definitions:函数定义:function definition
+pointer_variable_declaration:指针变量的声明:declare pointer
+pointer_array:指针数组:pointer to an array
+reference_statement:引用声明:reference declaration
+pointer_to_structure:指向结构的指针:pointer to structure
+derived_class:派生类:derived class
+pure_virtual_function:纯虚函数:pure virtual function
+hexadecimal:整数常量-十六进制:hexadecimal constant
+octal:整数常量-八进制:octal constant
+decimal:整数常量-十进制:decimal constant
+float_number:浮点常量-小数]":floating-point constants
+pattern_str:字符常量:character constant
+miscellaneous_operator_choose:杂项运算符-选择运算:conditional operator
+miscellaneous_operator_comma:杂项运算符-逗号运算:comma operator
+miscellaneous_data_type_cast:杂项运算符-强制转换数据类型:casting operators
+do_while:do-while循环:do while loop
+if_else:if-else循环:if else statements
+formal_parameter:形式参数:formal parameter
+pointer_call:指针调用:call by pointer
+reference_call:引用调用:call by reference
+pow:指数函数:exponential function 
+array_declaration:数组声明:array declaration
+initialize_array:初始化数组:array initialization
+null_pointer:空指针:null pointer
+pointer_to_pointer:指向指针的指针:pointer to a pointer
+pass_pointer_to_function:传递指针给函数:passing pointers to functions
+return_pointer_from_function:从函数返回指针:return pointer from function
+public_inheritance:公有继承:public inheritance
+protected_inheritance:保护继承:protected inheritance 
+private_inheritance:私有继承:private inheritance
+public_member:公有成员:public member
+private_member:私有成员:private member
+protected_member:保护成员:protected member
+struct_def:结构:struct
+class_def:类:class
+include_def:预处理指令#include:#include
+inline_def:内置函数:built-in function
+iostream_def:iostream:iostream library
+iomanip_def:iomanip:iomanip library
+namespace_def:命名空间:namespace
+char_def:字符型:char type
+string_def:String串:strings
+friend_def:友元函数:friend function
+this_def:this指针:this pointer
+operator_def:运算符重载:operator overloading
+bool_def:布尔型:bool type
+int_def:整型:integer type
+float_def:浮点型:floating point type
+double_def:双浮点型:double-precision floating point
+void_def:无类型:void type
+wchar_t_def:宽字符串:wide character
+virtual_def:虚函数:virtual function
+true_def:TRUE:true
+false_def:FALSE:false
+const_def:const:const
+#define_def:#define:#define
+signed_def:有符号型:signed
+unsigned_def:无符号型:unsigned
+long_def:长型:long
+short_def:短型:short
+sizeof_def:杂项运算符:sizeof operator
+auto_def:auto存储类:auto storage class
+register_def:register存储类:register storage class
+static_def:static存储类:static storage class
+extem_def:extern存储类:extern storage class
+mutable_def:mutable存储类:mutable storage class
+thread_local_def:thread_local存储类:thread_local storage class
+while_def:while循环:while loop
+for_def:for循环:for loop
+break_def:break语句:break statement
+continue_def:continue语句:continue statement
+goto_def:goto语句:goto statement
+if_def:if语句:if statement
+switch_def:switch语句:switch statement
+main_def:主函数main():main() function
+strcpy_def:复制字符串s2到字符串s1函数:strcpy() function
+strcat_def:连接字符串s2到字符串s1的末尾函数:strcat() function
+strlen_def:返回字符串s1的长度函数:strlen() function
+strcmp_def:比较字符串s1与s2的长度并返回相应值的函数:strcmp() function
+strchr_def:返回指针并指向s1中字符ch第一次出现的位置函数:strchr() function
+strstr_def:返回指针并指向s1中字符串s2第一次出现的位置函数:strstr() function
+fstream_def:fstream:fstream library
+cin_def:标准输入流cin:cin statement
+cout_def:标准输出流cout:cout statement
+cerr_def:cerr:cerr
+clog_def:clog:clog
+setw_def:setw:setw
+setprecision_def:setprecision函数:setprecision function
+using_def:using指令:using directive
+printf_def:c++库函数printf():printf() function
+scanf_def:c++库函数scanf():scanf() function
+enum_def:枚举类型:enumerated type
+alarm_def:警报铃声:\a
+back_sp_def:退格键:\b
+page_break_def:换页符:\f
+line_break_def:换行符:\n
+enter_def:回车:\r
+tab_def:水平制表符:\t
+vertical_def:垂直制表符:\v
+arithmetic_operator:算术运算符:arithmetic operators
+relational_operator:关系运算符:relational operators
+logic_operator:逻辑运算符:logical operators
+bit_operator:位运算符:bitwise operators
+assignment_operator:赋值运算符:assignment operators
+variable_declaration:变量声明:variable declaration
+re_type:返回类型:return type
+array_as_parameters:数组作为参数:passing array to function
+actual_parameter:实际参数:actual parameter
+cos:余弦函数:cos() function
+sin:正弦函数:sin() function
+tan:正切函数:tan() function
+log:对数函数:log() function
+sqrt:平方根函数:sqrt() function
+intro:注释:comment
+random_number_def:随机数函数:rand() function
+overload_fun:函数重载:function overloading
+local_var:局部变量:local variable
+global_var:全局变量:global variable
+static_member_fun:静态成员函数:static member function
+polym_class:继承:inheritance
+ptr_arith:指针运算:pointer arithmetic
