@@ -9,13 +9,21 @@ from concurrent.futures import ProcessPoolExecutor
 import multiprocessing
 import os
 import pdb
+import random
 
 headers = { 'apikey': 'd36b3620-6081-11ea-8cd5-6df14d96169d' }
 temp_path = './crawling_data/temp/'
 
 def fetch_async(query_content, description, url):
+    s = requests.session()
+    proxies_ip = ""
+    for i in range(4):
+        proxies_ip += "." + str(int(255*random.random()))
+    proxies_ip += ":8080"
+
+    s.proxies = {"https": proxies_ip }
     try:
-        response = requests.get(url).text
+        response = s.get(url).text
     except Exception as e:
         with open("./log/source_page_err.log", 'a') as sourepage_err_file:  
             print(query_content + "error is: " + str(e)) 
