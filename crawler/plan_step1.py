@@ -54,7 +54,7 @@ def crawler():
     with futures.ProcessPoolExecutor() as pool:
         for query_content in pool.map(parser_query, query_list):
             finish_query_set.append(query_content)
-    pool.shutdown(wait=True)
+    # pool.shutdown(wait=True)
 
 if __name__ == "__main__":
     crawler()
