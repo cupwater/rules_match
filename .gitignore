@@ -3,4 +3,7 @@ data/.DS_Store
 .DS_Store
 crawler/crawling_data/
 crawler/logs/
+*.zip
+*.tar
+*.gz
 
