@@ -33,24 +33,23 @@ sonar_properties_template += "sonar.language=c++\n"
 sonar_properties_template += "sonar.sourceEncoding=UTF-8\n"
 
 # start using sonar-scanner to scan all tasks
-for task in task_lists[:2]:
+for task in task_lists:
     n1, n2, n3 = task.split('/')[-3:]
     if n2 == 'src':
         key_name = n1 + '_' + n3.strip('\n')
     else:
         key_name = n2 + '_' + n3.strip('\n')
     print(key_name)
-
     current_properties = ""
     current_properties += "sonar.projectKey={}\n".format(key_name)
     current_properties += "sonar.projectName={}\n".format(key_name) 
-
     propertity_out = open(os.path.join(task, 'sonar-project.properties'), 'w')
     propertity_out.writelines("".join(current_properties+sonar_properties_template))
     propertity_out.close()
-
-    print(task)
-
-    # os.chdir(task)
-    # os.system(r"cppcheck --enable=all --xml ./ 1>cppcheck-result.xml 2>&1")
-    # os.system("sonar-scanner")
+    os.chdir(task)
+    # os.system(r'rm cppcheck-result.xml')
+    if os.path.exists('cppcheck-result.xml'):
+        continue
+    os.system(r"cppcheck --enable=all --suppress=missingIncludeSystem --xml ./ 1> cppcheck-result.xml 2>&1")
+    # time.sleep()
+    os.system("sonar-scanner")
