@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import multiprocessing
-content = open('./data/sqlresult_4890248.csv').readlines()[1:]
+content = open('./data//git_data/sqlresult.csv.bak.csv').readlines()[1:]
 
 repo_dict = {}
 for i in range(len(content)):
