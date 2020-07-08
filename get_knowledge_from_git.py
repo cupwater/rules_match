@@ -32,9 +32,20 @@ for _folder in os.listdir(code_root):
         else:
             task_lists.append(os.path.join(_path, _sub_folder))
 
+
+key_name_list = []
 # concat all files in a repo into a string
 git_content_list = []
 for git_path in task_lists:
+    
+    # get the key_name for each task
+    n1, n2, n3 = git_path.split('/')[-3:]
+    if n2 == 'src':
+        key_name = n1 + '_' + n3.strip('\n')
+    else:
+        key_name = n2 + '_' + n3.strip('\n')
+    key_name_list.append(key_name)
+
     git_content = ""
     for _file in os.listdir(git_path):
         _sub_path = os.path.join(git_path, _file)
@@ -60,6 +71,12 @@ result_array = np.array(result_rule)
 pattern_show_num = np.sum(result_array, axis=0)
 np.savetxt('./data/git_data/pattern_show_num.txt', pattern_show_num, fmt='%d')
 np.savetxt('./data/git_data/match_result_newdata.txt', result_array, fmt='%d')
+
+key_name_list = [name + '\n' for name in key_name_list]
+key_name_out = open('./data/git_data/key_name_for_result.txt', 'w')
+key_name_out.writelines("".join(key_name_list))
+key_name_out.close()
+
 
 pattern_name_num = [ pattern_name[i] + ': ' + str(pattern_show_num[i]) for i in range(len(pattern_name)) ]
 pattern_name_num_out = open('./data/git_data/pattern_name_num.txt', 'w')

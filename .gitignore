@@ -1,4 +1,5 @@
 data/.DS_Store
+data/git_data/sqlresult.csv.bak.csv
 *.pyc
 .DS_Store
 crawler/crawling_data/
