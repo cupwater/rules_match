@@ -51,7 +51,9 @@ rulesid_knowledge_list = []
 # link the rulesid_repos_dict to repos_knowledge_dict by taskid
 for rule_id, repos_list in rulesid_repos_dict.items():
     involved_knowledge = np.ones(knowledge_num)
+    print(rule_id),
     for repo in repos_list:
+        print(repo)
         involved_knowledge = involved_knowledge * repos_knowledge_dict[repo]
     
     involved_knowledge_str = ''
