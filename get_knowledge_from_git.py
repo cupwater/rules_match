@@ -1,6 +1,5 @@
 # -*- encoding: utf-8 -*-
 import os
-import sys
 import time
 import pandas as pd
 import re
@@ -10,6 +9,9 @@ import complex_pattern
 import numpy as np
 import collections
 from utils import *
+
+import sys
+sys.stdout.flush()
 
 import pdb
 
@@ -33,18 +35,17 @@ for _folder in os.listdir(code_root):
             task_lists.append(os.path.join(_path, _sub_folder))
 
 
-key_name_list = []
+repo_name_list = []
 # concat all files in a repo into a string
 git_content_list = []
 for git_path in task_lists:
-    
-    # get the key_name for each task
+    # get the repo_name for each task
     n1, n2, n3 = git_path.split('/')[-3:]
     if n2 == 'src':
-        key_name = n1 + '_' + n3.strip('\n')
+        repo_name = n1 + '_' + n3.strip('\n')
     else:
-        key_name = n2 + '_' + n3.strip('\n')
-    key_name_list.append(key_name)
+        repo_name = n2 + '_' + n3.strip('\n')
+    repo_name_list.append(repo_name)
 
     git_content = ""
     for _file in os.listdir(git_path):
@@ -56,10 +57,16 @@ for git_path in task_lists:
                     git_content += str(line) + '\n'
     git_content_list.append(git_content)
 
+print(len(git_content_list))
+
+# get the involved rules of each repo
 result_rule = []
 pattern_name = ''
 pattern_dict = simple_pattern.get_all_patterns()
 for i, row in enumerate(git_content_list):
+    print(i)
+    # if i != 18245:
+    #     continue
     # pdb.set_trace()
     content_str = remove_annotation(row)
     simple_result_dict = rule_match(content_str, pattern_dict)
@@ -72,11 +79,12 @@ pattern_show_num = np.sum(result_array, axis=0)
 np.savetxt('./data/git_data/pattern_show_num.txt', pattern_show_num, fmt='%d')
 np.savetxt('./data/git_data/match_result_newdata.txt', result_array, fmt='%d')
 
-key_name_list = [name + '\n' for name in key_name_list]
-key_name_out = open('./data/git_data/key_name_for_result.txt', 'w')
-key_name_out.writelines("".join(key_name_list))
-key_name_out.close()
 
+# get the names of all repos 
+repo_name_list = [name + '\n' for name in repo_name_list]
+repo_name_out = open('./data/git_data/repo_name_for_result.txt', 'w')
+repo_name_out.writelines("".join(repo_name_list))
+repo_name_out.close()
 
 pattern_name_num = [ pattern_name[i] + ': ' + str(pattern_show_num[i]) for i in range(len(pattern_name)) ]
 pattern_name_num_out = open('./data/git_data/pattern_name_num.txt', 'w')
@@ -101,3 +109,16 @@ pattern_name_out.writelines('\n'.join(pattern_name))
 pattern_name_out.close()
 with open("./data/git_data/code_rule_newdata.pkl","wb") as file:
     pickle.dump(result_rule, file)
+
+
+# # compute the std
+# match_result = np.loadtxt('./data/git_data/match_result_newdata.txt')
+# match_result_str = []
+# for i in range(match_result.shape[0]):
+#     temp_str = ""
+#     for j in range(match_result.shape[1]):
+#         temp_str += str( int(match_result[i, j]) )
+#     match_result_str.append(temp_str)
+# # pdb.set_trace()
+# unique_match_result = set(match_result_str)
+# print(len(unique_match_result))

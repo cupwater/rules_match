@@ -23,6 +23,8 @@ for _folder in os.listdir(code_root):
             task_lists.append(os.path.join(_path, _sub_folder))
             # print(os.path.join(_path, _sub_folder))
 
+print(len(task_lists))
+
 sonar_properties_template = ""
 sonar_properties_template += "sonar.projectVersion=2\n"
 sonar_properties_template += "sonar.sources=.\n"

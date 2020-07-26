@@ -6,41 +6,42 @@ import os
 import io
 import pdb
 
-keyname_rules = open('data/git_data/taskid_ruleid.txt').readlines()[2:]
+repo_rules = open('data/git_data/repo_ruleid_all.txt').readlines()[2:]
 knowledge = np.loadtxt('data/git_data/match_result_newdata.txt')
-knowledge_keyname = open('data/git_data/key_name_for_result.txt').readlines()
+# key_name_for_result.txt records the repo name
+repo_name_list = open('data/git_data/repo_name_list.txt').readlines() 
 
 knowledge_num = knowledge.shape[1]
 
 # get all knowledge given a repo
 repos_knowledge_dict = {}
-for i in range(len(knowledge_keyname)):
-    repos_knowledge_dict[knowledge_keyname[i].strip('\n')] = knowledge[i, :]
-    # task_name = knowledge_keyname[i].split('_')[1] + '_' + knowledge_keyname[i].split('_')[-1]
+for i in range(len(repo_name_list)):
+    repos_knowledge_dict[repo_name_list[i].strip('\n')] = knowledge[i, :]
+    # task_name = repo_name_list[i].split('_')[1] + '_' + repo_name_list[i].split('_')[-1]
     # if task_name not in repos_knowledge_dict.keys():
-    #     repos_knowledge_dict[knowledge_keyname[i]] = [knowledge[i, :]]
+    #     repos_knowledge_dict[repo_name_list[i]] = [knowledge[i, :]]
     # else: 
-    #     repos_knowledge_dict[knowledge_keyname[i]].append(knowledge[i, :])
+    #     repos_knowledge_dict[repo_name_list[i]].append(knowledge[i, :])
 
 rulesid_content_dict = {}
 rulesid_content_list = []
 rulesid_repos_dict = {}
-for i in range(len(keyname_rules)):
-    keyname, ruleid, rule_content = keyname_rules[i].split('|')[:3]
-    keyname = keyname.strip(' ')
+for i in range(len(repo_rules)):
+    repo_name, ruleid, rule_content = repo_rules[i].split('|')[:3]
+    repo_name = repo_name.strip(' ')
     ruleid = ruleid.strip(' ')
     rule_content = rule_content.strip(' ')
-    if '_' not in keyname:
-        continue
+    if '_' not in repo_name:
+        continue # filter LZ1 repo
     if ruleid not in rulesid_content_dict.keys():
         rulesid_content_dict[ruleid] = rule_content
         rulesid_content_list.append(ruleid + '|' + rule_content + '\n')
     
     # get all repos that may involves a given rule
     if ruleid not in rulesid_repos_dict.keys():
-        rulesid_repos_dict[ruleid] = [keyname]
+        rulesid_repos_dict[ruleid] = [repo_name]
     else :
-        rulesid_repos_dict[ruleid].append(keyname)
+        rulesid_repos_dict[ruleid].append(repo_name)
     
 rulesid_to_content_out = open('./data/git_data/rulesid_to_content.txt', 'w')
 rulesid_to_content_out.writelines("".join(rulesid_content_list))
@@ -64,3 +65,9 @@ for rule_id, repos_list in rulesid_repos_dict.items():
 rulesid_knowledge_out = open('./data/git_data/rulesid_to_knowledge.txt', 'w')
 rulesid_knowledge_out.writelines("".join(rulesid_knowledge_list))
 rulesid_knowledge_out.close()
+
+
+# # compute the std
+# rulesid_knowledge_result = np.loadtxt('./data/git_data/rulesid_to_knowledge.txt')[:, 1:]
+# rule2knowledge_std = np.std(rulesid_knowledge_result, axis=0)
+# pdb.set_trace()
