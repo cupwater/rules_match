@@ -2,18 +2,31 @@ import csv
 import numpy as np
 import pdb
 
+# extract the error content from a string
+def parse_err_content(err_content):
+    err_content = err_content.replace('‘', '$').replace('’', '$')
+    split_str = err_content.split('$')
+    res_str = ""
+    for i in range(len(split_str)):
+        if i%2==0:
+            res_str += split_str[i]
+    #pdb.set_trace()
+    return res_str
+
 errinfo_errid_dict = {}
 errid = 0
 def parse_compile_error_info(info_str):
     global errid
     global errinfo_errid_dict
-    lines = info_str.split('\r\n')
+    lines = info_str.split('\n')
     err_id_list = []
     for line in lines:
         if 'error' in line:
             temp = line.split('error')[-1]
-            errinfo = temp.split('\'')[0] + temp.split('\'')[-1]
-            if len(errinfo)<3:
+            errinfo = parse_err_content(temp)
+            #errinfo = temp.split('\'')[0] + temp.split('\'')[-1]
+            #pdb.set_trace()
+            if len(errinfo)<5:
                 continue
             if errinfo not in errinfo_errid_dict.keys():
                 errinfo_errid_dict[errinfo] = errid
@@ -30,9 +43,9 @@ compile_success = []
 res_compile_err = []
 index = 0
 for row in f_csv:
-    # if index > 3000000:
-    #     break
-    # index += 1
+    if index % 1000 == 0:
+        print('parse {}'.format(str(index)), flush=True)
+    index += 1
     _, out_put, actual_output, git_url, repo_name, shixun_id = row
     if 'successfully' in out_put:
         continue
