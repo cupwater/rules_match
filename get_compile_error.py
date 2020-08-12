@@ -5,17 +5,25 @@ import multiprocessing
 import pdb
 
 csv.field_size_limit(100000000)
-similar_threshold = 0.8
+sth = 0.5 # similar threshold
 errinfo_errid_dict = {}
 errid = 0
+eps=0.01
 
-def getSimilarRatioOfCommonSubstr(str1, str2):
+def getSimilarRatioOfCommonSubstr(ori_str1, ori_str2):
+    def parse_str(in_str):
+        split_str = in_str.split('\'')
+        res_str = ""
+        for i in range(len(split_str)):
+            if i%2==0:
+                res_str += split_str[i]
+        return res_str
+    str1 = parse_str(ori_str1)
+    str2 = parse_str(ori_str2)
     lstr1 = len(str1)
     lstr2 = len(str2)
-
-    if (float(lstr1) / float(lstr2) > 2) or (float(lstr1) / float(lstr2) < 0.5):
+    if (float(lstr2) / (lstr1+eps) > sth) or float(lstr1) / (lstr2+eps) < sth:
         return 0
-
     record = [[0 for i in range(lstr2+1)] for j in range(lstr1+1)]
     maxNum = 0 
     p = 0
@@ -126,14 +134,16 @@ def common_substr_fun(i):
 # merge highly similar errors in errinfo_errid_dict
 errinfo_list = list(errinfo_errid_dict.keys())
 print('length of error information list: {}'.format(str(len(errinfo_list))), flush=True)
-similarity_matrix = np.eye(len(errinfo_list))
 pool = multiprocessing.Pool(processes=48)
 similarity_vec_list = pool.map(common_substr_fun, range( len(errinfo_list)-1 ) )
+# for i in range( len(errinfo_list)-1 ):
+    # common_substr_fun(i)
+
 similarity_matrix = np.array(similarity_vec_list).reshape(-1, len(errinfo_list))
 print('max common sub-string finished', flush=True)
 
 
-similarity_matrix[ similarity_matrix > similar_threshold ] = 1
+similarity_matrix[ similarity_matrix > sth ] = 1
 nodes = sorted(list(errinfo_errid_dict.values()))
 edges = []
 for i in range(similarity_matrix.shape[0]-1):
