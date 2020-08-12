@@ -1,14 +1,21 @@
+# -*- coding: utf8
 import csv
 import numpy as np
+import multiprocessing
 import pdb
 
-similar_threshold = 0.5
+csv.field_size_limit(100000000)
+similar_threshold = 0.8
 errinfo_errid_dict = {}
 errid = 0
 
 def getSimilarRatioOfCommonSubstr(str1, str2):
     lstr1 = len(str1)
     lstr2 = len(str2)
+
+    if (float(lstr1) / float(lstr2) > 2) or (float(lstr1) / float(lstr2) < 0.5):
+        return 0
+
     record = [[0 for i in range(lstr2+1)] for j in range(lstr1+1)]
     maxNum = 0 
     p = 0
@@ -20,26 +27,26 @@ def getSimilarRatioOfCommonSubstr(str1, str2):
                     maxNum = record[i+1][j+1]
                     p = i + 1
     # return str1[p-maxNum:p], maxNum
-    return float(maxNum) / float((len(str1)+len(str2)))
+    return 2*float(maxNum) / float((len(str1)+len(str2)))
 
 def union_find(nodes, edges):
-    node_father = {}
+    father = [0]*len(nodes) 
     for node in nodes:
-        node_father[node] = node
-    for edge in edges:
-        if node_father[edge[1]] == edge[1]:
-            node_father[edge[1]] = edge[0]
-        else:
-            node_father[edge[0]] = edge[1]
+        father[node] = node
+    for edge in edges:  # 标记父节点
+        head = edge[0]
+        tail = edge[1]
+        father[tail] = head
 
     for node in nodes:
-        father = node_father[node]
-        print(node)
-        while father != node_father[father]:
-            father = node_father[father]
-        node_father[node] = father
-    return node_father
-
+        while True:
+            father_of_node = father[node]
+            if father_of_node != father[father_of_node]:
+                father[node] = father[father_of_node]
+            else:
+                break
+    return father
+ 
 # extract the error content from a string
 def parse_err_content(err_content):
     err_content = err_content.replace('‘', '$').replace('’', '$')
@@ -66,24 +73,20 @@ def parse_compile_error_info(info_str):
                 continue
             if errinfo not in errinfo_errid_dict.keys():
                 errinfo_errid_dict[errinfo] = errid
-                errid += 1
                 err_id_list.append(errid)
+                errid += 1
             else:
                 err_id_list.append(errinfo_errid_dict[errinfo])
     return list(set(err_id_list))
 
-csv.field_size_limit(100000000)
 f_csv = csv.reader(x.replace('\0', '') for x in open('./actual_outputs4.csv'))
 headers = next(f_csv)
-compile_success = []
 res_compile_err = []
 index = 0
 for row in f_csv:
     if index % 1000 == 0:
         print('parse {}'.format(str(index)), flush=True)
     index += 1
-    if index > 100000:
-        break
     _, out_put, actual_output, git_url, repo_name, shixun_id = row
     if 'successfully' in out_put:
         continue
@@ -112,37 +115,46 @@ for item in hashable_compile_err:
 res_out.close()
 
 
+def common_substr_fun(i):
+    similarity_vec = np.zeros(len(errinfo_list))
+    similarity_vec[i] = 1
+    for j in range(i+1, len(errinfo_list)):
+        similarity_vec[j] = getSimilarRatioOfCommonSubstr(errinfo_list[i], errinfo_list[j])
+    return similarity_vec
+
+
 # merge highly similar errors in errinfo_errid_dict
 errinfo_list = list(errinfo_errid_dict.keys())
+print('length of error information list: {}'.format(str(len(errinfo_list))), flush=True)
 similarity_matrix = np.eye(len(errinfo_list))
-for i in range(len(errinfo_list)):
-    for j in range(i, len(errinfo_list)):
-        similarity_matrix[i, j] = getSimilarRatioOfCommonSubstr(errinfo_list[i], errinfo_list[j])
-        similarity_matrix[j, i] = getSimilarRatioOfCommonSubstr(errinfo_list[i], errinfo_list[j])
+pool = multiprocessing.Pool(processes=48)
+similarity_vec_list = pool.map(common_substr_fun, range( len(errinfo_list)-1 ) )
+similarity_matrix = np.array(similarity_vec_list).reshape(-1, len(errinfo_list))
+print('max common sub-string finished', flush=True)
 
 
 similarity_matrix[ similarity_matrix > similar_threshold ] = 1
 nodes = sorted(list(errinfo_errid_dict.values()))
 edges = []
-for i in range(similarity_matrix.shape[0]):
-    for j in range(i, similarity_matrix.shape[1]):
+for i in range(similarity_matrix.shape[0]-1):
+    for j in range(i+1, similarity_matrix.shape[1]):
         if similarity_matrix[i, j] == 1:
             edges.append([i, j])
-node_father = union_find(nodes, edges)
+nodes_father = union_find(nodes, edges)
+print('union-find finished', flush=True)
+
 
 err_out = open('compile_err_dict_after_merge.txt', 'w')
-for node in list(node_father.values()):
-    err_out.write(errinfo_list[node] + ': ' + str(node) + '\n')
+for father_node in set(nodes_father):
+    err_out.write(errinfo_list[father_node] + ': ' + str(father_node) + '\n')
 err_out.close()
-
 hashable_compile_err = []
 for (repo_name, shixun_id, current_err_list) in res_compile_err:
     # update error id lists due to error merge
     merged_err_list = []
     for errid in current_err_list:
-        merged_err_list.append(node_father[errid])
+        merged_err_list.append(nodes_father[errid])
     merged_err_list = list(set(merged_err_list))
-
     err_list_str = "["
     for _id in merged_err_list:
         err_list_str += str(_id) + ","
