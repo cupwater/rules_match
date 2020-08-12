@@ -18,8 +18,8 @@ def getSimilarRatioOfCommonSubstr(ori_str1, ori_str2):
             if i%2==0:
                 res_str += split_str[i]
         return res_str
-    str1 = parse_str(ori_str1)
-    str2 = parse_str(ori_str2)
+    str1 = parse_str(ori_str1).replace(' ', '')
+    str2 = parse_str(ori_str2).replace(' ', '')
     lstr1 = len(str1)
     lstr2 = len(str2)
     if (float(lstr2) / (lstr1+eps) > sth) or float(lstr1) / (lstr2+eps) < sth:
