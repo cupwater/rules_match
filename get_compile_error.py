@@ -10,6 +10,8 @@ errinfo_errid_dict = {}
 errid = 0
 eps=0.01
 
+data_root = 'compile_error/'
+
 def getSimilarRatioOfCommonSubstr(ori_str1, ori_str2):
     def parse_str(in_str):
         split_str = in_str.split('\'')
@@ -56,8 +58,8 @@ def union_find(nodes, edges):
     return father
  
 # extract the error content from a string
-def parse_err_content(err_content):
-    err_content = err_content.replace('‘', '$').replace('’', '$')
+def parse_err_content(input_err_content):
+    err_content = input_err_content.replace('‘', '$').replace('’', '$')
     split_str = err_content.split('$')
     res_str = ""
     for i in range(len(split_str)):
@@ -87,41 +89,41 @@ def parse_compile_error_info(info_str):
                 err_id_list.append(errinfo_errid_dict[errinfo])
     return list(set(err_id_list))
 
-f_csv = csv.reader(x.replace('\0', '') for x in open('./actual_outputs4.csv'))
+f_csv = csv.reader(x.replace('\0', '') for x in open(data_root + 'compile_err_4_c++.csv'))
 headers = next(f_csv)
+
 res_compile_err = []
 index = 0
 for row in f_csv:
     if index % 1000 == 0:
         print('parse {}'.format(str(index)), flush=True)
     index += 1
-    _, out_put, actual_output, git_url, repo_name, shixun_id = row
+    # _, out_put, actual_output, git_url, repo_name, shixun_id = row
+    _, out_put, actual_output, git_url, repo_name, shixun_id, position, _ = row
     if 'successfully' in out_put:
         continue
     else:
         current_err_list = parse_compile_error_info(out_put)
-        res_compile_err.append( (repo_name, shixun_id, current_err_list ) )
+        res_compile_err.append( (repo_name, shixun_id, position, current_err_list ) )
 
-
-err_out = open('compile_err_dict_before_merge.txt', 'w')
+err_out = open(data_root + 'compile_err_dict_before_merge.txt', 'w')
 for k, v in errinfo_errid_dict.items():
     err_out.write(k + ': ' + str(v) + '\n')
 err_out.close()
 
 hashable_compile_err = []
-for (repo_name, shixun_id, current_err_list) in res_compile_err:
+for (repo_name, shixun_id, position, current_err_list) in res_compile_err:
     err_list_str = "["
     for _id in current_err_list:
         err_list_str += str(_id) + ","
     err_list_str += "]"
-    hashable_compile_err.append(repo_name.strip('\r').strip('\n') + '\t' + str(shixun_id) + '\t' + err_list_str + '\n')
-res_out = open('compile_err_res_before_merge.txt', 'w')
+    hashable_compile_err.append(repo_name.strip('\r').strip('\n') + '\t' + str(shixun_id) + '\t' + str(position) + '\t' + err_list_str + '\n')
+res_out = open(data_root + 'compile_err_res_before_merge.txt', 'w')
 # remove repeated items
 hashable_compile_err = list(set(hashable_compile_err))
 for item in hashable_compile_err:
     res_out.write(item)
 res_out.close()
-
 
 def common_substr_fun(i):
     similarity_vec = np.zeros(len(errinfo_list))
@@ -129,7 +131,6 @@ def common_substr_fun(i):
     for j in range(i+1, len(errinfo_list)):
         similarity_vec[j] = getSimilarRatioOfCommonSubstr(errinfo_list[i], errinfo_list[j])
     return similarity_vec
-
 
 # merge highly similar errors in errinfo_errid_dict
 errinfo_list = list(errinfo_errid_dict.keys())
@@ -154,12 +155,12 @@ nodes_father = union_find(nodes, edges)
 print('union-find finished', flush=True)
 
 
-err_out = open('compile_err_dict_after_merge.txt', 'w')
+err_out = open(data_root + 'compile_err_dict_after_merge.txt', 'w')
 for father_node in set(nodes_father):
     err_out.write(errinfo_list[father_node] + ': ' + str(father_node) + '\n')
 err_out.close()
 hashable_compile_err = []
-for (repo_name, shixun_id, current_err_list) in res_compile_err:
+for (repo_name, shixun_id, position, current_err_list) in res_compile_err:
     # update error id lists due to error merge
     merged_err_list = []
     for errid in current_err_list:
@@ -169,8 +170,8 @@ for (repo_name, shixun_id, current_err_list) in res_compile_err:
     for _id in merged_err_list:
         err_list_str += str(_id) + ","
     err_list_str += "]"
-    hashable_compile_err.append(repo_name.strip('\r').strip('\n') + '\t' + str(shixun_id) + '\t' + err_list_str + '\n')
-res_out = open('compile_err_res_after_merge.txt', 'w')
+    hashable_compile_err.append(repo_name.strip('\r').strip('\n') + '\t' + str(shixun_id) + '\t' + str(position) + '\t' + err_list_str + '\n')
+res_out = open(data_root + 'compile_err_res_after_merge.txt', 'w')
 # remove repeated items
 hashable_compile_err = list(set(hashable_compile_err))
 for item in hashable_compile_err:

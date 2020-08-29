@@ -7,7 +7,7 @@ import io
 import pdb
 
 repo_rules = open('data/git_data/repo_ruleid_all.txt').readlines()[2:]
-knowledge = np.loadtxt('data/git_data/match_result_newdata.txt')
+knowledge = np.loadtxt('data/git_data/repo_knowledge_corresponding_matrix.txt')
 # key_name_for_result.txt records the repo name
 repo_name_list = open('data/git_data/repo_name_list.txt').readlines() 
 
